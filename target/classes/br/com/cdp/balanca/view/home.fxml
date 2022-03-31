@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
+    <items>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="background" GridPane.columnSpan="2">
+                    <items>
+                        <Button fx:id="btnSair" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onBtnSairAction" text="Sair" />
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />
+                        <Label fx:id="lblUser" styleClass="label-bright" />
+                    </items>
+                </ToolBar>
+                <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" GridPane.rowIndex="6">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account-multiple" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="btnExportacao" mnemonicParsing="false" onAction="#onBtPesagemExportacaoAction" GridPane.rowIndex="2">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-scale" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="btnImportacaoSaidaRodoviaria" mnemonicParsing="false" GridPane.rowIndex="3">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-truck-delivery" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="btnImportacaoDescargaNavio" mnemonicParsing="false" GridPane.rowIndex="4">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-ferry" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="btnTara" mnemonicParsing="false" onAction="#onBtCadastroTara" GridPane.rowIndex="1">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-truck" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="btnRelatorios" mnemonicParsing="false" GridPane.rowIndex="5">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-file-pdf" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="btnConfiguracao" mnemonicParsing="false" GridPane.rowIndex="7">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-wrench" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="btnTrocarUsario" mnemonicParsing="false" onAction="#onBtActionTrocaUsuarioAction" GridPane.rowIndex="8">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-exit-to-app" iconSize="40" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets right="25.0" />
+                    </GridPane.margin>
+                </Button>
+                <Label styleClass="label-bright" text="Gerenciamento de Funcioanrio" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label styleClass="label-bright" text="Pesagem De Exportação" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label styleClass="label-bright" text="Pesagem Importação Saída Rodoviária" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label styleClass="label-bright" text="Pesagem Importação Descarga de Navio" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label styleClass="label-bright" text="Tara de Veículo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label styleClass="label-bright" text="Relatórios" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label styleClass="label-bright" text="Configuração" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Label styleClass="label-bright" text="Trocar de Usuário" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            </children>
+        </GridPane>
+    </items>
+</SplitPane>
