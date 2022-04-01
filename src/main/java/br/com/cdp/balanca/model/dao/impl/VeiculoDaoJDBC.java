@@ -8,9 +8,7 @@ import br.com.cdp.balanca.model.entities.Veiculo;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.List;
-import java.util.Locale;
 
 public class VeiculoDaoJDBC implements VeiculoDAO {
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

@@ -17,11 +17,9 @@ public class LeituraPortaCOM {
             port.setParams(BAUDRATE_9600, DATABITS_8, STOPBITS_2, PARITY_NONE);
 //            port.writeBytes(new byte[]{0x04});
             port.setEventsMask(MASK_RXCHAR);
-            byte[] buffer = port.readBytes(8, 6000);
+            byte[] buffer = port.readBytes(6, 6000);
             String valor = new String(buffer);
-            valor = valor.replace("E","");
-            System.out.println(valor);
-            peso = Double.parseDouble(valor);
+            peso = Double.parseDouble(convertStringToDigit(valor));
             return peso;
         } catch (SerialPortException e) {
             System.out.println(e.getMessage());
@@ -35,5 +33,17 @@ public class LeituraPortaCOM {
             }
         }
         return peso;
+    }
+
+    private static String convertStringToDigit(String valor) {
+        StringBuffer buffer = new StringBuffer();
+        char [] chars = valor.toCharArray();
+
+        for (Character cr : chars) {
+            if (Character.isDigit(cr)) {
+                buffer.append(cr);
+            }
+        }
+        return buffer.toString();
     }
 }

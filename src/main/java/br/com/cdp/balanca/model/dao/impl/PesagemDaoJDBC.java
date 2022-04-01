@@ -3,7 +3,6 @@ package br.com.cdp.balanca.model.dao.impl;
 import br.com.cdp.balanca.db.DB;
 import br.com.cdp.balanca.db.DbException;
 import br.com.cdp.balanca.model.dao.PesagemDAO;
-import br.com.cdp.balanca.model.entities.AutorizacaoEntradaSaida;
 import br.com.cdp.balanca.model.entities.Pesagem;
 
 import java.sql.Connection;

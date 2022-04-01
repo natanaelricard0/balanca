@@ -11,11 +11,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.sql.Timestamp;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -31,6 +31,9 @@ public class TaraController implements Initializable{
     private Button btnPesar;
 
     @FXML
+    private Label lblPlacaRecuperada;
+
+    @FXML
     private TextField txtIdVeiculo;
 
     @FXML
@@ -38,6 +41,8 @@ public class TaraController implements Initializable{
 
     @FXML
     private TextField txtDataHoraPesagem;
+
+    Veiculo veiculo;
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
@@ -54,7 +59,16 @@ public class TaraController implements Initializable{
                 if(t1){
                     System.out.println("ganhou");
                 }else {
-                    System.out.println("perdeu");
+                    buscarVeiculo();
+                    if(veiculo != null){
+                        lblPlacaRecuperada.setStyle("-fx-background-color: green");
+                        txtIdVeiculo.setStyle("-fx-border-color: green");
+                        lblPlacaRecuperada.setText("PLACA DO VEICULO: "+veiculo.getPlacaVeiculo());
+                    } else {
+                        lblPlacaRecuperada.setStyle("-fx-background-color: red");
+                        txtIdVeiculo.setStyle("-fx-border-color: red");
+                        lblPlacaRecuperada.setText("VEICULO NÃO ENCONTRADO");
+                    }
                 }
             }
         });
@@ -65,8 +79,8 @@ public class TaraController implements Initializable{
         Constraints.setTextFieldInteger(txtIdVeiculo);
     }
 
-    private Veiculo veiculoIsValid(){
-        return services.findById(Integer.parseInt(txtIdVeiculo.getText()));
+    private void buscarVeiculo(){
+        veiculo = services.findById(Integer.parseInt(txtIdVeiculo.getText()));
     }
 
     @FXML
@@ -87,7 +101,6 @@ public class TaraController implements Initializable{
     @FXML
     private void btOnActionSalvarPesagem() {
         if(validationFields()) {
-            Veiculo veiculo =veiculoIsValid();
             if (veiculo != null) {
                 veiculo.setPesoTara(Float.parseFloat(txtPeso.getText()));
                 veiculo.setDataPesagem(Timestamp.valueOf(txtDataHoraPesagem.getText()));

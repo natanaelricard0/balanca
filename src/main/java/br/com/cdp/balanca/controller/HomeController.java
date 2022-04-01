@@ -12,6 +12,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
@@ -66,6 +68,17 @@ public class HomeController implements Initializable {
     }
 
     @FXML
+    private void handleOnKeyReleased(KeyEvent event){
+        if(event.getCode() == KeyCode.F2){
+            loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/exportacao.fxml", "Pesagem Exportação", (PesagemController controller) -> {
+                controller.setService(new AutorizacaoEntradaSaidaServices());
+                controller.setVeiculoServices(new VeiculoServices());
+                controller.setPrimeiraPesagem(true);
+            });
+        }
+    }
+
+    @FXML
     private void onBtnFuncionarioAction(ActionEvent event) {
         loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/funcionario.fxml", "Gerenciamento de Funcionario", (FuncionarioController controller) -> {
             controller.setService(new FuncionarioServices());
@@ -77,7 +90,8 @@ public class HomeController implements Initializable {
     private void onBtPesagemExportacaoAction(ActionEvent event) {
         loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/exportacao.fxml", "Pesagem Exportação", (PesagemController controller) -> {
             controller.setService(new AutorizacaoEntradaSaidaServices());
-            controller.setPrimeiraPesagem(false);
+            controller.setVeiculoServices(new VeiculoServices());
+            controller.setPrimeiraPesagem(true);
         });
     }
 
@@ -99,6 +113,8 @@ public class HomeController implements Initializable {
             e.printStackTrace();
         }
     }
+
+
 
     @FXML
     private void onBtActionTrocaUsuarioAction() throws IOException {
