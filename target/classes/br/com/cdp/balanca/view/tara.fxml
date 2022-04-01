@@ -84,6 +84,7 @@
                         <Insets left="10.0" right="10.0" />
                     </GridPane.margin>
                 </TextField>
+            <Label fx:id="lblPlacaRecuperada" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             </children>
         </GridPane>
     </children>
