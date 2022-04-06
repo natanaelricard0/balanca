@@ -3,10 +3,12 @@ package br.com.cdp.balanca.controller;
 import br.com.cdp.balanca.application.Main;
 import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
 import br.com.cdp.balanca.model.services.FuncionarioServices;
+import br.com.cdp.balanca.model.services.PesagemServices;
 import br.com.cdp.balanca.model.services.VeiculoServices;
 import br.com.cdp.balanca.utils.DialogForm;
 import br.com.cdp.balanca.utils.ResourceStage;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -69,12 +71,11 @@ public class HomeController implements Initializable {
 
     @FXML
     private void handleOnKeyReleased(KeyEvent event){
+        if(event.getCode() == KeyCode.F1){
+            cadastroTara(event);
+        }
         if(event.getCode() == KeyCode.F2){
-            loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/exportacao.fxml", "Pesagem Exportação", (PesagemController controller) -> {
-                controller.setService(new AutorizacaoEntradaSaidaServices());
-                controller.setVeiculoServices(new VeiculoServices());
-                controller.setPrimeiraPesagem(true);
-            });
+            pesagemExportacao(event);
         }
     }
 
@@ -86,18 +87,27 @@ public class HomeController implements Initializable {
         });
     }
 
+    private void pesagemExportacao(Event event){
+        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml", "Gerenciamento de Pesagens", (PesagensPendentesController controller) -> {
+            controller.setService(new PesagemServices());
+            controller.setAutorizacaoEntradaSaidaServices(new AutorizacaoEntradaSaidaServices());
+            controller.setVeiculoServices(new VeiculoServices());
+            controller.updateTableView();
+        });
+    }
+
+    private void cadastroTara(Event event){
+        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/tara.fxml", "Cadastro de Tara", (TaraController controller) -> controller.setServices(new VeiculoServices()));
+    }
+
     @FXML
     private void onBtPesagemExportacaoAction(ActionEvent event) {
-        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/exportacao.fxml", "Pesagem Exportação", (PesagemController controller) -> {
-            controller.setService(new AutorizacaoEntradaSaidaServices());
-            controller.setVeiculoServices(new VeiculoServices());
-            controller.setPrimeiraPesagem(true);
-        });
+        pesagemExportacao(event);
     }
 
     @FXML
     private void onBtCadastroTara(ActionEvent event) {
-        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/tara.fxml", "Cadastro de Tara", (TaraController controller) -> controller.setServices(new VeiculoServices()));
+        cadastroTara(event);
     }
 
     private synchronized <T> void loadView(Stage parentStage, String absolutName, String title, Consumer<T> initializingAction) {
@@ -113,8 +123,6 @@ public class HomeController implements Initializable {
             e.printStackTrace();
         }
     }
-
-
 
     @FXML
     private void onBtActionTrocaUsuarioAction() throws IOException {

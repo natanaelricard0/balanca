@@ -1,11 +1,10 @@
 package br.com.cdp.balanca.controller;
 
-import br.com.cdp.balanca.db.DbException;
 import br.com.cdp.balanca.model.entities.AutorizacaoEntradaSaida;
+import br.com.cdp.balanca.model.entities.Pesagem;
 import br.com.cdp.balanca.model.entities.Veiculo;
 import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
 import br.com.cdp.balanca.model.services.VeiculoServices;
-import br.com.cdp.balanca.utils.Alerts;
 import br.com.cdp.balanca.utils.Constraints;
 import br.com.cdp.balanca.utils.LeituraPortaCOM;
 import javafx.beans.value.ChangeListener;
@@ -28,6 +27,8 @@ public class PesagemController implements Initializable {
     private VeiculoServices veiculoServices;
 
     private Boolean primeiraPesagem;
+
+    private Pesagem pesagem;
 
     @FXML
     private TextField txtVeiculo;
@@ -81,6 +82,8 @@ public class PesagemController implements Initializable {
 
     public void setPrimeiraPesagem(boolean primeiraPesagem){this.primeiraPesagem = primeiraPesagem;}
 
+    public void setPesagem(Pesagem pesagem){this.pesagem = pesagem;}
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Constraints.setTextFieldInteger(txtAutorizacaoEntrada);
@@ -89,56 +92,54 @@ public class PesagemController implements Initializable {
     }
 
     public void initializeFocus(){
-        txtAutorizacaoEntrada.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                if(t1){
-
-                }else if(!txtAutorizacaoEntrada.getText().equals("")){
-                    AutorizacaoEntradaSaida autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
-                    if(autorizacaoIsValid(autorizacaoEntradaSaida)){
-                        if(autorizacaoIsUsed(autorizacaoEntradaSaida)){
-                            lblErrorAutorizacao.setStyle("-fx-background-color: green");
-                            txtAutorizacaoEntrada.setStyle("-fx-border-color: green");
-                            lblErrorAutorizacao.setText("Autorização é Válida");
-                        }else {
-                            lblErrorAutorizacao.setStyle("-fx-background-color: red");
-                            txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
-                            lblErrorAutorizacao.setText("Autorização Já Foi Utilizada no dia "+sdf2.format(autorizacaoEntradaSaida.getDataUso()));
-                        }
-                    }else {
-                        lblErrorAutorizacao.setStyle("-fx-background-color: red");
-                        txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
-                        lblErrorAutorizacao.setText("Autorização Não é Válida");
-                    }
-                }
-            }
+        txtAutorizacaoEntrada.setOnAction(actionEvent -> {
+            validarAutorizacao();
         });
 
-        txtVeiculo.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                if(t1){
-                    System.out.println("ganhou");
+        txtVeiculo.setOnAction(actionEvent -> {
+            validarVeiculo();
+        });
+    }
+
+    private void validarAutorizacao(){
+        if(!txtAutorizacaoEntrada.getText().equals("")){
+            AutorizacaoEntradaSaida autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
+            if(autorizacaoIsValid(autorizacaoEntradaSaida)){
+                if(autorizacaoIsUsed(autorizacaoEntradaSaida)){
+                    lblErrorAutorizacao.setStyle("-fx-background-color: green");
+                    txtAutorizacaoEntrada.setStyle("-fx-border-color: green");
+                    lblErrorAutorizacao.setText("Autorização é Válida");
                 }else {
-                    buscarVeiculo();
-                    if(veiculo != null){
-                        lblErrorVeiculo.setStyle("-fx-background-color: green");
-                        txtVeiculo.setStyle("-fx-border-color: green");
-                        lblErrorVeiculo.setText("PLACA DO VEICULO: "+veiculo.getPlacaVeiculo());
-                    } else {
-                        lblErrorVeiculo.setStyle("-fx-background-color: red");
-                        txtVeiculo.setStyle("-fx-border-color: red");
-                        lblErrorVeiculo.setText("VEICULO NÃO ENCONTRADO");
-                    }
+                    lblErrorAutorizacao.setStyle("-fx-background-color: red");
+                    txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
+                    lblErrorAutorizacao.setText("Autorização Já Foi Utilizada no dia "+sdf2.format(autorizacaoEntradaSaida.getDataUso()));
                 }
+            }else {
+                lblErrorAutorizacao.setStyle("-fx-background-color: red");
+                txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
+                lblErrorAutorizacao.setText("Autorização Não é Válida");
             }
-        });
+        }
+    }
+
+    private void validarVeiculo(){
+        buscarVeiculo();
+        if(veiculo != null){
+            lblErrorVeiculo.setStyle("-fx-background-color: green");
+            txtVeiculo.setStyle("-fx-border-color: green");
+            lblErrorVeiculo.setText("PLACA DO VEICULO: "+veiculo.getPlacaVeiculo());
+        } else {
+            lblErrorVeiculo.setStyle("-fx-background-color: red");
+            txtVeiculo.setStyle("-fx-border-color: red");
+            lblErrorVeiculo.setText("VEICULO NÃO ENCONTRADO");
+        }
     }
 
     private void buscarVeiculo(){
         veiculo = veiculoServices.findById(Integer.parseInt(txtVeiculo.getText()));
     }
+
+    public void buscarVeiculoPlaca(String placa){ veiculo = veiculoServices.findByPlca(placa);}
 
     private Boolean autorizacaoIsValid(AutorizacaoEntradaSaida autorizacaoEntradaSaida){
         if(autorizacaoEntradaSaida == null){
@@ -155,6 +156,23 @@ public class PesagemController implements Initializable {
         } else {
             return true;
         }
+    }
+
+    public void updateFormData(){
+        if(pesagem == null){
+            throw new IllegalStateException("Pesagem Is Null");
+        }
+        txtVeiculo.setText(veiculo.getIdVeiculo().toString());
+        validarVeiculo();
+        txtAutorizacaoEntrada.setText(pesagem.getIdAutorizacao().toString());
+        validarAutorizacao();
+        txtNotaFiscal.setText(pesagem.getNotaFiscal());
+        txtPesoCheio.setText(pesagem.getPesoBruto().toString());
+        txtDataHoraPesagemCheio.setText(pesagem.getDataPrimeiraPesagem().toString());
+    }
+
+    private void setPesoLiquido(){
+
     }
 
     @FXML

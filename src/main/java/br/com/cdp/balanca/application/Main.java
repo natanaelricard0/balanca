@@ -45,7 +45,6 @@ public class Main extends Application {
     public static void changeScene(String tela) {
         switch (tela) {
             case "Login":
-                stage.close();
                 stage.setScene(loginScene);
                 stage.show();
                 break;

@@ -8,9 +8,15 @@ public interface PesagemDAO {
 
     void insert(Pesagem pesagem);
 
-    void update(Pesagem pesagem);
+    void insertPesagemPendente(Pesagem pesagem);
+
+    void updatePesagemPendente(Pesagem pesagem);
 
     List<Pesagem> findAll();
+
+    List<Pesagem> pesagensPendentes();
+
+    List<Pesagem> buscarPesagensPorPlaca(String valor);
 
     Pesagem findById();
 }

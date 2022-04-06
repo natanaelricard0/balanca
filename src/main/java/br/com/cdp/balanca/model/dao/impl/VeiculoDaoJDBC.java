@@ -22,7 +22,7 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
         PreparedStatement st = null;
         ResultSet rs = null;
         try {
-            st = conn.prepareStatement("EXECUTE pr_BalancaBuscarTaraVeiculo ?");
+            st = conn.prepareStatement("SELECT * FROM veiculo WHERE nsu_veiculo = ?");
             st.setInt(1,id);
 
             rs = st.executeQuery();
@@ -43,20 +43,15 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
     }
 
     @Override
-    public void insertTara(Veiculo veiculo) {
+    public void updateTara(Veiculo veiculo) {
         PreparedStatement st = null;
         try{
-            st = conn.prepareStatement("EXECUTE pr_Balanca_InserirVeiculoPesagemImportacao ?,?,?,?,?,?,?");
-            st.setInt(1,findLastIdIncrement());
-            st.setInt(2, veiculo.getIdVeiculo());
-            st.setFloat(3,veiculo.getPesoTara());
-            st.setInt(4,1);
-            st.setTimestamp(5, veiculo.getDataPesagem());
-            st.setString(6, Main.getDataUser().getLoginScap());
-            st.setString(7, Main.getDataUser().getNome().toUpperCase());
+            st = conn.prepareStatement("UPDATE veiculo SET no_tara = ? WHERE nsu_veiculo = ?");
+            st.setFloat(1,veiculo.getPesoTara());
+            st.setInt(2,veiculo.getIdVeiculo());
 
-            st.execute();
-        }catch (SQLException e){
+            st.executeUpdate();
+        } catch (SQLException e) {
             throw new DbException(e.getMessage());
         }finally {
             DB.closeStatment(st);
@@ -64,34 +59,21 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
     }
 
     @Override
-    public List<Veiculo> findAll() {
-        return null;
-    }
-
-    @Override
-    public List<Veiculo> findPesagemById(int id) {
-        return null;
-    }
-
-    @Override
-    public Veiculo findVeiculo(int id) {
+    public Veiculo findByPlaca(String placa) {
         PreparedStatement st = null;
         ResultSet rs = null;
-
-        try{
-            st = conn.prepareStatement("SELECT * FROM veiculo WHERE nsu_veiculo = ?");
-            st.setInt(1,id);
+        try {
+            st = conn.prepareStatement("SELECT * FROM veiculo WHERE nm_placa = ?");
+            st.setString(1,placa);
 
             rs = st.executeQuery();
 
             if(rs.next()){
-                Veiculo veiculo = new Veiculo();
-                veiculo.setIdVeiculo(rs.getInt("nsu_veiculo"));
-                veiculo.setPlacaVeiculo(rs.getString("nm_placa").replace(" ",""));
+                Veiculo veiculo = instatiateVeiculo(rs);
                 return veiculo;
             }
             return null;
-        }catch (SQLException e) {
+        }catch (SQLException e){
             throw new DbException(e.getMessage());
         }finally {
             DB.closeStatment(st);
@@ -99,35 +81,13 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
         }
     }
 
-    @Override
-    public Integer findLastIdIncrement() {
-        PreparedStatement st = null;
-        ResultSet rs = null;
-
-        try {
-            st = conn.prepareStatement("SELECT TOP 1 nsu_pesagem + 1 as nsu_pesagem FROM veiculo_pesagem_importacao ORDER BY nsu_pesagem DESC");
-
-            rs = st.executeQuery();
-
-            if(rs.next()){
-                return rs.getInt("nsu_pesagem");
-            }
-
-            return null;
-        }catch (SQLException e) {
-            throw new DbException(e.getMessage());
-        }
-    }
 
     private Veiculo instatiateVeiculo(ResultSet rs) throws SQLException {
         Veiculo veiculo = new Veiculo();
         veiculo.setIdVeiculo(rs.getInt("nsu_veiculo"));
         veiculo.setIdPessoa(rs.getInt("id_pessoa"));
         veiculo.setPlacaVeiculo(rs.getString("nm_placa").replace(" ", ""));
-        veiculo.setPesoTara(rs.getFloat("peso_tara"));
-        veiculo.setDataPesagem(rs.getTimestamp("dt_pesagem1"));
-        veiculo.setUsuario(rs.getString("nm_usuario1"));
-        veiculo.setNomeUsuario(rs.getString("nm_operador1"));
+        veiculo.setPesoTara(rs.getFloat("no_tara"));
         return veiculo;
     }
 }

@@ -5,12 +5,10 @@ import java.sql.Timestamp;
 public class Pesagem {
 
     private Integer idAutorizacao;
-    private Integer idBalanca;
     private Integer idPesagem;
     private Float pesoBruto;
     private Float tara;
     private String placa;
-    private String placaCarreta;
     private String notaFiscal;
     private String usuarioPrimeiraPesagem;
     private String usuarioSegundaPesagem;
@@ -21,14 +19,12 @@ public class Pesagem {
 
     }
 
-    public Pesagem(Integer idAutorizacao, Integer idBalanca, Integer idPesagem, Float pesoBruto, Float tara, String placa, String placaCarreta, String notaFiscal, String usuarioPrimeiraPesagem, String usuarioSegundaPesagem, Timestamp dataPrimeiraPesagem, Timestamp dataSegundapesagem) {
+    public Pesagem(Integer idAutorizacao, Integer idPesagem, Float pesoBruto, Float tara, String placa, String notaFiscal, String usuarioPrimeiraPesagem, String usuarioSegundaPesagem, Timestamp dataPrimeiraPesagem, Timestamp dataSegundapesagem) {
         this.idAutorizacao = idAutorizacao;
-        this.idBalanca = idBalanca;
         this.idPesagem = idPesagem;
         this.pesoBruto = pesoBruto;
         this.tara = tara;
         this.placa = placa;
-        this.placaCarreta = placaCarreta;
         this.notaFiscal = notaFiscal;
         this.usuarioPrimeiraPesagem = usuarioPrimeiraPesagem;
         this.usuarioSegundaPesagem = usuarioSegundaPesagem;
@@ -42,14 +38,6 @@ public class Pesagem {
 
     public void setIdAutorizacao(Integer idAutorizacao) {
         this.idAutorizacao = idAutorizacao;
-    }
-
-    public Integer getIdBalanca() {
-        return idBalanca;
-    }
-
-    public void setIdBalanca(Integer idBalanca) {
-        this.idBalanca = idBalanca;
     }
 
     public Integer getIdPesagem() {
@@ -82,14 +70,6 @@ public class Pesagem {
 
     public void setPlaca(String placa) {
         this.placa = placa;
-    }
-
-    public String getPlacaCarreta() {
-        return placaCarreta;
-    }
-
-    public void setPlacaCarreta(String placaCarreta) {
-        this.placaCarreta = placaCarreta;
     }
 
     public String getNotaFiscal() {

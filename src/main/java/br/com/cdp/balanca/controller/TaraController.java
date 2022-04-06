@@ -5,8 +5,6 @@ import br.com.cdp.balanca.model.services.VeiculoServices;
 import br.com.cdp.balanca.utils.Alerts;
 import br.com.cdp.balanca.utils.Constraints;
 import br.com.cdp.balanca.utils.LeituraPortaCOM;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -15,9 +13,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.ResourceBundle;
 
 public class TaraController implements Initializable{
@@ -39,12 +34,7 @@ public class TaraController implements Initializable{
     @FXML
     private TextField txtPeso;
 
-    @FXML
-    private TextField txtDataHoraPesagem;
-
     Veiculo veiculo;
-
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     public void setServices(VeiculoServices services) {
         this.services = services;
@@ -53,23 +43,16 @@ public class TaraController implements Initializable{
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initialNodes();
-        txtIdVeiculo.focusedProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observableValue, Boolean aBoolean, Boolean t1) {
-                if(t1){
-                    System.out.println("ganhou");
-                }else {
-                    buscarVeiculo();
-                    if(veiculo != null){
-                        lblPlacaRecuperada.setStyle("-fx-background-color: green");
-                        txtIdVeiculo.setStyle("-fx-border-color: green");
-                        lblPlacaRecuperada.setText("PLACA DO VEICULO: "+veiculo.getPlacaVeiculo());
-                    } else {
-                        lblPlacaRecuperada.setStyle("-fx-background-color: red");
-                        txtIdVeiculo.setStyle("-fx-border-color: red");
-                        lblPlacaRecuperada.setText("VEICULO NÃO ENCONTRADO");
-                    }
-                }
+        txtIdVeiculo.setOnAction(actionEvent -> {
+            buscarVeiculo();
+            if(veiculo != null){
+                lblPlacaRecuperada.setStyle("-fx-background-color: green");
+                txtIdVeiculo.setStyle("-fx-border-color: green");
+                lblPlacaRecuperada.setText("PLACA DO VEICULO: "+veiculo.getPlacaVeiculo());
+            } else {
+                lblPlacaRecuperada.setStyle("-fx-background-color: red");
+                txtIdVeiculo.setStyle("-fx-border-color: red");
+                lblPlacaRecuperada.setText("VEICULO NÃO ENCONTRADO");
             }
         });
     }
@@ -87,7 +70,6 @@ public class TaraController implements Initializable{
     private void btOnActionPesar(){
         Double valorRecuperado = LeituraPortaCOM.leituraPeso();
         txtPeso.setText(valorRecuperado.toString());
-        txtDataHoraPesagem.setText(sdf.format(new Date()));
     }
 
     private boolean validationFields(){
@@ -103,11 +85,9 @@ public class TaraController implements Initializable{
         if(validationFields()) {
             if (veiculo != null) {
                 veiculo.setPesoTara(Float.parseFloat(txtPeso.getText()));
-                veiculo.setDataPesagem(Timestamp.valueOf(txtDataHoraPesagem.getText()));
-                services.insert(veiculo);
+                services.updateTara(veiculo);
                 txtIdVeiculo.clear();
                 txtPeso.clear();
-                txtDataHoraPesagem.clear();
                 Alerts.showAlert("Sucesso", "Pesagem de Tara Cadastrada", "Pesagem de Tara do veiculo " + veiculo.getPlacaVeiculo() + " foi concluido", Alert.AlertType.INFORMATION);
             } else {
                 Alerts.showAlert("Error", "Código Inválido", "Código de Veiculo não foi localizado", Alert.AlertType.ERROR);

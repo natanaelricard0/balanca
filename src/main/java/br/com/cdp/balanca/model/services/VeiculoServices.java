@@ -9,23 +9,13 @@ import java.util.List;
 public class VeiculoServices {
     VeiculoDAO service = DaoFactory.createVeiculoDao();
 
-    public void insert(Veiculo veiculo){
-        service.insertTara(veiculo);
-    }
-
-    public List<Veiculo> findAll(){
-        return service.findAll();
-    }
-
-    public List<Veiculo> findPesagenById(int id){
-        return service.findPesagemById(id);
-    }
-
     public  Veiculo findById(int id){
         return service.findById(id);
     }
 
-    public Veiculo findPlacaVeiculo(int id){
-        return service.findVeiculo(id);
+    public Veiculo findByPlca(String placa){
+        return service.findByPlaca(placa);
     }
+
+    public void updateTara(Veiculo veiculo){ service.updateTara(veiculo); }
 }
