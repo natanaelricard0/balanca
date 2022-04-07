@@ -17,7 +17,7 @@ public class LeituraPortaCOM {
             port.setParams(BAUDRATE_9600, DATABITS_8, STOPBITS_2, PARITY_NONE);
 //            port.writeBytes(new byte[]{0x04});
             port.setEventsMask(MASK_RXCHAR);
-            byte[] buffer = port.readBytes(6, 6000);
+            byte[] buffer = port.readBytes(8, 6000);
             String valor = new String(buffer);
             peso = Double.parseDouble(convertStringToDigit(valor));
             return peso;

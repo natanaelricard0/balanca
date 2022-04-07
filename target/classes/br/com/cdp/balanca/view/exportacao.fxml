@@ -44,7 +44,7 @@
                         <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnSalvar" mnemonicParsing="false">
+                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#onBtActionSalvar">
                             <graphic>
                                 <FontIcon iconColor="WHITE" iconLiteral="mdi-content-save" iconSize="30" />
                             </graphic>

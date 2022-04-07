@@ -13,6 +13,7 @@ import br.com.cdp.balanca.utils.ResourceStage;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -58,6 +59,9 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
 
     @FXML
     Button btnPesquisar;
+
+    @FXML
+    Button btnCadastrar;
 
     @FXML
     TextField txtPesquisar;
@@ -126,12 +130,19 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
             VBox vbox = loader.load();
 
             PesagemController controller = loader.getController();
-            controller.setPesagem(obj);
-            controller.setPrimeiraPesagem(false);
             controller.setService(new AutorizacaoEntradaSaidaServices());
             controller.setVeiculoServices(new VeiculoServices());
-            controller.buscarVeiculoPlaca(obj.getPlaca());
-            controller.updateFormData();
+            controller.setPesagemServices(new PesagemServices());
+            if (obj == null) {
+                controller.setPesagem(new Pesagem());
+                controller.setPrimeiraPesagem(true);
+            } else {
+                controller.setPesagem(obj);
+                controller.setPrimeiraPesagem(false);
+                controller.buscarVeiculoPlaca(obj.getPlaca());
+                controller.updateFormData();
+            }
+
 
             DialogForm.createDialogForm(vbox, title, parentStage);
         } catch (IOException e) {
@@ -142,6 +153,11 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
     @Override
     public void onDataChanged() {
         updateTableView();
+    }
+
+    @FXML
+    private void onActionCadastrar(ActionEvent event) {
+        createDialogForm(null, ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/exportacao.fxml", "Cadastro de pesagem de exportação");
     }
 
     @FXML

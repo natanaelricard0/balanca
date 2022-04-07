@@ -1,21 +1,27 @@
 package br.com.cdp.balanca.controller;
 
+import br.com.cdp.balanca.application.Main;
 import br.com.cdp.balanca.model.entities.AutorizacaoEntradaSaida;
 import br.com.cdp.balanca.model.entities.Pesagem;
 import br.com.cdp.balanca.model.entities.Veiculo;
 import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
+import br.com.cdp.balanca.model.services.PesagemServices;
 import br.com.cdp.balanca.model.services.VeiculoServices;
+import br.com.cdp.balanca.utils.Alerts;
 import br.com.cdp.balanca.utils.Constraints;
 import br.com.cdp.balanca.utils.LeituraPortaCOM;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
 import java.net.URL;
+import java.sql.Timestamp;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -25,6 +31,8 @@ public class PesagemController implements Initializable {
     private AutorizacaoEntradaSaidaServices service;
 
     private VeiculoServices veiculoServices;
+
+    private PesagemServices pesagemServices;
 
     private Boolean primeiraPesagem;
 
@@ -68,9 +76,9 @@ public class PesagemController implements Initializable {
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    SimpleDateFormat sdf2 = new SimpleDateFormat("dd-MM-yyyy");
-
     Veiculo veiculo;
+
+    AutorizacaoEntradaSaida autorizacaoEntradaSaida;
 
     public void setService(AutorizacaoEntradaSaidaServices service) {
         this.service = service;
@@ -84,14 +92,18 @@ public class PesagemController implements Initializable {
 
     public void setPesagem(Pesagem pesagem){this.pesagem = pesagem;}
 
+    public void setPesagemServices(PesagemServices pesagemServices) {
+        this.pesagemServices = pesagemServices;
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Constraints.setTextFieldInteger(txtAutorizacaoEntrada);
         Constraints.setTextFieldInteger(txtVeiculo);
-        initializeFocus();
+        initialize();
     }
 
-    public void initializeFocus(){
+    public void initialize(){
         txtAutorizacaoEntrada.setOnAction(actionEvent -> {
             validarAutorizacao();
         });
@@ -103,16 +115,18 @@ public class PesagemController implements Initializable {
 
     private void validarAutorizacao(){
         if(!txtAutorizacaoEntrada.getText().equals("")){
-            AutorizacaoEntradaSaida autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
+            autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
             if(autorizacaoIsValid(autorizacaoEntradaSaida)){
-                if(autorizacaoIsUsed(autorizacaoEntradaSaida)){
+                boolean a = autorizacaoEntradaSaida.autorizacaIsValid();
+                boolean b = autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E");
+                if(autorizacaoEntradaSaida.autorizacaIsValid() && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
                     lblErrorAutorizacao.setStyle("-fx-background-color: green");
                     txtAutorizacaoEntrada.setStyle("-fx-border-color: green");
                     lblErrorAutorizacao.setText("Autorização é Válida");
                 }else {
                     lblErrorAutorizacao.setStyle("-fx-background-color: red");
                     txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
-                    lblErrorAutorizacao.setText("Autorização Já Foi Utilizada no dia "+sdf2.format(autorizacaoEntradaSaida.getDataUso()));
+                    lblErrorAutorizacao.setText("Autorização Não é válida para essa Operação");
                 }
             }else {
                 lblErrorAutorizacao.setStyle("-fx-background-color: red");
@@ -149,15 +163,6 @@ public class PesagemController implements Initializable {
         }
     }
 
-    private boolean autorizacaoIsUsed(AutorizacaoEntradaSaida autorizacaoEntradaSaida){
-
-        if(autorizacaoEntradaSaida.autorizacaIsValid()){
-            return false;
-        } else {
-            return true;
-        }
-    }
-
     public void updateFormData(){
         if(pesagem == null){
             throw new IllegalStateException("Pesagem Is Null");
@@ -172,7 +177,45 @@ public class PesagemController implements Initializable {
     }
 
     private void setPesoLiquido(){
+        double pesocheio = Double.parseDouble(txtPesoCheio.getText());
+        double pesoVazio = Double.parseDouble(txtPesoVazio.getText());
+        double total = pesocheio - pesoVazio;
+        txtPesoLiquido.setText(String.valueOf(total));
+    }
 
+    @FXML
+    private void onBtActionSalvar() {
+        if (validateFields()){
+            if(primeiraPesagem == true){
+                pesagem.setIdAutorizacao(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida());
+                pesagem.setDataPrimeiraPesagem(Timestamp.valueOf(txtDataHoraPesagemCheio.getText()));
+                pesagem.setPesoBruto(Float.parseFloat(txtPesoCheio.getText()));
+                pesagem.setPlaca(veiculo.getPlacaVeiculo());
+                pesagem.setUsuarioPrimeiraPesagem(Main.getDataUser().getLoginScap());
+                pesagem.setNotaFiscal(txtNotaFiscal.getText());
+
+                pesagemServices.insertPrimeiraPesagem(pesagem);
+
+                Alerts.showAlert("Sucesso","", "Pesagem inserida com sucesso", Alert.AlertType.INFORMATION);
+            }else {
+
+            }
+
+        }else {
+            Alerts.showAlert("Error","","Campos obrigatórios não são válidos ou estão em branco", Alert.AlertType.ERROR);
+        }
+    }
+
+    private boolean validateFields(){
+        validarVeiculo();
+        validarAutorizacao();
+        if(veiculo != null || autorizacaoEntradaSaida != null){
+            if(!autorizacaoEntradaSaida.autorizacaIsValid() || !autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
+                return false;
+            }else return true;
+        }else {
+            return false;
+        }
     }
 
     @FXML
@@ -184,6 +227,7 @@ public class PesagemController implements Initializable {
         }else {
             txtPesoVazio.setText(valorRecuperado.toString());
             txtDataHoraPesagemVazio.setText(sdf.format(new Date()));
+            setPesoLiquido();
         }
     }
 }

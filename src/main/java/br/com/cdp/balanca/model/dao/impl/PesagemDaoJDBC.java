@@ -131,13 +131,13 @@ public class PesagemDaoJDBC implements PesagemDAO {
 
         List<Pesagem> list = new ArrayList<>();
         try{
-            st = conn.prepareStatement("select * from pesagem WHERE nm_placa LIKE ?");
+            st = conn.prepareStatement("select * from pesagem_pendente WHERE nm_placa LIKE ?");
             st.setString(1,"%"+valor+"%");
 
             rs = st.executeQuery();
 
             while (rs.next()){
-                list.add(instatiatePesagem(rs));
+                list.add(instatiatePesagemPendente(rs));
             }
             return list;
         } catch (SQLException e) {

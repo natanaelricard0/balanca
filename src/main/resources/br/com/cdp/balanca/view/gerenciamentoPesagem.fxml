@@ -25,7 +25,7 @@
         </rowConstraints>
          <children>
             <TextField fx:id="txtPesquisar" GridPane.columnIndex="2" />
-            <Button mnemonicParsing="false" text="Adicionar Pesagem" />
+            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#onActionCadastrar" text="Adicionar Pesagem" />
             <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#onActionPesquisar" text="Pesquisar" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />

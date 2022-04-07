@@ -84,7 +84,7 @@ public class AutorizacaoEntradaSaida {
 
     public Boolean autorizacaIsValid() {
         if (idVeiculo == 0 || idPessoa == 0 || dataUso == null) {
-            return false;
-        } else return true;
+            return true;
+        } else return false;
     }
 }
