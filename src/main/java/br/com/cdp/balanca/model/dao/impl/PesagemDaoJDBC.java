@@ -27,7 +27,7 @@ public class PesagemDaoJDBC implements PesagemDAO {
             st = conn.prepareStatement("EXECUTE pr_Balanca_InserirPesagem ?,?,?,?,?,?,?,?,?,?,?,?");
             st.setInt(1, pesagem.getIdAutorizacao());
             st.setInt(2, 1);
-            st.setInt(3, pesagem.getIdPesagem());
+            st.setInt(3, lastIdPesagem());
             st.setFloat(4, pesagem.getPesoBruto());
             st.setFloat(5, pesagem.getTara());
             st.setString(6, pesagem.getPlaca());
@@ -67,6 +67,24 @@ public class PesagemDaoJDBC implements PesagemDAO {
         }
     }
 
+    private Integer lastIdPesagem(){
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try{
+            st = conn.prepareStatement("SELECT TOP 1 nsu_pesagem + 1 AS lastId FROM pesagem ORDER BY nsu_pesagem DESC");
+
+            rs = st.executeQuery();
+
+            if(rs.next()){
+                int valor = rs.getInt("lastId");
+                return valor;
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        }
+    }
+
     @Override
     public void updatePesagemPendente(Pesagem pesagem) {
         PreparedStatement st = null;
@@ -76,6 +94,7 @@ public class PesagemDaoJDBC implements PesagemDAO {
             st.setFloat(1,pesagem.getTara());
             st.setTimestamp(2, pesagem.getDataSegundapesagem());
             st.setString(3, pesagem.getUsuarioSegundaPesagem());
+            st.setInt(4,pesagem.getIdPesagem());
 
             st.executeUpdate();
         }catch (SQLException e){

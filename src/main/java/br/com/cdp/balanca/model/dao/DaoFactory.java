@@ -10,4 +10,5 @@ public class DaoFactory {
     public static PesagemDAO createPesagemDao(){return new PesagemDaoJDBC(DB.getConnection());}
     public static AutorizacaoEntradaSaidaDAO createAutorizacaoEntradaSaidaDao(){return new AutorizacaoEntradaSaidaDaoJDBC(DB.getConnection());}
     public static ItemPesagemDAO createItemPesagemDao(){return  new ItemPesagemDaoJDBC(DB.getConnection());}
+    public static ItemAutorizacaoDAO createItemAutorizacaoDao(){ return new ItemAutorizacaoDaoJDBC(DB.getConnection());}
 }

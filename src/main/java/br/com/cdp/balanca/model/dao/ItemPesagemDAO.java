@@ -5,4 +5,6 @@ import br.com.cdp.balanca.model.entities.ItemPesagem;
 public interface ItemPesagemDAO {
 
     void insert(ItemPesagem itemPesagem);
+
+    ItemPesagem findByAutorizacao(int idAutorizacao);
 }

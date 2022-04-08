@@ -117,9 +117,7 @@ public class PesagemController implements Initializable {
         if(!txtAutorizacaoEntrada.getText().equals("")){
             autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
             if(autorizacaoIsValid(autorizacaoEntradaSaida)){
-                boolean a = autorizacaoEntradaSaida.autorizacaIsValid();
-                boolean b = autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E");
-                if(autorizacaoEntradaSaida.autorizacaIsValid() && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
+                if(service.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
                     lblErrorAutorizacao.setStyle("-fx-background-color: green");
                     txtAutorizacaoEntrada.setStyle("-fx-border-color: green");
                     lblErrorAutorizacao.setText("Autorização é Válida");
@@ -198,7 +196,11 @@ public class PesagemController implements Initializable {
 
                 Alerts.showAlert("Sucesso","", "Pesagem inserida com sucesso", Alert.AlertType.INFORMATION);
             }else {
+                pesagem.setUsuarioSegundaPesagem(Main.getDataUser().getLoginScap());
+                pesagem.setTara(Float.parseFloat(txtPesoVazio.getText()));
+                pesagem.setDataSegundapesagem(Timestamp.valueOf(txtDataHoraPesagemVazio.getText()));
 
+                pesagemServices.insertSegundaPesagem(pesagem, Float.parseFloat(txtPesoLiquido.getText()));
             }
 
         }else {
@@ -210,12 +212,10 @@ public class PesagemController implements Initializable {
         validarVeiculo();
         validarAutorizacao();
         if(veiculo != null || autorizacaoEntradaSaida != null){
-            if(!autorizacaoEntradaSaida.autorizacaIsValid() || !autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
+            if(!service.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) || !autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
                 return false;
             }else return true;
-        }else {
-            return false;
-        }
+        }else return false;
     }
 
     @FXML

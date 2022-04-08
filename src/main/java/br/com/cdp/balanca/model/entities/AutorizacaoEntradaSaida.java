@@ -81,10 +81,4 @@ public class AutorizacaoEntradaSaida {
     public void setTipoEntradaSaida(String tipoEntradaSaida) {
         this.tipoEntradaSaida = tipoEntradaSaida;
     }
-
-    public Boolean autorizacaIsValid() {
-        if (idVeiculo == 0 || idPessoa == 0 || dataUso == null) {
-            return true;
-        } else return false;
-    }
 }

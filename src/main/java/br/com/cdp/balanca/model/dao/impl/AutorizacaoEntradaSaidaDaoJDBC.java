@@ -45,7 +45,6 @@ public class AutorizacaoEntradaSaidaDaoJDBC implements AutorizacaoEntradaSaidaDA
         ResultSet rs = null;
 
         try{
-            if (autorizacaoEntradaSaida.autorizacaIsValid()){
                 st = conn.prepareStatement("UPDATE autorizacao_entrada_saida SET nsu_veiculo = ?, " +
                         "nsu_pessoa = ?, " +
                         "dt_uso = ?, " +
@@ -57,7 +56,7 @@ public class AutorizacaoEntradaSaidaDaoJDBC implements AutorizacaoEntradaSaidaDA
                 st.setInt(4, autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida());
 
                 st.executeUpdate();
-            }
+
         }catch (SQLException e){
             throw new DbException(e.getMessage());
         }finally {
