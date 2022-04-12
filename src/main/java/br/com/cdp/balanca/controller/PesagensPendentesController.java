@@ -132,6 +132,7 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
             PesagemController controller = loader.getController();
             controller.setService(new AutorizacaoEntradaSaidaServices());
             controller.setVeiculoServices(new VeiculoServices());
+            controller.subscribeDataChangeListener(this);
             controller.setPesagemServices(new PesagemServices());
             if (obj == null) {
                 controller.setPesagem(new Pesagem());

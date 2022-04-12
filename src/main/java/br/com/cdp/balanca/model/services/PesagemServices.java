@@ -41,4 +41,15 @@ public class PesagemServices {
         itemPesagem.setPesoLiquido(pesoLiquido);
         itemPesagemService.insert(itemPesagem);
     }
+
+    public void insertPesagemImportacao(Pesagem pesagem, Float pesoLiquido){
+        service.insert(pesagem);
+        ItemAutorizacao itemAutorizacao = itemAutorizacaoService.findById(pesagem.getIdAutorizacao());
+        ItemPesagem itemPesagem = new ItemPesagem();
+        itemPesagem.setIdAutorizacaoEntradaSaida(pesagem.getIdAutorizacao());
+        itemPesagem.setIdItemIO(itemAutorizacao.getIdItemEmbarqueDesembarque());
+        itemPesagem.setIdSubitemIO(itemAutorizacao.getIdSubitemEmbarqueDesembarque());
+        itemPesagem.setPesoLiquido(pesoLiquido);
+        itemPesagemService.insert(itemPesagem);
+    }
 }

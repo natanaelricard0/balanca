@@ -53,7 +53,7 @@
                         <Insets right="25.0" />
                     </GridPane.margin>
                 </Button>
-                <Button fx:id="btnImportacaoSaidaRodoviaria" mnemonicParsing="false" GridPane.rowIndex="3">
+                <Button fx:id="btnImportacaoSaidaRodoviaria" mnemonicParsing="false" onAction="#onBtPesagemImportacaoSaidaRodoviaria" GridPane.rowIndex="3">
                     <graphic>
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-truck-delivery" iconSize="40" />
                     </graphic>
@@ -101,11 +101,11 @@
                         <Insets right="25.0" />
                     </GridPane.margin>
                 </Button>
-                <Label styleClass="label-bright" text="Gerenciamento de Funcioanrio" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <Label styleClass="label-bright" text="Pesagem De Exportação" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Label styleClass="label-bright" text="Pesagem Importação Saída Rodoviária" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label styleClass="label-bright" text="Gerenciamento de Funcioanrio (F6)" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label styleClass="label-bright" text="Pesagem De Exportação (F2)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label styleClass="label-bright" text="Pesagem Importação Saída Rodoviária (F3)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 <Label styleClass="label-bright" text="Pesagem Importação Descarga de Navio" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <Label styleClass="label-bright" text="Tara de Veículo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label styleClass="label-bright" text="Tara de Veículo (F1)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label styleClass="label-bright" text="Relatórios" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                 <Label styleClass="label-bright" text="Configuração" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                 <Label styleClass="label-bright" text="Trocar de Usuário" GridPane.columnIndex="1" GridPane.rowIndex="8" />

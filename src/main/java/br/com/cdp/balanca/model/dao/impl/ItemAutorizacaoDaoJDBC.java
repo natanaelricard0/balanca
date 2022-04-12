@@ -24,7 +24,7 @@ public class ItemAutorizacaoDaoJDBC implements ItemAutorizacaoDAO {
         ResultSet rs = null;
 
         try{
-            st = conn.prepareStatement("select * from autorizacao_entrada_saida where nsu_autorizacao_e_s = ?");
+            st = conn.prepareStatement("select * from item_autorizacao where nsu_autorizacao_e_s = ?");
             st.setInt(1,idAutorizacao);
 
             rs = st.executeQuery();

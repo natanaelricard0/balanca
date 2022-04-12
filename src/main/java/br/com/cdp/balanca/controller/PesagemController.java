@@ -1,6 +1,7 @@
 package br.com.cdp.balanca.controller;
 
 import br.com.cdp.balanca.application.Main;
+import br.com.cdp.balanca.listeners.DataChangeListeners;
 import br.com.cdp.balanca.model.entities.AutorizacaoEntradaSaida;
 import br.com.cdp.balanca.model.entities.Pesagem;
 import br.com.cdp.balanca.model.entities.Veiculo;
@@ -10,8 +11,11 @@ import br.com.cdp.balanca.model.services.VeiculoServices;
 import br.com.cdp.balanca.utils.Alerts;
 import br.com.cdp.balanca.utils.Constraints;
 import br.com.cdp.balanca.utils.LeituraPortaCOM;
+import br.com.cdp.balanca.utils.ResourceStage;
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -23,7 +27,9 @@ import java.net.URL;
 import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class PesagemController implements Initializable {
@@ -37,6 +43,8 @@ public class PesagemController implements Initializable {
     private Boolean primeiraPesagem;
 
     private Pesagem pesagem;
+
+    private List<DataChangeListeners> dataChangeListeners = new ArrayList<>();
 
     @FXML
     private TextField txtVeiculo;
@@ -182,7 +190,7 @@ public class PesagemController implements Initializable {
     }
 
     @FXML
-    private void onBtActionSalvar() {
+    private void onBtActionSalvar(ActionEvent event) {
         if (validateFields()){
             if(primeiraPesagem == true){
                 pesagem.setIdAutorizacao(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida());
@@ -195,16 +203,31 @@ public class PesagemController implements Initializable {
                 pesagemServices.insertPrimeiraPesagem(pesagem);
 
                 Alerts.showAlert("Sucesso","", "Pesagem inserida com sucesso", Alert.AlertType.INFORMATION);
+                notifyDataChangeListener();
+                ResourceStage.currentStage(event).close();
             }else {
                 pesagem.setUsuarioSegundaPesagem(Main.getDataUser().getLoginScap());
                 pesagem.setTara(Float.parseFloat(txtPesoVazio.getText()));
                 pesagem.setDataSegundapesagem(Timestamp.valueOf(txtDataHoraPesagemVazio.getText()));
 
                 pesagemServices.insertSegundaPesagem(pesagem, Float.parseFloat(txtPesoLiquido.getText()));
+                Alerts.showAlert("Sucesso", "","Pesagem Salva Com Sucesso", Alert.AlertType.INFORMATION);
+                notifyDataChangeListener();
+                ResourceStage.currentStage(event).close();
             }
 
         }else {
             Alerts.showAlert("Error","","Campos obrigatórios não são válidos ou estão em branco", Alert.AlertType.ERROR);
+        }
+    }
+
+    public void subscribeDataChangeListener(DataChangeListeners listener) {
+        dataChangeListeners.add(listener);
+    }
+
+    private void notifyDataChangeListener() {
+        for (DataChangeListeners listener : dataChangeListeners) {
+            listener.onDataChanged();
         }
     }
 

@@ -111,4 +111,20 @@ public class Pesagem {
     public void setDataSegundapesagem(Timestamp dataSegundapesagem) {
         this.dataSegundapesagem = dataSegundapesagem;
     }
+
+    @Override
+    public String toString() {
+        return "Pesagem{" +
+                "idAutorizacao=" + idAutorizacao +
+                ", idPesagem=" + idPesagem +
+                ", pesoBruto=" + pesoBruto +
+                ", tara=" + tara +
+                ", placa='" + placa + '\'' +
+                ", notaFiscal='" + notaFiscal + '\'' +
+                ", usuarioPrimeiraPesagem='" + usuarioPrimeiraPesagem + '\'' +
+                ", usuarioSegundaPesagem='" + usuarioSegundaPesagem + '\'' +
+                ", dataPrimeiraPesagem=" + dataPrimeiraPesagem +
+                ", dataSegundapesagem=" + dataSegundapesagem +
+                '}';
+    }
 }

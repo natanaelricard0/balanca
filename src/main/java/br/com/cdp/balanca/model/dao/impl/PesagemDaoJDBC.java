@@ -24,7 +24,7 @@ public class PesagemDaoJDBC implements PesagemDAO {
         PreparedStatement st = null;
 
         try {
-            st = conn.prepareStatement("EXECUTE pr_Balanca_InserirPesagem ?,?,?,?,?,?,?,?,?,?,?,?");
+            st = conn.prepareStatement("EXECUTE pr_Balanca_InserirPesagem ?,?,?,?,?,?,?,?,?,?,?,?,?");
             st.setInt(1, pesagem.getIdAutorizacao());
             st.setInt(2, 1);
             st.setInt(3, lastIdPesagem());

@@ -1,10 +1,7 @@
 package br.com.cdp.balanca.controller;
 
 import br.com.cdp.balanca.application.Main;
-import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
-import br.com.cdp.balanca.model.services.FuncionarioServices;
-import br.com.cdp.balanca.model.services.PesagemServices;
-import br.com.cdp.balanca.model.services.VeiculoServices;
+import br.com.cdp.balanca.model.services.*;
 import br.com.cdp.balanca.utils.DialogForm;
 import br.com.cdp.balanca.utils.ResourceStage;
 import javafx.event.ActionEvent;
@@ -69,6 +66,7 @@ public class HomeController implements Initializable {
         System.exit(1);
     }
 
+    //ACTION DE ATALHO DE TECLAS
     @FXML
     private void handleOnKeyReleased(KeyEvent event){
         if(event.getCode() == KeyCode.F1){
@@ -77,10 +75,15 @@ public class HomeController implements Initializable {
         if(event.getCode() == KeyCode.F2){
             pesagemExportacao(event);
         }
+        if(event.getCode() == KeyCode.F3){
+            pesagemImportacao(event);
+        }
+        if(event.getCode() == KeyCode.F6){
+            gerenciamentoFuncionario(event);
+        }
     }
 
-    @FXML
-    private void onBtnFuncionarioAction(ActionEvent event) {
+    private void gerenciamentoFuncionario(Event event){
         loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/funcionario.fxml", "Gerenciamento de Funcionario", (FuncionarioController controller) -> {
             controller.setService(new FuncionarioServices());
             controller.updateTableView();
@@ -100,6 +103,14 @@ public class HomeController implements Initializable {
         loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/tara.fxml", "Cadastro de Tara", (TaraController controller) -> controller.setServices(new VeiculoServices()));
     }
 
+    private void pesagemImportacao(Event event){
+        loadView(ResourceStage.currentStage(event),"/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml","Cadastro de Pesagem de importação Saída Rodoviária", (PesagemImportacaoController controller) -> {
+            controller.setPesagemServices(new PesagemServices());
+            controller.setVeiculoServices(new VeiculoServices());
+            controller.setAutorizacaoEntradaSaidaServices(new AutorizacaoEntradaSaidaServices());
+        });
+    }
+
     @FXML
     private void onBtPesagemExportacaoAction(ActionEvent event) {
         pesagemExportacao(event);
@@ -109,6 +120,12 @@ public class HomeController implements Initializable {
     private void onBtCadastroTara(ActionEvent event) {
         cadastroTara(event);
     }
+
+    @FXML
+    private void onBtPesagemImportacaoSaidaRodoviaria(ActionEvent event){ pesagemImportacao(event);}
+
+    @FXML
+    private void onBtnFuncionarioAction(ActionEvent event) { gerenciamentoFuncionario(event);}
 
     private synchronized <T> void loadView(Stage parentStage, String absolutName, String title, Consumer<T> initializingAction) {
         try {

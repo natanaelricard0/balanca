@@ -38,9 +38,12 @@ public class LeituraPortaCOM {
     private static String convertStringToDigit(String valor) {
         StringBuffer buffer = new StringBuffer();
         char [] chars = valor.toCharArray();
-
+        boolean stop = false;
         for (Character cr : chars) {
-            if (Character.isDigit(cr)) {
+            if(cr == 'E'){
+                stop = true;
+            }
+            if (Character.isDigit(cr) && stop == false) {
                 buffer.append(cr);
             }
         }
