@@ -26,8 +26,8 @@ public class Main extends Application {
         loginScene = new Scene(fxmlLogin, 600, 400);
 
         primaryStage.setTitle("Balança Rodoviária CDP");
-        primaryStage.setResizable(false);
         primaryStage.setScene(loginScene);
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
@@ -44,11 +44,17 @@ public class Main extends Application {
         switch (tela) {
             case "Login":
                 stage.setScene(loginScene);
+                stage.setMaximized(false);
+                stage.setResizable(false);
+                stage.setWidth(600);
+                stage.setHeight(425);
                 stage.show();
                 break;
             case "Home":
                 setHomeScene();
                 stage.setScene(homeScene);
+                stage.setMaximized(true);
+                stage.setResizable(true);
                 stage.show();
                 break;
         }

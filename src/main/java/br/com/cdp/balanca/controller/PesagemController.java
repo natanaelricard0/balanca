@@ -8,13 +8,7 @@ import br.com.cdp.balanca.model.entities.Veiculo;
 import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
 import br.com.cdp.balanca.model.services.PesagemServices;
 import br.com.cdp.balanca.model.services.VeiculoServices;
-import br.com.cdp.balanca.utils.Alerts;
-import br.com.cdp.balanca.utils.Constraints;
-import br.com.cdp.balanca.utils.LeituraPortaCOM;
-import br.com.cdp.balanca.utils.ResourceStage;
-import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
+import br.com.cdp.balanca.utils.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -25,7 +19,6 @@ import javafx.scene.control.TextField;
 
 import java.net.URL;
 import java.sql.Timestamp;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -202,6 +195,7 @@ public class PesagemController implements Initializable {
 
                 pesagemServices.insertPrimeiraPesagem(pesagem);
 
+                ShowReports.printComprovantePrimeiraPesagem(pesagem);
                 Alerts.showAlert("Sucesso","", "Pesagem inserida com sucesso", Alert.AlertType.INFORMATION);
                 notifyDataChangeListener();
                 ResourceStage.currentStage(event).close();
@@ -211,6 +205,8 @@ public class PesagemController implements Initializable {
                 pesagem.setDataSegundapesagem(Timestamp.valueOf(txtDataHoraPesagemVazio.getText()));
 
                 pesagemServices.insertSegundaPesagem(pesagem, Float.parseFloat(txtPesoLiquido.getText()));
+
+                ShowReports.printComprovanteSegundaPesagem(pesagem);
                 Alerts.showAlert("Sucesso", "","Pesagem Salva Com Sucesso", Alert.AlertType.INFORMATION);
                 notifyDataChangeListener();
                 ResourceStage.currentStage(event).close();

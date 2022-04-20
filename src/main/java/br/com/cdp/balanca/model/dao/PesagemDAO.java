@@ -18,5 +18,5 @@ public interface PesagemDAO {
 
     List<Pesagem> buscarPesagensPorPlaca(String valor);
 
-    Pesagem findById();
+    Pesagem findById(int id);
 }

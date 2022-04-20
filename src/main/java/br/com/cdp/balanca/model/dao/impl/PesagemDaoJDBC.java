@@ -168,8 +168,27 @@ public class PesagemDaoJDBC implements PesagemDAO {
     }
 
     @Override
-    public Pesagem findById() {
-        return null;
+    public Pesagem findById(int id) {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        try{
+            st = conn.prepareStatement("select  * from pesagem where nsu_pesagem = ?");
+            st.setInt(1,id);
+
+            rs = st.executeQuery();
+
+            if(rs.next()){
+                Pesagem pesagem = instatiatePesagem(rs);
+                return pesagem;
+            }
+            return null;
+        }catch (SQLException e){
+            throw new DbException(e.getMessage());
+        }finally {
+            DB.closeStatment(st);
+            DB.closeResultSet(rs);
+        }
     }
 
     private Pesagem instatiatePesagem(ResultSet rs) throws SQLException {

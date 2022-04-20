@@ -8,6 +8,7 @@ import br.com.cdp.balanca.model.entities.Veiculo;
 
 import java.sql.*;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.List;
 
 public class VeiculoDaoJDBC implements VeiculoDAO {
@@ -74,6 +75,29 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
             }
             return null;
         }catch (SQLException e){
+            throw new DbException(e.getMessage());
+        }finally {
+            DB.closeStatment(st);
+            DB.closeResultSet(rs);
+        }
+    }
+
+    @Override
+    public List<Veiculo> findAll() {
+        PreparedStatement st = null;
+        ResultSet rs = null;
+        try{
+            st = conn.prepareStatement("SELECT * FROM veiculo WHERE nm_placa is not null");
+            rs = st.executeQuery();
+
+            List<Veiculo> list = new ArrayList<>();
+
+            while (rs.next()){
+                list.add(instatiateVeiculo(rs));
+            }
+
+            return list;
+        } catch (SQLException e) {
             throw new DbException(e.getMessage());
         }finally {
             DB.closeStatment(st);

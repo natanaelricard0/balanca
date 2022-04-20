@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comprovante_segunda_pesagem" pageWidth="226" pageHeight="425" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="571cc016-6a63-461e-a084-5ef1fbaaae74">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<subDataset name="Dataset1" uuid="e00470f1-62f2-4d12-816d-535289527fda">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idAutorizacao" class="java.lang.Integer"/>
+	<field name="pesoBruto" class="java.lang.Float"/>
+	<field name="placa" class="java.lang.String"/>
+	<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
+	<field name="dataPrimeiraPesagem" class="java.sql.Timestamp"/>
+	<field name="tara" class="java.lang.Float"/>
+	<field name="pesoLiquido" class="java.lang.Float"/>
+	<field name="usuarioSegundaPesagem" class="java.lang.String"/>
+	<field name="dataSegundapesagem" class="java.sql.Timestamp"/>
+	<background>
+		<band height="30" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="50" width="146" height="30" uuid="60eb2b46-fbc0-43f5-8e51-7d1c5476f97e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROVANTE DE PESAGEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="146" height="60" uuid="662af389-29b6-4abf-9b3b-1a5c564f5f05"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="11" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[COMPANHIA DOCAS DO PARÁ
+CNPJ: 04.933.552/0001-03]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="269" splitType="Stretch">
+			<textField>
+				<reportElement x="90" y="10" width="90" height="30" uuid="dc2aece6-7d19-499c-9f62-5dc38b19b1d9"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idAutorizacao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="90" height="30" uuid="b258fc47-e8f7-4363-b857-aea0463ca355"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Autorizacao:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="40" width="90" height="30" uuid="1195f9d6-c95a-4340-bb3f-019896570a86"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{pesoBruto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="90" height="30" uuid="73fbd7bd-e932-4698-9d60-c5e9b01c721e"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Peso Bruto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="160" width="90" height="30" uuid="09ae148b-fe52-4f22-932e-dbf64ef18ea6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{usuarioSegundaPesagem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="160" width="90" height="30" uuid="6235e104-4eef-44fd-a541-69e6baaaf2fc"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Emitido Por:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="43" y="200" width="100" height="20" uuid="ef790e68-ed6a-43bc-baa6-ed69012af8cd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data de Emissão:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="90" height="30" uuid="3431068e-d7dd-486a-85fc-544d73c08867"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Tara:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="70" width="90" height="30" uuid="7668eba4-1c6d-4521-ade6-57f23edec65b"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tara}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="100" width="90" height="30" uuid="53b2d74e-9161-4fd6-b4c9-3209d90138fd"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{pesoLiquido}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="90" height="30" uuid="33e4976e-8332-4cd1-b1a6-257e0b2f0b0b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Peso Liquido:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="130" width="90" height="30" uuid="a0e9bbe7-5455-4b5b-abbc-eff940b132a7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="130" width="90" height="30" uuid="55713865-df33-4154-9304-8d6121f8a25a"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Placa: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="43" y="220" width="100" height="30" uuid="7eafd24b-c4fd-4b17-b6a0-a1651f3e7fc1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dataSegundapesagem}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

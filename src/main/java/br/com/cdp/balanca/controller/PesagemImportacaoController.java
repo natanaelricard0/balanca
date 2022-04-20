@@ -7,10 +7,7 @@ import br.com.cdp.balanca.model.entities.Veiculo;
 import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
 import br.com.cdp.balanca.model.services.PesagemServices;
 import br.com.cdp.balanca.model.services.VeiculoServices;
-import br.com.cdp.balanca.utils.Alerts;
-import br.com.cdp.balanca.utils.Constraints;
-import br.com.cdp.balanca.utils.LeituraPortaCOM;
-import br.com.cdp.balanca.utils.ResourceStage;
+import br.com.cdp.balanca.utils.*;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -195,7 +192,9 @@ public class PesagemImportacaoController implements Initializable {
             pesagem.setDataPrimeiraPesagem(Timestamp.valueOf(sdf.format(new Date())));
             pesagem.setDataSegundapesagem(Timestamp.valueOf(sdf.format(new Date())));
 
-            pesagemServices.insertPesagemImportacao(pesagem, pesoLiquido);
+            pesagemServices.insertPesagemImportacao(pesagem);
+
+            ShowReports.printComprovanteSegundaPesagem(pesagem);
             ResourceStage.currentStage(event).close();
             Alerts.showAlert("Sucesso","","Pesagem Inserida com Sucesso", Alert.AlertType.INFORMATION);
         }else {

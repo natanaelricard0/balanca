@@ -30,6 +30,8 @@ public class PesagemServices {
 
     public void insertSegundaPesagem(Pesagem pesagem){ service.updatePesagemPendente(pesagem);}
 
+    public Pesagem findById(int id){ return service.findById(id); }
+
     public void insertSegundaPesagem(Pesagem pesagem, Float pesoLiquido){
         service.updatePesagemPendente(pesagem);
         service.insert(pesagem);
@@ -42,14 +44,14 @@ public class PesagemServices {
         itemPesagemService.insert(itemPesagem);
     }
 
-    public void insertPesagemImportacao(Pesagem pesagem, Float pesoLiquido){
+    public void insertPesagemImportacao(Pesagem pesagem){
         service.insert(pesagem);
         ItemAutorizacao itemAutorizacao = itemAutorizacaoService.findById(pesagem.getIdAutorizacao());
         ItemPesagem itemPesagem = new ItemPesagem();
         itemPesagem.setIdAutorizacaoEntradaSaida(pesagem.getIdAutorizacao());
         itemPesagem.setIdItemIO(itemAutorizacao.getIdItemEmbarqueDesembarque());
         itemPesagem.setIdSubitemIO(itemAutorizacao.getIdSubitemEmbarqueDesembarque());
-        itemPesagem.setPesoLiquido(pesoLiquido);
+        itemPesagem.setPesoLiquido(pesagem.getPesoLiquido());
         itemPesagemService.insert(itemPesagem);
     }
 }

@@ -5,12 +5,11 @@ import br.com.cdp.balanca.model.services.VeiculoServices;
 import br.com.cdp.balanca.utils.Alerts;
 import br.com.cdp.balanca.utils.Constraints;
 import br.com.cdp.balanca.utils.LeituraPortaCOM;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -62,22 +61,10 @@ public class TaraController implements Initializable{
         Constraints.setTextFieldInteger(txtIdVeiculo);
     }
 
-    private void buscarVeiculo(){
-        veiculo = services.findById(Integer.parseInt(txtIdVeiculo.getText()));
-    }
-
     @FXML
     private void btOnActionPesar(){
         Double valorRecuperado = LeituraPortaCOM.leituraPeso();
         txtPeso.setText(valorRecuperado.toString());
-    }
-
-    private boolean validationFields(){
-        if(txtIdVeiculo.getText().equals("") || txtPeso.getText().equals("")){
-            return false;
-        } else {
-            return true;
-        }
     }
 
     @FXML
@@ -94,6 +81,18 @@ public class TaraController implements Initializable{
             }
         }else{
             Alerts.showAlert("Atenção", "", "Campos em Branco", Alert.AlertType.WARNING);
+        }
+    }
+
+    private void buscarVeiculo(){
+        veiculo = services.findById(Integer.parseInt(txtIdVeiculo.getText()));
+    }
+
+    private boolean validationFields(){
+        if(txtIdVeiculo.getText().equals("") || txtPeso.getText().equals("")){
+            return false;
+        } else {
+            return true;
         }
     }
 }

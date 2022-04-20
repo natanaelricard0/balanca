@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="comprovante_primeira_pesagem" pageWidth="226" pageHeight="425" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="70abc188-54da-42b7-9ce7-c7258f28db1b">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="net.sf.jasperreports.export.character.encoding" value="ISO-8859-1"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="mm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="idAutorizacao" class="java.lang.Integer"/>
+	<field name="pesoBruto" class="java.lang.Float"/>
+	<field name="placa" class="java.lang.String"/>
+	<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
+	<field name="dataPrimeiraPesagem" class="java.sql.Timestamp"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="50" width="146" height="30" uuid="3d023848-8d58-4d60-ab71-f3381cc62868"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROVANTE DE PESAGEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="146" height="60" uuid="593c6b63-b12a-49ce-bddf-4167c0e8f628"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="11" isBold="true"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[COMPANHIA DOCAS DO PARÁ
+CNPJ: 04.933.552/0001-03]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="190" splitType="Stretch">
+			<textField>
+				<reportElement x="80" y="10" width="100" height="30" uuid="075aa1df-2ec0-446f-a622-b3285a0d737d"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{idAutorizacao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="80" height="30" uuid="a55ba9fc-6eef-406c-91b3-6328deb13b1b"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Autorizacao:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="40" width="100" height="30" uuid="e3ff8876-f6e5-4eea-a360-b3ad035697e7"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{pesoBruto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="40" width="80" height="30" uuid="b3c0304b-4d9d-47d4-8ed7-41b164cec514"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<text><![CDATA[Peso Bruto:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="70" width="100" height="30" uuid="9bbb716b-3dea-41e8-b70b-44b6908c0bf8"/>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{placa}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="70" width="80" height="30" uuid="96dc7f2f-c4af-49ff-b67c-289c9eea3733"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Placa: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="100" width="100" height="30" uuid="f5aeb1aa-8997-4468-ae92-dff826eec4eb"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{usuarioPrimeiraPesagem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="100" width="80" height="30" uuid="aa6ffb85-9b6e-4705-b73d-ab64a1ddca1c"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Emitido Por:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="30" y="160" width="100" height="30" uuid="5e622c62-40e6-4807-b6b9-397e1b347f7f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{dataPrimeiraPesagem}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="30" y="140" width="100" height="20" uuid="cf4e677a-cd94-4247-a102-22824612ff90"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Data de Emissão:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

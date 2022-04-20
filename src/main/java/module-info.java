@@ -9,6 +9,7 @@ module br.com.cdp.balanca {
     requires java.naming;
     requires com.microsoft.sqlserver.jdbc;
     requires jssc;
+    requires jasperreports;
 
     opens br.com.cdp.balanca.application to javafx.fxml;
     exports br.com.cdp.balanca.application;

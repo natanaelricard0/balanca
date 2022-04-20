@@ -8,6 +8,7 @@ public class Pesagem {
     private Integer idPesagem;
     private Float pesoBruto;
     private Float tara;
+    private Float pesoLiquido;
     private String placa;
     private String notaFiscal;
     private String usuarioPrimeiraPesagem;
@@ -19,10 +20,11 @@ public class Pesagem {
 
     }
 
-    public Pesagem(Integer idAutorizacao, Integer idPesagem, Float pesoBruto, Float tara, String placa, String notaFiscal, String usuarioPrimeiraPesagem, String usuarioSegundaPesagem, Timestamp dataPrimeiraPesagem, Timestamp dataSegundapesagem) {
+    public Pesagem(Integer idAutorizacao, Integer idPesagem, Float pesoBruto, Float tara, Float pesoLiquido, String placa, String notaFiscal, String usuarioPrimeiraPesagem, String usuarioSegundaPesagem, Timestamp dataPrimeiraPesagem, Timestamp dataSegundapesagem) {
         this.idAutorizacao = idAutorizacao;
         this.idPesagem = idPesagem;
         this.pesoBruto = pesoBruto;
+        this.pesoLiquido = pesoLiquido;
         this.tara = tara;
         this.placa = placa;
         this.notaFiscal = notaFiscal;
@@ -62,6 +64,10 @@ public class Pesagem {
 
     public void setTara(Float tara) {
         this.tara = tara;
+    }
+
+    public Float getPesoLiquido() {
+        return pesoBruto - tara;
     }
 
     public String getPlaca() {
@@ -110,21 +116,5 @@ public class Pesagem {
 
     public void setDataSegundapesagem(Timestamp dataSegundapesagem) {
         this.dataSegundapesagem = dataSegundapesagem;
-    }
-
-    @Override
-    public String toString() {
-        return "Pesagem{" +
-                "idAutorizacao=" + idAutorizacao +
-                ", idPesagem=" + idPesagem +
-                ", pesoBruto=" + pesoBruto +
-                ", tara=" + tara +
-                ", placa='" + placa + '\'' +
-                ", notaFiscal='" + notaFiscal + '\'' +
-                ", usuarioPrimeiraPesagem='" + usuarioPrimeiraPesagem + '\'' +
-                ", usuarioSegundaPesagem='" + usuarioSegundaPesagem + '\'' +
-                ", dataPrimeiraPesagem=" + dataPrimeiraPesagem +
-                ", dataSegundapesagem=" + dataSegundapesagem +
-                '}';
     }
 }

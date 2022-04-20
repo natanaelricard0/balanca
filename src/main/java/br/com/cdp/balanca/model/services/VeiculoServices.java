@@ -18,4 +18,6 @@ public class VeiculoServices {
     }
 
     public void updateTara(Veiculo veiculo){ service.updateTara(veiculo); }
+
+    public List findAll(){ return service.findAll(); }
 }
