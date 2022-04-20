@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="550.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.TaraController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="550.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.TaraController">
     <children>
         <ToolBar prefHeight="10.0" prefWidth="200.0" styleClass="background">
             <items>
@@ -39,17 +39,16 @@
                 </GridPane>
             </items>
         </ToolBar>
-        <GridPane prefHeight="275.0">
+        <GridPane prefHeight="200.0">
             <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="70.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <TextField fx:id="txtIdVeiculo" GridPane.rowIndex="1">
@@ -72,7 +71,28 @@
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-            <Label fx:id="lblPlacaRecuperada" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <GridPane fx:id="gridPaneVeiculo" gridLinesVisible="true" visible="false" GridPane.columnIndex="1" GridPane.rowSpan="3">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="label-bright" text="Codigo:" />
+                  <Label styleClass="label-bright" text="Placa:" GridPane.rowIndex="1" />
+                  <Label styleClass="label-bright" text="Tara:" GridPane.rowIndex="2" />
+                  <Label fx:id="lblIdVeiculo" styleClass="label-bright" GridPane.columnIndex="1" />
+                  <Label fx:id="lblPlacaVeiculo" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblTaraVeiculo" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </GridPane.margin>
+            </GridPane>
             </children>
         </GridPane>
     </children>

@@ -152,7 +152,7 @@ public class PesagemController implements Initializable {
         veiculo = veiculoServices.findById(Integer.parseInt(txtVeiculo.getText()));
     }
 
-    public void buscarVeiculoPlaca(String placa){ veiculo = veiculoServices.findByPlca(placa);}
+    public void buscarVeiculoPlaca(String placa){ veiculo = veiculoServices.findByPlaca(placa);}
 
     private Boolean autorizacaoIsValid(AutorizacaoEntradaSaida autorizacaoEntradaSaida){
         if(autorizacaoEntradaSaida == null){

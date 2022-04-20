@@ -10,8 +10,10 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
 
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.util.ResourceBundle;
 
 public class TaraController implements Initializable{
@@ -25,15 +27,26 @@ public class TaraController implements Initializable{
     private Button btnPesar;
 
     @FXML
-    private Label lblPlacaRecuperada;
-
-    @FXML
     private TextField txtIdVeiculo;
 
     @FXML
     private TextField txtPeso;
 
+    @FXML
+    private Label lblIdVeiculo;
+
+    @FXML
+    private Label lblPlacaVeiculo;
+
+    @FXML
+    private Label lblTaraVeiculo;
+
+    @FXML
+    private GridPane gridPaneVeiculo;
+
     Veiculo veiculo;
+
+    DecimalFormat df = new DecimalFormat("##,##0.00 KG");
 
     public void setServices(VeiculoServices services) {
         this.services = services;
@@ -45,26 +58,33 @@ public class TaraController implements Initializable{
         txtIdVeiculo.setOnAction(actionEvent -> {
             buscarVeiculo();
             if(veiculo != null){
-                lblPlacaRecuperada.setStyle("-fx-background-color: green");
+                gridPaneVeiculo.setVisible(true);
+                gridPaneVeiculo.setStyle("-fx-background-color: green");
                 txtIdVeiculo.setStyle("-fx-border-color: green");
-                lblPlacaRecuperada.setText("PLACA DO VEICULO: "+veiculo.getPlacaVeiculo());
+                lblIdVeiculo.setText(veiculo.getIdVeiculo().toString());
+                lblPlacaVeiculo.setText(veiculo.getPlacaVeiculo());
+                lblTaraVeiculo.setText(veiculo.getPesoTara().toString());
             } else {
-                lblPlacaRecuperada.setStyle("-fx-background-color: red");
                 txtIdVeiculo.setStyle("-fx-border-color: red");
-                lblPlacaRecuperada.setText("VEICULO NÃO ENCONTRADO");
+                gridPaneVeiculo.setVisible(false);
             }
         });
     }
 
     private void initialNodes(){
         validationFields();
-        Constraints.setTextFieldInteger(txtIdVeiculo);
     }
 
     @FXML
     private void btOnActionPesar(){
-        Double valorRecuperado = LeituraPortaCOM.leituraPeso();
-        txtPeso.setText(valorRecuperado.toString());
+        if(veiculo != null){
+            String valorRecuperado = String.valueOf(LeituraPortaCOM.leituraPeso());
+            txtPeso.setText(df.format(Double.parseDouble(valorRecuperado)));
+            veiculo.setPesoTara(Float.parseFloat(valorRecuperado));
+        }else {
+            txtPeso.setText("");
+            Alerts.showAlert("Atenção", "Veículo não encontrado", "Por favor, verifique o ID do veículo", Alert.AlertType.WARNING);
+        }
     }
 
     @FXML
@@ -85,7 +105,11 @@ public class TaraController implements Initializable{
     }
 
     private void buscarVeiculo(){
-        veiculo = services.findById(Integer.parseInt(txtIdVeiculo.getText()));
+        if(isDigit()){
+            veiculo = services.findById(Integer.parseInt(txtIdVeiculo.getText()));
+        }else {
+            veiculo = services.findByPlaca(txtIdVeiculo.getText());
+        }
     }
 
     private boolean validationFields(){
@@ -94,5 +118,9 @@ public class TaraController implements Initializable{
         } else {
             return true;
         }
+    }
+
+    private boolean isDigit(){
+        return txtIdVeiculo.getText().matches("[0-9]+");
     }
 }

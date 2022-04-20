@@ -13,7 +13,7 @@ public class VeiculoServices {
         return service.findById(id);
     }
 
-    public Veiculo findByPlca(String placa){
+    public Veiculo findByPlaca(String placa){
         return service.findByPlaca(placa);
     }
 
