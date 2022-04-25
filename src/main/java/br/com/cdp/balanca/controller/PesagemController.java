@@ -3,19 +3,21 @@ package br.com.cdp.balanca.controller;
 import br.com.cdp.balanca.application.Main;
 import br.com.cdp.balanca.listeners.DataChangeListeners;
 import br.com.cdp.balanca.model.entities.AutorizacaoEntradaSaida;
+import br.com.cdp.balanca.model.entities.ItemAutorizacao;
 import br.com.cdp.balanca.model.entities.Pesagem;
 import br.com.cdp.balanca.model.entities.Veiculo;
 import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
 import br.com.cdp.balanca.model.services.PesagemServices;
 import br.com.cdp.balanca.model.services.VeiculoServices;
 import br.com.cdp.balanca.utils.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.GridPane;
 
 import java.net.URL;
 import java.sql.Timestamp;
@@ -73,13 +75,36 @@ public class PesagemController implements Initializable {
     private Label lblErrorAutorizacao;
 
     @FXML
-    private Label lblErrorVeiculo;
+    private GridPane gridPaneVeiculo;
+
+    @FXML
+    private Label lblCodigo;
+
+    @FXML
+    private Label lblPlaca;
+
+    @FXML
+    private Label lblTara;
+
+    @FXML
+    private TableView<ItemAutorizacao> tableViewItemAutorizacao;
+
+    @FXML
+    private TableColumn<ItemAutorizacao, Integer> tableColumnAutorizacao;
+
+    @FXML
+    private TableColumn<ItemAutorizacao, String> tableColumnDescricao;
+
+    @FXML
+    private TableColumn<ItemAutorizacao, Float> tableColumnPeso;
 
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     Veiculo veiculo;
 
     AutorizacaoEntradaSaida autorizacaoEntradaSaida;
+
+    ObservableList<ItemAutorizacao> observableListItemAutorizacao;
 
     public void setService(AutorizacaoEntradaSaidaServices service) {
         this.service = service;
@@ -100,86 +125,8 @@ public class PesagemController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         Constraints.setTextFieldInteger(txtAutorizacaoEntrada);
-        Constraints.setTextFieldInteger(txtVeiculo);
-        initialize();
-    }
-
-    public void initialize(){
-        txtAutorizacaoEntrada.setOnAction(actionEvent -> {
-            validarAutorizacao();
-        });
-
-        txtVeiculo.setOnAction(actionEvent -> {
-            validarVeiculo();
-        });
-    }
-
-    private void validarAutorizacao(){
-        if(!txtAutorizacaoEntrada.getText().equals("")){
-            autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
-            if(autorizacaoIsValid(autorizacaoEntradaSaida)){
-                if(service.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
-                    lblErrorAutorizacao.setStyle("-fx-background-color: green");
-                    txtAutorizacaoEntrada.setStyle("-fx-border-color: green");
-                    lblErrorAutorizacao.setText("Autorização é Válida");
-                }else {
-                    lblErrorAutorizacao.setStyle("-fx-background-color: red");
-                    txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
-                    lblErrorAutorizacao.setText("Autorização Não é válida para essa Operação");
-                }
-            }else {
-                lblErrorAutorizacao.setStyle("-fx-background-color: red");
-                txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
-                lblErrorAutorizacao.setText("Autorização Não é Válida");
-            }
-        }
-    }
-
-    private void validarVeiculo(){
-        buscarVeiculo();
-        if(veiculo != null){
-            lblErrorVeiculo.setStyle("-fx-background-color: green");
-            txtVeiculo.setStyle("-fx-border-color: green");
-            lblErrorVeiculo.setText("PLACA DO VEICULO: "+veiculo.getPlacaVeiculo());
-        } else {
-            lblErrorVeiculo.setStyle("-fx-background-color: red");
-            txtVeiculo.setStyle("-fx-border-color: red");
-            lblErrorVeiculo.setText("VEICULO NÃO ENCONTRADO");
-        }
-    }
-
-    private void buscarVeiculo(){
-        veiculo = veiculoServices.findById(Integer.parseInt(txtVeiculo.getText()));
-    }
-
-    public void buscarVeiculoPlaca(String placa){ veiculo = veiculoServices.findByPlaca(placa);}
-
-    private Boolean autorizacaoIsValid(AutorizacaoEntradaSaida autorizacaoEntradaSaida){
-        if(autorizacaoEntradaSaida == null){
-            return false;
-        }else {
-            return true;
-        }
-    }
-
-    public void updateFormData(){
-        if(pesagem == null){
-            throw new IllegalStateException("Pesagem Is Null");
-        }
-        txtVeiculo.setText(veiculo.getIdVeiculo().toString());
-        validarVeiculo();
-        txtAutorizacaoEntrada.setText(pesagem.getIdAutorizacao().toString());
-        validarAutorizacao();
-        txtNotaFiscal.setText(pesagem.getNotaFiscal());
-        txtPesoCheio.setText(pesagem.getPesoBruto().toString());
-        txtDataHoraPesagemCheio.setText(pesagem.getDataPrimeiraPesagem().toString());
-    }
-
-    private void setPesoLiquido(){
-        double pesocheio = Double.parseDouble(txtPesoCheio.getText());
-        double pesoVazio = Double.parseDouble(txtPesoVazio.getText());
-        double total = pesocheio - pesoVazio;
-        txtPesoLiquido.setText(String.valueOf(total));
+        initialNodes();
+        tableValueFactory();
     }
 
     @FXML
@@ -217,6 +164,115 @@ public class PesagemController implements Initializable {
         }
     }
 
+    @FXML
+    private void onBtActionPesar() {
+        Double valorRecuperado = LeituraPortaCOM.leituraPeso();
+        if(primeiraPesagem.equals(true)){
+            txtPesoCheio.setText(valorRecuperado.toString());
+            txtDataHoraPesagemCheio.setText(sdf.format(new Date()));
+        }else {
+            txtPesoVazio.setText(valorRecuperado.toString());
+            txtDataHoraPesagemVazio.setText(sdf.format(new Date()));
+            setPesoLiquido();
+        }
+    }
+
+    private void validarAutorizacao(){
+        if(!txtAutorizacaoEntrada.getText().equals("")){
+            autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
+            if(autorizacaoEntradaSaida != null){
+                if(service.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
+                    txtAutorizacaoEntrada.setStyle("-fx-border-color: green");
+                    updateTableView();
+                }else {
+                    txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
+                    Alerts.showAlert("Error","","Autorização Inválida", Alert.AlertType.ERROR);
+                }
+            }else {
+                lblErrorAutorizacao.setStyle("-fx-background-color: red");
+                txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
+                Alerts.showAlert("Error","","Autorização não encontrada", Alert.AlertType.ERROR);
+            }
+        }
+    }
+
+    public void initialNodes(){
+        txtAutorizacaoEntrada.setOnAction(actionEvent -> {
+            validarAutorizacao();
+        });
+
+        txtVeiculo.setOnAction(actionEvent -> {
+            validarVeiculo();
+        });
+    }
+
+    private void tableValueFactory(){
+        tableColumnAutorizacao.setCellValueFactory(new PropertyValueFactory<>("idAutorizacaoEntradaSaida"));
+        tableColumnDescricao.setCellValueFactory(new PropertyValueFactory<>("descricao"));
+        tableColumnPeso.setCellValueFactory(new PropertyValueFactory<>("peso"));
+    }
+
+    private void updateTableView(){
+        List<ItemAutorizacao> list = new ArrayList<>();
+        list.add(service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText())).getItemAutorizacao());
+        observableListItemAutorizacao = FXCollections.observableArrayList(list);
+        tableViewItemAutorizacao.setItems(FXCollections.observableArrayList(list));
+    }
+
+    private void validarVeiculo(){
+        if(isDigit()){
+            veiculo = veiculoServices.findById(Integer.parseInt(txtVeiculo.getText()));
+            if(veiculo != null){
+                gridPaneVeiculo.setVisible(true);
+                gridPaneVeiculo.setStyle("-fx-background-color: green");
+                lblCodigo.setText(veiculo.getIdVeiculo().toString());
+                lblPlaca.setText(veiculo.getPlacaVeiculo());
+                lblTara.setText(veiculo.getPesoTara().toString());
+                txtVeiculo.setStyle("-fx-border-color: green");
+            }else {
+                Alerts.showAlert("Error","","Veiculo não encontrado", Alert.AlertType.ERROR);
+                txtVeiculo.setStyle("-fx-border-color: red");
+                gridPaneVeiculo.setVisible(false);
+            }
+        }else {
+            veiculo = veiculoServices.findByPlaca(txtVeiculo.getText());
+            if(veiculo != null){
+                gridPaneVeiculo.setVisible(true);
+                gridPaneVeiculo.setStyle("-fx-background-color: green");
+                lblCodigo.setText(veiculo.getIdVeiculo().toString());
+                lblPlaca.setText(veiculo.getPlacaVeiculo());
+                lblTara.setText(veiculo.getPesoTara().toString());
+                txtVeiculo.setStyle("-fx-border-color: green");
+            } else{
+                Alerts.showAlert("Error","","Veiculo não encontrado", Alert.AlertType.ERROR);
+                txtVeiculo.setStyle("-fx-border-color: red");
+                gridPaneVeiculo.setVisible(false);
+            }
+        }
+    }
+
+    public void buscarVeiculoPlaca(String placa){ veiculo = veiculoServices.findByPlaca(placa);}
+
+    public void updateFormData(){
+        if(pesagem == null){
+            throw new IllegalStateException("Pesagem Is Null");
+        }
+        txtVeiculo.setText(veiculo.getIdVeiculo().toString());
+        validarVeiculo();
+        txtAutorizacaoEntrada.setText(pesagem.getIdAutorizacao().toString());
+        validarAutorizacao();
+        txtNotaFiscal.setText(pesagem.getNotaFiscal());
+        txtPesoCheio.setText(pesagem.getPesoBruto().toString());
+        txtDataHoraPesagemCheio.setText(pesagem.getDataPrimeiraPesagem().toString());
+    }
+
+    private void setPesoLiquido(){
+        double pesocheio = Double.parseDouble(txtPesoCheio.getText());
+        double pesoVazio = Double.parseDouble(txtPesoVazio.getText());
+        double total = pesocheio - pesoVazio;
+        txtPesoLiquido.setText(String.valueOf(total));
+    }
+
     public void subscribeDataChangeListener(DataChangeListeners listener) {
         dataChangeListeners.add(listener);
     }
@@ -237,16 +293,7 @@ public class PesagemController implements Initializable {
         }else return false;
     }
 
-    @FXML
-    private void onBtActionPesar() {
-        Double valorRecuperado = LeituraPortaCOM.leituraPeso();
-        if(primeiraPesagem.equals(true)){
-            txtPesoCheio.setText(valorRecuperado.toString());
-            txtDataHoraPesagemCheio.setText(sdf.format(new Date()));
-        }else {
-            txtPesoVazio.setText(valorRecuperado.toString());
-            txtDataHoraPesagemVazio.setText(sdf.format(new Date()));
-            setPesoLiquido();
-        }
+    private boolean isDigit(){
+        return txtVeiculo.getText().matches("[0-9]+");
     }
 }

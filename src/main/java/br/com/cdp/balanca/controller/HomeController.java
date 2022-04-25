@@ -32,9 +32,6 @@ public class HomeController implements Initializable {
     private Button btnExportacao;
 
     @FXML
-    private Button btnImportacaoDescargaNavio;
-
-    @FXML
     private Button btnImportacaoSaidaRodoviaria;
 
     @FXML

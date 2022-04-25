@@ -123,22 +123,44 @@
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-                <TextField fx:id="txtPesoLiquido" GridPane.columnSpan="2" GridPane.rowIndex="12">
+                <TextField fx:id="txtPesoLiquido" editable="false" GridPane.columnSpan="2" GridPane.rowIndex="12">
                     <GridPane.margin>
                         <Insets left="10.0" right="10.0" />
                     </GridPane.margin>
                 </TextField>
-            <Label fx:id="lblErrorVeiculo" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <Label fx:id="lblErrorAutorizacao" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <GridPane fx:id="gridPaneVeiculo" gridLinesVisible="true" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="2" GridPane.rowSpan="3">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label styleClass="label-bright" text="Código:" />
+                  <Label styleClass="label-bright" text="Placa:" GridPane.rowIndex="1" />
+                  <Label styleClass="label-bright" text="Tara:" GridPane.rowIndex="2" />
+                  <Label fx:id="lblCodigo" styleClass="label-bright" GridPane.columnIndex="1" />
+                  <Label fx:id="lblPlaca" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblTara" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
             </children>
         </GridPane>
-        <TableView prefHeight="150.0" prefWidth="200.0">
+        <TableView fx:id="tableViewItemAutorizacao" prefHeight="150.0" prefWidth="200.0">
             <columns>
-                <TableColumn prefWidth="113.0" text="Autorização" />
-                <TableColumn minWidth="0.0" prefWidth="113.0" text="Descrição" />
-                <TableColumn prefWidth="98.0" text="RG Conteiner" />
-                <TableColumn prefWidth="130.0" text="Quantidade" />
-                <TableColumn prefWidth="110.0" text="Peso" />
+                <TableColumn fx:id="tableColumnAutorizacao" prefWidth="136.0" text="Autorização" />
+                <TableColumn fx:id="tableColumnDescricao" minWidth="0.0" prefWidth="345.0" text="Descrição" />
+                <TableColumn fx:id="tableColumnPeso" prefWidth="194.0" text="Peso" />
             </columns>
             <VBox.margin>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />

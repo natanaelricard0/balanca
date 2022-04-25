@@ -12,11 +12,13 @@ public class AutorizacaoEntradaSaida {
     private Timestamp dataUso;
     private String tipoEntradaSaida;
 
+    private ItemAutorizacao itemAutorizacao;
+
     public AutorizacaoEntradaSaida(){
 
     }
 
-    public AutorizacaoEntradaSaida(Integer idAutorizacaoEntradaSaida, Integer idEmbarqueDesembarque, Integer idVeiculo, Integer idPessoa, Timestamp dataPrevisao, Timestamp dataUso, String tipoEntradaSaida) {
+    public AutorizacaoEntradaSaida(Integer idAutorizacaoEntradaSaida, Integer idEmbarqueDesembarque, Integer idVeiculo, Integer idPessoa, Timestamp dataPrevisao, Timestamp dataUso, String tipoEntradaSaida, ItemAutorizacao itemAutorizacao) {
         this.idAutorizacaoEntradaSaida = idAutorizacaoEntradaSaida;
         this.idEmbarqueDesembarque = idEmbarqueDesembarque;
         this.idVeiculo = idVeiculo;
@@ -24,6 +26,7 @@ public class AutorizacaoEntradaSaida {
         this.dataPrevisao = dataPrevisao;
         this.dataUso = dataUso;
         this.tipoEntradaSaida = tipoEntradaSaida;
+        this.itemAutorizacao = itemAutorizacao;
     }
 
     public Integer getIdAutorizacaoEntradaSaida() {
@@ -80,5 +83,13 @@ public class AutorizacaoEntradaSaida {
 
     public void setTipoEntradaSaida(String tipoEntradaSaida) {
         this.tipoEntradaSaida = tipoEntradaSaida;
+    }
+
+    public ItemAutorizacao getItemAutorizacao() {
+        return itemAutorizacao;
+    }
+
+    public void setItemAutorizacao(ItemAutorizacao itemAutorizacao) {
+        this.itemAutorizacao = itemAutorizacao;
     }
 }

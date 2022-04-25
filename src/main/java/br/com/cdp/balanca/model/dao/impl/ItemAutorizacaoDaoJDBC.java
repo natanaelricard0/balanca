@@ -24,7 +24,9 @@ public class ItemAutorizacaoDaoJDBC implements ItemAutorizacaoDAO {
         ResultSet rs = null;
 
         try{
-            st = conn.prepareStatement("select * from item_autorizacao where nsu_autorizacao_e_s = ?");
+            st = conn.prepareStatement("SELECT ia.*, ied.ds_descricao from item_autorizacao AS ia\n" +
+                    "INNER JOIN item_embarque_desembarque AS ied ON ia.nsu_item_io = ied.nsu_item_io \n" +
+                    "WHERE ia.nsu_autorizacao_e_s = ?");
             st.setInt(1,idAutorizacao);
 
             rs = st.executeQuery();
@@ -44,6 +46,8 @@ public class ItemAutorizacaoDaoJDBC implements ItemAutorizacaoDAO {
         itemAutorizacao.setIdAutorizacaoEntradaSaida(rs.getInt("nsu_autorizacao_e_s"));
         itemAutorizacao.setIdItemEmbarqueDesembarque(rs.getInt("nsu_item_io"));
         itemAutorizacao.setIdSubitemEmbarqueDesembarque(rs.getInt("nsu_subitem_io"));
+        itemAutorizacao.setDescricao(rs.getString("ds_descricao"));
+        itemAutorizacao.setPeso(rs.getFloat("no_peso"));
         return itemAutorizacao;
     }
 }
