@@ -34,6 +34,13 @@ public class LoginController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        onPressedAction();
+    }
+
+    private void onPressedAction(){
+        pswSenha.setOnAction(event -> {
+                login();
+        });
     }
 
     private boolean validateInput(){

@@ -91,10 +91,10 @@ public class TaraController implements Initializable{
     private void btOnActionSalvarPesagem() {
         if(validationFields()) {
             if (veiculo != null) {
-                veiculo.setPesoTara(Float.parseFloat(txtPeso.getText()));
                 services.updateTara(veiculo);
                 txtIdVeiculo.clear();
                 txtPeso.clear();
+                gridPaneVeiculo.setVisible(false);
                 Alerts.showAlert("Sucesso", "Pesagem de Tara Cadastrada", "Pesagem de Tara do veiculo " + veiculo.getPlacaVeiculo() + " foi concluido", Alert.AlertType.INFORMATION);
             } else {
                 Alerts.showAlert("Error", "Código Inválido", "Código de Veiculo não foi localizado", Alert.AlertType.ERROR);

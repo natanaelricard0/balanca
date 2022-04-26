@@ -197,13 +197,27 @@ public class PesagemController implements Initializable {
     }
 
     public void initialNodes(){
-        txtAutorizacaoEntrada.setOnAction(actionEvent -> {
-            validarAutorizacao();
-        });
+        txtAutorizacaoEntrada.focusedProperty()
+                .addListener((observable, oldValue, newValue) -> {
+                    if (!newValue) {
+                        if(!txtAutorizacaoEntrada.getText().equals("")){
+                            validarAutorizacao();
+                        }else {
+                            txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
+                        }
+                    }
+                });
 
-        txtVeiculo.setOnAction(actionEvent -> {
-            validarVeiculo();
-        });
+        txtVeiculo.focusedProperty()
+                .addListener((observable, oldValue, newValue) -> {
+                    if(!newValue) {
+                        if (txtVeiculo.getText().equals("")) {
+                            txtVeiculo.setStyle("-fx-border-color: red");
+                        } else {
+                            validarVeiculo();
+                        }
+                    }
+                });
     }
 
     private void tableValueFactory(){
@@ -236,14 +250,14 @@ public class PesagemController implements Initializable {
             }
         }else {
             veiculo = veiculoServices.findByPlaca(txtVeiculo.getText());
-            if(veiculo != null){
+            if(veiculo != null) {
                 gridPaneVeiculo.setVisible(true);
                 gridPaneVeiculo.setStyle("-fx-background-color: green");
                 lblCodigo.setText(veiculo.getIdVeiculo().toString());
                 lblPlaca.setText(veiculo.getPlacaVeiculo());
                 lblTara.setText(veiculo.getPesoTara().toString());
                 txtVeiculo.setStyle("-fx-border-color: green");
-            } else{
+            } else  {
                 Alerts.showAlert("Error","","Veiculo não encontrado", Alert.AlertType.ERROR);
                 txtVeiculo.setStyle("-fx-border-color: red");
                 gridPaneVeiculo.setVisible(false);

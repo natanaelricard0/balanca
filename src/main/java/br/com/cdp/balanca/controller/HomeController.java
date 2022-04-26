@@ -38,9 +38,6 @@ public class HomeController implements Initializable {
     private Button btnConfiguracao;
 
     @FXML
-    private Button btnTrocarUsario;
-
-    @FXML
     private Button btnTara;
 
     @FXML
@@ -56,11 +53,6 @@ public class HomeController implements Initializable {
 
     private void initializeNodes() {
         lblUser.setText(Main.getDataUser().getNome());
-    }
-
-    @FXML
-    private void onBtnSairAction(){
-        System.exit(1);
     }
 
     //ACTION DE ATALHO DE TECLAS
