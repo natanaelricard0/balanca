@@ -15,6 +15,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 
 import java.net.URL;
 import java.sql.Timestamp;
@@ -59,16 +60,22 @@ public class PesagemImportacaoController implements Initializable {
     private TextField txtPesoLiquido;
 
     @FXML
-    private Label lblErrorAutorizacao;
+    private Label lblCodigo;
 
     @FXML
-    private Label lblErrorVeiculo;
+    private Label lblPlaca;
+
+    @FXML
+    private Label lblTara;
 
     @FXML
     private Button btnPesar;
 
     @FXML
     private Button btnSalvar;
+
+    @FXML
+    private GridPane gridPaneVeiculo;
 
     //INJEÇÃO DE DEPENDÊNCIA DO SERVIÇO
     public void setPesagemServices(PesagemServices pesagemServices){
@@ -95,7 +102,6 @@ public class PesagemImportacaoController implements Initializable {
     private void initialNodes(){
         eventos();
         Constraints.setTextFieldInteger(txtAutorizacaoSaida);
-        Constraints.setTextFieldInteger(txtVeiculo);
     }
 
     //EVENTOS PARA OS COMPONENTES
@@ -124,38 +130,47 @@ public class PesagemImportacaoController implements Initializable {
         if(valor != ""){
             AutorizacaoEntradaSaida autorizacaoEntradaSaida = autorizacaoEntradaSaidaServices.findById(Integer.parseInt(valor));
             if(autorizacaoEntradaSaida != null && autorizacaoEntradaSaidaServices.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("S")){
-                lblErrorAutorizacao.setStyle("-fx-background-color: green");
                 txtAutorizacaoSaida.setStyle("-fx-border-color: green");
-                lblErrorAutorizacao.setText("Autorização é válida");
                 pesagem.setIdAutorizacao(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida());
             }else{
-                lblErrorAutorizacao.setStyle("-fx-background-color: red");
                 txtAutorizacaoSaida.setStyle("-fx-border-color: red");
-                lblErrorAutorizacao.setText("Autorização não existe ou não é válida");
             }
         }
     }
 
     //VERIFICA SE O VEÍCULO EXISTE E TEM TARA CADASTRADA
     private void verificaVeiculo(){
-        String valor = txtVeiculo.getText();
-
-        if(valor != ""){
-            Veiculo veiculo = veiculoServices.findById(Integer.valueOf(valor));
-            if(veiculo != null && veiculo.getPesoTara() != 0.0){
-                lblErrorVeiculo.setStyle("-fx-background-color: green");
-                txtVeiculo.setStyle("-fx-border-color: green");
-                lblErrorVeiculo.setText("Veículo "+veiculo.getPlacaVeiculo()+" Válido");
-                txtTara.setText(veiculo.getPesoTara().toString());
-                pesagem.setPlaca(veiculo.getPlacaVeiculo());
-                pesagem.setTara(veiculo.getPesoTara());
-                if(txtPesoTotal.getText() != ""){pesoLiquido();}
-            }else {
-                lblErrorVeiculo.setStyle("-fx-background-color: red");
-                txtVeiculo.setStyle("-fx-border-color: red");
-                lblErrorVeiculo.setText("Veículo Inválido ou Tara não foi Cadastrada");
-            }
+        if(isDigit()) {
+            Veiculo veiculo = veiculoServices.findById(Integer.parseInt(txtVeiculo.getText()));
+            preencheCampos(veiculo);
+        } else {
+            Veiculo veiculo = veiculoServices.findByPlaca(txtVeiculo.getText());
+            preencheCampos(veiculo);
         }
+    }
+
+    //PREEENCHE OS CAMPOS DO TARA E PESO
+    private void preencheCampos(Veiculo veiculo){
+        if (veiculo != null) {
+            txtVeiculo.setStyle("-fx-border-color: green");
+            gridPaneVeiculo.setVisible(true);
+            gridPaneVeiculo.setStyle("-fx-background-color: green");
+            txtTara.setText(veiculo.getPesoTara() + " KG");
+            lblCodigo.setText(veiculo.getIdVeiculo() + "");
+            lblPlaca.setText(veiculo.getPlacaVeiculo());
+            lblTara.setText(veiculo.getPesoTara() + " KG");
+            pesagem.setPlaca(veiculo.getPlacaVeiculo());
+            pesagem.setTara(veiculo.getPesoTara());
+        } else {
+            txtVeiculo.setStyle("-fx-border-color: red");
+            gridPaneVeiculo.setVisible(false);
+            Alerts.showAlert("Veículo não encontrado", null, "Veículo não encontrado", Alert.AlertType.ERROR);
+        }
+    }
+
+    //VERIFICA SE O CAMPO VEICULO É CODIGO OU PLACA
+    private boolean isDigit(){
+        return txtVeiculo.getText().matches("[0-9]+");
     }
 
     //REALIZA A LEITURA DE PESO

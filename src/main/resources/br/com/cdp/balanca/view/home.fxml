@@ -32,7 +32,7 @@
                     <items>
                         <Button fx:id="btnSair" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onBtActionTrocaUsuarioAction" text="Sair" />
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />
-                        <Label fx:id="lblUser" styleClass="label-bright" />
+                        <Label fx:id="lblUser" />
                     </items>
                 </ToolBar>
                 <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" GridPane.rowIndex="5">
@@ -83,10 +83,10 @@
                         <Insets right="25.0" />
                     </GridPane.margin>
                 </Button>
-                <Label styleClass="label-bright" text="Gerenciamento de Funcionário(F6)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <Label styleClass="label-bright" text="Pesagem De Exportação (F2)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Label styleClass="label-bright" text="Pesagem Importação Saída Rodoviária (F3)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Label styleClass="label-bright" text="Tara de Veículo (F1)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label styleClass="label-bright" text="Gerenciamento de Funcionário(F5)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label styleClass="label-bright" text="Pesagem De Exportação (F3)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label styleClass="label-bright" text="Pesagem Importação Saída Rodoviária (F4)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label styleClass="label-bright" text="Tara de Veículo (F2)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label styleClass="label-bright" text="Relatórios" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                 <Label styleClass="label-bright" text="Configuração" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             </children>

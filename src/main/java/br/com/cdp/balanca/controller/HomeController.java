@@ -2,6 +2,7 @@ package br.com.cdp.balanca.controller;
 
 import br.com.cdp.balanca.application.Main;
 import br.com.cdp.balanca.model.services.*;
+import br.com.cdp.balanca.utils.Alerts;
 import br.com.cdp.balanca.utils.DialogForm;
 import br.com.cdp.balanca.utils.ResourceStage;
 import javafx.event.ActionEvent;
@@ -9,6 +10,7 @@ import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.KeyCode;
@@ -58,25 +60,29 @@ public class HomeController implements Initializable {
     //ACTION DE ATALHO DE TECLAS
     @FXML
     private void handleOnKeyReleased(KeyEvent event){
-        if(event.getCode() == KeyCode.F1){
+        if(event.getCode() == KeyCode.F2){
             cadastroTara(event);
         }
-        if(event.getCode() == KeyCode.F2){
+        if(event.getCode() == KeyCode.F3){
             pesagemExportacao(event);
         }
-        if(event.getCode() == KeyCode.F3){
+        if(event.getCode() == KeyCode.F4){
             pesagemImportacao(event);
         }
-        if(event.getCode() == KeyCode.F6){
+        if(event.getCode() == KeyCode.F5){
             gerenciamentoFuncionario(event);
         }
     }
 
     private void gerenciamentoFuncionario(Event event){
-        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/funcionario.fxml", "Gerenciamento de Funcionario", (FuncionarioController controller) -> {
-            controller.setService(new FuncionarioServices());
-            controller.updateTableView();
-        });
+        if(Main.getDataUser().getAdministrador().equals(true)) {
+            loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/funcionario.fxml", "Gerenciamento de Funcionario", (FuncionarioController controller) -> {
+                controller.setService(new FuncionarioServices());
+                controller.updateTableView();
+            });
+        } else {
+            Alerts.showAlert("Acesso Negado", "Você não tem permissão para acessar essa funcionalidade", "",Alert.AlertType.ERROR);
+        }
     }
 
     private void pesagemExportacao(Event event){

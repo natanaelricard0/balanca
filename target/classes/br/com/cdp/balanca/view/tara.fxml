@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="550.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.TaraController">
     <children>
@@ -25,16 +24,8 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnPesar" mnemonicParsing="false" onAction="#btOnActionPesar" GridPane.columnIndex="1">
-                            <graphic>
-                                <FontIcon iconColor="WHITE" iconLiteral="mdi-scale" iconSize="30" />
-                            </graphic>
-                        </Button>
-                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btOnActionSalvarPesagem">
-                            <graphic>
-                                <FontIcon iconColor="WHITE" iconLiteral="mdi-content-save" iconSize="30" />
-                            </graphic>
-                        </Button>
+                        <Button fx:id="btnPesar" mnemonicParsing="false" onAction="#btOnActionPesar" text="Pesar" />
+                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btOnActionSalvarPesagem" text="Salvar" GridPane.columnIndex="1" />
                     </children>
                 </GridPane>
             </items>
@@ -56,7 +47,7 @@
                         <Insets left="10.0" right="10.0" />
                     </GridPane.margin>
                 </TextField>
-                <TextField fx:id="txtPeso" editable="false" style="-fx-background-color: Yellow;" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                <TextField fx:id="txtPeso" editable="false" styleClass="text-field-bright" GridPane.columnSpan="2" GridPane.rowIndex="3">
                     <GridPane.margin>
                         <Insets left="10.0" right="10.0" />
                     </GridPane.margin>
@@ -82,12 +73,12 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label styleClass="label-bright" text="Codigo:" />
-                  <Label styleClass="label-bright" text="Placa:" GridPane.rowIndex="1" />
-                  <Label styleClass="label-bright" text="Tara:" GridPane.rowIndex="2" />
-                  <Label fx:id="lblIdVeiculo" styleClass="label-bright" GridPane.columnIndex="1" />
-                  <Label fx:id="lblPlacaVeiculo" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <Label fx:id="lblTaraVeiculo" styleClass="label-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Codigo:" />
+                  <Label text="Placa:" GridPane.rowIndex="1" />
+                  <Label text="Tara:" GridPane.rowIndex="2" />
+                  <Label fx:id="lblIdVeiculo" GridPane.columnIndex="1" />
+                  <Label fx:id="lblPlacaVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lblTaraVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />

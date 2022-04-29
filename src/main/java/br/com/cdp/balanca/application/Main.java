@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.SplitPane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -35,6 +37,11 @@ public class Main extends Application {
         try {
             SplitPane fxmlHome = FXMLLoader.load(Main.class.getResource("/br/com/cdp/balanca/view/home.fxml"));
             homeScene = new Scene(fxmlHome);
+
+            stage.setScene(homeScene);
+            stage.setMaximized(true);
+            stage.setResizable(true);
+            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -52,10 +59,6 @@ public class Main extends Application {
                 break;
             case "Home":
                 setHomeScene();
-                stage.setScene(homeScene);
-                stage.setMaximized(true);
-                stage.setResizable(true);
-                stage.show();
                 break;
         }
     }

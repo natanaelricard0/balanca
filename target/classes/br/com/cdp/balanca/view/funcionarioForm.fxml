@@ -48,8 +48,8 @@
                     </GridPane.margin>
                 </Label>
                 <TextField fx:id="txtLoginScap" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <CheckBox fx:id="checkAdministrador" mnemonicParsing="false" text="Administrador" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <CheckBox fx:id="checkAtivo" mnemonicParsing="false" text="Ativo" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <CheckBox fx:id="checkAdministrador" mnemonicParsing="false" text="Administrador" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <CheckBox fx:id="checkAtivo" mnemonicParsing="false" text="Ativo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                 <Label styleClass="label-bright" text="Identificador:">
                     <GridPane.margin>
                         <Insets right="10.0" />
