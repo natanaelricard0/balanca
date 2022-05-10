@@ -55,7 +55,7 @@
                         </Button>
                     </children>
                 </GridPane>
-                <Label styleClass="label-bright" text="Veículo: *" GridPane.rowIndex="1">
+                <Label text="Veículo: *" GridPane.rowIndex="1">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin></Label>
@@ -64,7 +64,7 @@
                         <Insets left="10.0" right="70.0" />
                     </GridPane.margin>
                 </TextField>
-                <Label styleClass="label-bright" text="Autorização: *" GridPane.rowIndex="3">
+                <Label text="Autorização: *" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="10.0" />
                </GridPane.margin></Label>
@@ -72,25 +72,25 @@
                     <GridPane.margin>
                         <Insets left="10.0" right="70.0" />
                     </GridPane.margin></TextField>
-                <Label styleClass="label-bright" text="Nota Fiscal:" GridPane.rowIndex="5">
+                <Label text="Nota Fiscal:" GridPane.rowIndex="5">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin></Label>
-                <Label styleClass="label-bright" text="Peso Cheio:" GridPane.rowIndex="7">
+                <Label text="Peso Cheio:" GridPane.rowIndex="7">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin></Label>
-                <Label styleClass="label-bright" text="Data e Hora da Pesagem Cheio" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Label text="Data e Hora da Pesagem Cheio" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                 <TextField fx:id="txtNotaFiscal" GridPane.columnSpan="2" GridPane.rowIndex="6">
                     <GridPane.margin>
                         <Insets left="10.0" right="10.0" />
                     </GridPane.margin></TextField>
-                <Label styleClass="label-bright" text="Peso Vazio:" GridPane.rowIndex="9">
+                <Label text="Peso Vazio:" GridPane.rowIndex="9">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-                <Label styleClass="label-bright" text="Data e Hora da Pesagem Vazio" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                <Label text="Data e Hora da Pesagem Vazio" GridPane.columnIndex="1" GridPane.rowIndex="9" />
                 <TextField fx:id="txtPesoCheio" editable="false" styleClass="text-field-bright" GridPane.rowIndex="8">
                     <GridPane.margin>
                         <Insets left="10.0" right="70.0" />
@@ -111,7 +111,7 @@
                         <Insets right="10.0" />
                     </GridPane.margin>
                 </TextField>
-                <Label styleClass="label-bright" text="Peso Líquido" GridPane.rowIndex="11">
+                <Label text="Peso Líquido" GridPane.rowIndex="11">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin>

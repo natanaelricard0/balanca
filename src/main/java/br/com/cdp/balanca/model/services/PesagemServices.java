@@ -8,6 +8,7 @@ import br.com.cdp.balanca.model.entities.ItemAutorizacao;
 import br.com.cdp.balanca.model.entities.ItemPesagem;
 import br.com.cdp.balanca.model.entities.Pesagem;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public class PesagemServices {
@@ -31,6 +32,10 @@ public class PesagemServices {
     public void insertSegundaPesagem(Pesagem pesagem){ service.updatePesagemPendente(pesagem);}
 
     public Pesagem findById(int id){ return service.findById(id); }
+
+    public List<Pesagem> findByRelatorio(String usuarioScap, String placa, Timestamp dataInicial, Timestamp dataFinal, char tipo){
+        return service.buscaPorParametro(usuarioScap, placa, dataInicial, dataFinal, tipo);
+    }
 
     public void insertSegundaPesagem(Pesagem pesagem, Float pesoLiquido){
         service.updatePesagemPendente(pesagem);

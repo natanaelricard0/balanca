@@ -2,6 +2,7 @@ package br.com.cdp.balanca.model.dao;
 
 import br.com.cdp.balanca.model.entities.Pesagem;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public interface PesagemDAO {
@@ -17,6 +18,8 @@ public interface PesagemDAO {
     List<Pesagem> pesagensPendentes();
 
     List<Pesagem> buscarPesagensPorPlaca(String valor);
+
+    List<Pesagem> buscaPorParametro(String usuarioScap, String placa, Timestamp dataInicial, Timestamp dataFinal, char tipo);
 
     Pesagem findById(int id);
 }

@@ -25,7 +25,6 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
                 <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="background" GridPane.columnSpan="2">
@@ -67,7 +66,7 @@
                         <Insets right="25.0" />
                     </GridPane.margin>
                 </Button>
-                <Button fx:id="btnRelatorios" mnemonicParsing="false" GridPane.rowIndex="4">
+                <Button fx:id="btnRelatorios" mnemonicParsing="false" onAction="#onBtRelatorioAction" GridPane.rowIndex="4">
                     <graphic>
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-file-pdf" iconSize="40" />
                     </graphic>
@@ -75,20 +74,11 @@
                         <Insets right="25.0" />
                     </GridPane.margin>
                 </Button>
-                <Button fx:id="btnConfiguracao" mnemonicParsing="false" GridPane.rowIndex="6">
-                    <graphic>
-                        <FontIcon iconColor="WHITE" iconLiteral="mdi-wrench" iconSize="40" />
-                    </graphic>
-                    <GridPane.margin>
-                        <Insets right="25.0" />
-                    </GridPane.margin>
-                </Button>
-                <Label styleClass="label-bright" text="Gerenciamento de Funcionário(F5)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <Label styleClass="label-bright" text="Pesagem De Exportação (F3)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Label styleClass="label-bright" text="Pesagem Importação Saída Rodoviária (F4)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <Label styleClass="label-bright" text="Tara de Veículo (F2)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Label styleClass="label-bright" text="Relatórios" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <Label styleClass="label-bright" text="Configuração" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label text="Gerenciamento de Funcionário (F6)" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <Label text="Pesagem De Exportação (F3)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label text="Pesagem Importação Saída Rodoviária (F4)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label text="Tara de Veículo (F2)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Relatórios (F5)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             </children>
         </GridPane>
     </items>

@@ -69,7 +69,10 @@ public class HomeController implements Initializable {
         if(event.getCode() == KeyCode.F4){
             pesagemImportacao(event);
         }
-        if(event.getCode() == KeyCode.F5){
+        if (event.getCode() == KeyCode.F5){
+            relatorio(event);
+        }
+        if(event.getCode() == KeyCode.F6){
             gerenciamentoFuncionario(event);
         }
     }
@@ -104,6 +107,16 @@ public class HomeController implements Initializable {
             controller.setVeiculoServices(new VeiculoServices());
             controller.setAutorizacaoEntradaSaidaServices(new AutorizacaoEntradaSaidaServices());
         });
+    }
+
+    private void relatorio(Event event) {
+        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/relatorio.fxml", "Relatórios", (RelatorioController controller) -> {
+        });
+    }
+
+    @FXML
+    private void onBtRelatorioAction(ActionEvent event) {
+        relatorio(event);
     }
 
     @FXML

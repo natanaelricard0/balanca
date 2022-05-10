@@ -5,10 +5,7 @@ import br.com.cdp.balanca.db.DbException;
 import br.com.cdp.balanca.model.dao.PesagemDAO;
 import br.com.cdp.balanca.model.entities.Pesagem;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -162,6 +159,40 @@ public class PesagemDaoJDBC implements PesagemDAO {
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
         }finally {
+            DB.closeStatment(st);
+            DB.closeResultSet(rs);
+        }
+    }
+
+    @Override
+    public List<Pesagem> buscaPorParametro(String usuarioScap, String placa, Timestamp dataInicial, Timestamp dataFinal, char tipo) {
+
+        PreparedStatement st = null;
+        ResultSet rs = null;
+
+        String valor = "";
+        List<Pesagem> list = new ArrayList<>();
+        try{
+            String sql = "select p.* from pesagem p\n" +
+                    "INNER JOIN autorizacao_entrada_saida aes ON p.nsu_autorizacao_e_s = aes.nsu_autorizacao_e_s\n" +
+                    "WHERE p.dt_pesagem2 BETWEEN ? AND ? AND p.nm_usuario2 LIKE ? AND aes.tp_entrada_saida = ? AND p.nm_placa LIKE ? ORDER BY p.dt_pesagem2 ASC";
+            st = conn.prepareStatement(sql);
+            st.setTimestamp(1,dataInicial);
+            st.setTimestamp(2,dataFinal);
+            st.setString(3,"%"+usuarioScap+"%");
+            st.setString(4, String.valueOf(tipo));
+            st.setString(5,"%"+placa+"%");
+            rs = st.executeQuery();
+
+            while (rs.next()){
+                list.add(instatiatePesagem(rs));
+            }
+
+            return list;
+
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        } finally {
             DB.closeStatment(st);
             DB.closeResultSet(rs);
         }

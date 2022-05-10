@@ -40,7 +40,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label styleClass="label-bright" text="AS: *">
+            <Label text="AS: *">
                <padding>
                   <Insets left="5.0" />
                </padding>
@@ -48,7 +48,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label styleClass="label-bright" text="Nota Fiscal:" GridPane.rowIndex="3">
+            <Label text="Nota Fiscal:" GridPane.rowIndex="3">
                <padding>
                   <Insets left="5.0" />
                </padding>
@@ -56,7 +56,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label styleClass="label-bright" text="Veículo: *" GridPane.rowIndex="1">
+            <Label text="Veículo: *" GridPane.rowIndex="1">
                <padding>
                   <Insets left="5.0" />
                </padding>
@@ -65,9 +65,8 @@
                </font>
             </Label>
             <TextField fx:id="txtAutorizacaoSaida" style="-fx-border-radius: 8px;" GridPane.columnIndex="1" />
-            <TextField fx:id="txtNotaFiscal" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
             <TextField fx:id="txtVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label styleClass="label-bright" text="Tara:" GridPane.rowIndex="2">
+            <Label text="Tara:" GridPane.rowIndex="2">
                <padding>
                   <Insets left="5.0" />
                </padding>
@@ -76,7 +75,9 @@
                </font>
             </Label>
             <TextField fx:id="txtTara" editable="false" styleClass="text-field-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Label styleClass="label-bright" text="Peso Total:" GridPane.rowIndex="4">
+            <TextField fx:id="txtNotaFiscal" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+            <TextField fx:id="txtPesoTotal" editable="false" styleClass="text-field-bright" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Peso Total:" GridPane.rowIndex="4">
                <padding>
                   <Insets left="5.0" />
                </padding>
@@ -84,8 +85,7 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <TextField fx:id="txtPesoTotal" editable="false" styleClass="text-field-bright" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label styleClass="label-bright" text="Peso Líquido:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Label text="Peso Líquido:" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <padding>
                   <Insets left="5.0" />
                </padding>

@@ -106,12 +106,17 @@ public class PesagemImportacaoController implements Initializable {
 
     //EVENTOS PARA OS COMPONENTES
     private void eventos(){
-        txtAutorizacaoSaida.setOnAction(event -> {
-            verificacaoAutorizacao();
+
+        txtAutorizacaoSaida.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if(!newValue){
+                verificacaoAutorizacao();
+            }
         });
 
-        txtVeiculo.setOnAction(event -> {
-            verificaVeiculo();
+        txtVeiculo.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if(!newValue){
+                verificaVeiculo();
+            }
         });
 
         btnPesar.setOnAction(event -> {
@@ -127,13 +132,14 @@ public class PesagemImportacaoController implements Initializable {
     private void verificacaoAutorizacao(){
         String valor = txtAutorizacaoSaida.getText();
 
-        if(valor != ""){
+        if(valor != "") {
             AutorizacaoEntradaSaida autorizacaoEntradaSaida = autorizacaoEntradaSaidaServices.findById(Integer.parseInt(valor));
             if(autorizacaoEntradaSaida != null && autorizacaoEntradaSaidaServices.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("S")){
-                txtAutorizacaoSaida.setStyle("-fx-border-color: green");
+                txtAutorizacaoSaida.setStyle("-fx-border-color: green;  -fx-border-width: 2px");
                 pesagem.setIdAutorizacao(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida());
-            }else{
+            }else {
                 txtAutorizacaoSaida.setStyle("-fx-border-color: red");
+                Alerts.showAlert("ATENÇÃO", "A autorização informada não é válida ou não é de saída.", null, Alert.AlertType.WARNING);
             }
         }
     }
@@ -184,7 +190,7 @@ public class PesagemImportacaoController implements Initializable {
     //CALCULA O PESO LIQUIDO
     private void pesoLiquido(){
         Float pesoCheio = Float.parseFloat(txtPesoTotal.getText());
-        Float tara = Float.parseFloat(txtTara.getText());
+        Float tara = Float.parseFloat(txtTara.getText().replaceAll("[^0-9]", ""));
         Float resultado = pesoCheio - tara;
         txtPesoLiquido.setText(resultado.toString());
         if(resultado <= 0.0){

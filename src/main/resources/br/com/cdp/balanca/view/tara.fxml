@@ -52,12 +52,12 @@
                         <Insets left="10.0" right="10.0" />
                     </GridPane.margin>
                 </TextField>
-                <Label styleClass="label-bright" text="Veículo: *">
+                <Label text="Veículo: *">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin>
                 </Label>
-                <Label styleClass="label-bright" text="Peso da Balança:" GridPane.rowIndex="2">
+                <Label text="Peso da Balança:" GridPane.rowIndex="2">
                     <GridPane.margin>
                         <Insets left="10.0" />
                     </GridPane.margin>

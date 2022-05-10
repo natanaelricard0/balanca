@@ -5,7 +5,9 @@ import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.design.JasperDesign;
 import net.sf.jasperreports.engine.xml.JRXmlLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +36,20 @@ public class ShowReports {
             JasperReport relatorio = JasperCompileManager.compileReport(desenho);
             JasperPrint impressao = JasperFillManager.fillReport(relatorio,null, new JRBeanCollectionDataSource(lista));
             JasperPrintManager.printPage(impressao,0,true);
+        }catch (JRException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void printRelatorioPesagem(List<Pesagem> lista){
+        try{
+            InputStream fonte = ShowReports.class.getResourceAsStream("/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml");
+            JasperReport relatorio = JasperCompileManager.compileReport(fonte);
+            JasperPrint impressao = JasperFillManager.fillReport(relatorio,null, new JRBeanCollectionDataSource(lista));
+//            JasperPrintManager.printPage(impressao,0,true);
+
+            JasperViewer.viewReport(impressao,false);
+
         }catch (JRException e){
             e.printStackTrace();
         }
