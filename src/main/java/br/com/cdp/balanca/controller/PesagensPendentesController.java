@@ -1,10 +1,7 @@
 package br.com.cdp.balanca.controller;
 
 import br.com.cdp.balanca.listeners.DataChangeListeners;
-import br.com.cdp.balanca.model.entities.AutorizacaoEntradaSaida;
-import br.com.cdp.balanca.model.entities.Funcionario;
 import br.com.cdp.balanca.model.entities.Pesagem;
-import br.com.cdp.balanca.model.entities.Veiculo;
 import br.com.cdp.balanca.model.services.AutorizacaoEntradaSaidaServices;
 import br.com.cdp.balanca.model.services.PesagemServices;
 import br.com.cdp.balanca.model.services.VeiculoServices;

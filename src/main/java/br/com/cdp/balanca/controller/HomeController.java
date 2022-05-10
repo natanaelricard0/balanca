@@ -89,7 +89,7 @@ public class HomeController implements Initializable {
     }
 
     private void pesagemExportacao(Event event){
-        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml", "Gerenciamento de Pesagens", (PesagensPendentesController controller) -> {
+        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml", "Pesagem Exportação", (PesagensPendentesController controller) -> {
             controller.setService(new PesagemServices());
             controller.setAutorizacaoEntradaSaidaServices(new AutorizacaoEntradaSaidaServices());
             controller.setVeiculoServices(new VeiculoServices());
@@ -102,7 +102,7 @@ public class HomeController implements Initializable {
     }
 
     private void pesagemImportacao(Event event){
-        loadView(ResourceStage.currentStage(event),"/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml","Cadastro de Pesagem de importação Saída Rodoviária", (PesagemImportacaoController controller) -> {
+        loadView(ResourceStage.currentStage(event),"/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml","Pesagem de importação Saída Rodoviária", (PesagemImportacaoController controller) -> {
             controller.setPesagemServices(new PesagemServices());
             controller.setVeiculoServices(new VeiculoServices());
             controller.setAutorizacaoEntradaSaidaServices(new AutorizacaoEntradaSaidaServices());
@@ -110,7 +110,7 @@ public class HomeController implements Initializable {
     }
 
     private void relatorio(Event event) {
-        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/relatorio.fxml", "Relatórios", (RelatorioController controller) -> {
+        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/relatorio.fxml", "Relatórios de Pesagem", (RelatorioController controller) -> {
         });
     }
 

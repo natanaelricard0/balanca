@@ -75,7 +75,7 @@ public class DB {
             String url = prop.getProperty("adurl");
             String dominio = prop.getProperty("dominio");
 
-            Hashtable<String, String> environment = new Hashtable<String, String>();
+            Hashtable<String, String> environment = new Hashtable<>();
             String put = environment.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
             environment.put(Context.PROVIDER_URL, url);
             environment.put(Context.SECURITY_AUTHENTICATION, "simple");

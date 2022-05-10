@@ -301,9 +301,18 @@ public class PesagemController implements Initializable {
         validarVeiculo();
         validarAutorizacao();
         if(veiculo != null || autorizacaoEntradaSaida != null){
-            if(!service.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) || !autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
-                return false;
-            }else return true;
+            if(service.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) || autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
+                if(!primeiraPesagem){
+                    Float pesoLiquido = Float.parseFloat(txtPesoLiquido.getText());
+                    if(pesoLiquido > 0){
+                        return true;
+                    } else {
+                        txtPesoLiquido.setStyle("-fx-border-color: red");
+                        return false;
+                    }
+                }
+                return true;
+            }else return false;
         }else return false;
     }
 
