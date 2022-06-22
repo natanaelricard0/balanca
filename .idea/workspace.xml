@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a754f3ab-e075-459f-9446-29f386c25c80" name="Changes" comment="teste 1">
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="teste">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/application/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,67 +26,39 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2AvqYdqWbtdyE274LSwJ2SD1rQq" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="2AvwMB5HpXl7QbHMCCYMwrZYxNx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/JavaLibs/javafx-sdk-18.0.1/lib",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "project.propVCSSupport.Mappings"
-  }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/zulu17.30.15-ca-jdk17.0.1-win_i686" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.Main" />
-      <module name="Balanca" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a754f3ab-e075-459f-9446-29f386c25c80" name="Changes" comment="" />
-      <created>1655900460547</created>
+      <changelist id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="" />
+      <created>1655903323465</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1655900460547</updated>
-      <workItem from="1655900462648" duration="1678000" />
+      <updated>1655903323465</updated>
+      <workItem from="1655903325328" duration="236000" />
     </task>
-    <task id="LOCAL-00001" summary="testando intellij">
-      <created>1655901916425</created>
+    <task id="LOCAL-00001" summary="teste">
+      <created>1655903525679</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1655901916425</updated>
+      <updated>1655903525679</updated>
     </task>
-    <task id="LOCAL-00002" summary="projeto origin">
-      <created>1655902016668</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1655902016668</updated>
-    </task>
-    <task id="LOCAL-00003" summary="teste 1">
-      <created>1655902216114</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1655902216114</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -103,10 +76,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="atualizando projeto" />
-    <MESSAGE value="testando intellij" />
-    <MESSAGE value="projeto origin" />
-    <MESSAGE value="teste 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste 1" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste" />
   </component>
 </project>
