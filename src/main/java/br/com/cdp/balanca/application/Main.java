@@ -25,7 +25,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
         Parent fxmlLogin = FXMLLoader.load(Main.class.getResource("/br/com/cdp/balanca/view/login.fxml"));
-        loginScene = new Scene(fxmlLogin, 601, 400);
+        loginScene = new Scene(fxmlLogin, 600, 400);
 
         primaryStage.setTitle("Balança Rodoviária CDP");
         primaryStage.setScene(loginScene);
