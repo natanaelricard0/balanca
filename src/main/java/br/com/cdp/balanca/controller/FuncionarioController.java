@@ -101,6 +101,7 @@ public class FuncionarioController implements Initializable, DataChangeListeners
     @FXML
     private void onBtActionPesquisar() {
 //        searchTableView();
+//adicionar depois
     }
 
     @FXML
