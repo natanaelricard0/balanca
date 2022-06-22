@@ -79,6 +79,11 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         initEditButtons();
     }
 
+//   public void searchTableView(){
+
+//   }
+
+
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
         columnEdit.setCellFactory(param -> new TableCell<Funcionario, Funcionario>() {
@@ -127,6 +132,10 @@ public class FuncionarioController implements Initializable, DataChangeListeners
             e.printStackTrace();
         }
     }
+
+/*   private void onBtnActionDelete(ActionEvent event){
+     }
+*/
 
     private void initialNodes() {
         columnId.setCellValueFactory(new PropertyValueFactory<>("id"));

@@ -117,4 +117,6 @@ public class FuncionarioFormController implements Initializable {
         checkAdministrador.setSelected(funcionario.getAdministrador() == null ? false : funcionario.getAdministrador());
         checkAtivo.setSelected(funcionario.getAtivo() == null ? false : funcionario.getAtivo());
     }
+
+
 }

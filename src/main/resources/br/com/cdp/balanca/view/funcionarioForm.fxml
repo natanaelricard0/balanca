@@ -57,6 +57,7 @@
                     </GridPane.margin>
                 </Label>
                 <TextField fx:id="txtId" disable="true" GridPane.columnIndex="1" />
+
                 <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#btnOnActionSalvar" text="Salvar" GridPane.columnIndex="1" GridPane.rowIndex="6">
                     <styleClass>
                         <String fx:value="btn" />

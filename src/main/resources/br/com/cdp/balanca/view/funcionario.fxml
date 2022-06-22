@@ -24,6 +24,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
+
                 <Button fx:id="btnCadastrarUsuario" mnemonicParsing="false" onAction="#onBtnActionCadastrar" prefHeight="20.0" prefWidth="10.0">
                     <GridPane.margin>
                         <Insets left="5.0" />
@@ -64,6 +65,8 @@
                 </GridPane>
             </children>
         </GridPane>
+
+        <!--Tabela funcionário balança-->
         <TableView fx:id="tabelaFuncionario" prefHeight="480.0" prefWidth="200.0">
             <columns>
                 <TableColumn fx:id="columnId" prefWidth="75.0" text="Id" />
