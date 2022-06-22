@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a754f3ab-e075-459f-9446-29f386c25c80" name="Changes" comment="projeto origin" />
+    <list default="true" id="a754f3ab-e075-459f-9446-29f386c25c80" name="Changes" comment="teste 1">
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/application/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/application/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +62,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1655900460547</updated>
-      <workItem from="1655900462648" duration="1644000" />
+      <workItem from="1655900462648" duration="1678000" />
     </task>
     <task id="LOCAL-00001" summary="testando intellij">
       <created>1655901916425</created>
@@ -76,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655902016668</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="teste 1">
+      <created>1655902216114</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655902216114</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,6 +106,7 @@
     <MESSAGE value="atualizando projeto" />
     <MESSAGE value="testando intellij" />
     <MESSAGE value="projeto origin" />
-    <option name="LAST_COMMIT_MESSAGE" value="projeto origin" />
+    <MESSAGE value="teste 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste 1" />
   </component>
 </project>
