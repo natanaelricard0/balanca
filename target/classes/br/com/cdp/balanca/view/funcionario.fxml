@@ -73,9 +73,13 @@
                 <TableColumn fx:id="columnNome" prefWidth="156.0" text="Nome" />
                 <TableColumn fx:id="columnLoginScap" minWidth="0.0" prefWidth="90.0" text="Login Scap" />
                 <TableColumn fx:id="columnLoginRede" minWidth="7.0" prefWidth="90.0" text="Login Rede" />
+
                 <TableColumn fx:id="columnAtivo" prefWidth="55.0" text="Ativo" />
                 <TableColumn fx:id="columnAdministrador" prefWidth="103.0" text="Administrador" />
+
+                <!--button editar-->
                 <TableColumn fx:id="columnEdit" prefWidth="120.0" text="Editar" />
+                <TableColumn fx:id="columnDelete" prefWidth="120.0" text="Deletar"/>
             </columns>
         </TableView>
     </children>
