@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="650.0" styleClass="background-submenu" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemImportacaoController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="325.0" prefWidth="650.0" styleClass="background-submenu" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemImportacaoController">
    <children>
       <GridPane prefHeight="60.0">
         <columnConstraints>
@@ -40,25 +40,25 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="AS: *">
-               <padding>
-                  <Insets left="5.0" />
-               </padding>
+            <Label text="Autorização de Saída: *" textAlignment="CENTER" wrapText="true">
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Label>
             <Label text="Nota Fiscal:" GridPane.rowIndex="3">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="18.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
-            <Label text="Veículo: *" GridPane.rowIndex="1">
+            <Label text="Veículo: *" textAlignment="CENTER" GridPane.rowIndex="1">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="18.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -68,7 +68,7 @@
             <TextField fx:id="txtVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Tara:" GridPane.rowIndex="2">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="18.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
@@ -79,7 +79,7 @@
             <TextField fx:id="txtPesoTotal" editable="false" styleClass="text-field-bright" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="Peso Total:" GridPane.rowIndex="4">
                <padding>
-                  <Insets left="5.0" />
+                  <Insets left="18.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />

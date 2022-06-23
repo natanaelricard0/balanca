@@ -50,10 +50,8 @@ public class FuncionarioController implements Initializable, DataChangeListeners
     @FXML
     private TableColumn<Funcionario, Funcionario> columnEdit;
 
-    /*
     @FXML
-    private TableColumn<Funcionario, Funcionario> columnDelete;
-    */
+    private TableColumn<Funcionario, Funcionario> columnDelete; //new
 
     @FXML
     private Button btnCadastrarUsuario;
@@ -83,7 +81,19 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         initEditButtons();
     }
 
+/*
+   private void deleteAction(ActionEvent event){
+        List<Funcionario> list;
+        list = service.findAll();
+        obsList = FXCollections.observableArrayList(list);
+        tabelaFuncionario.setItems(obsList);
+        initDeleteButtons();
+   }s2ferr
 
+   private void initDeleteButtons(){
+
+   }
+*/
 
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
@@ -103,10 +113,6 @@ public class FuncionarioController implements Initializable, DataChangeListeners
             }
         });
     }
-
-/*   private void onBtnActionDelete(ActionEvent event){
-     }
-*/
 
     //   public void searchTableView(){
 
@@ -150,11 +156,13 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         columnLoginScap.setCellValueFactory(new PropertyValueFactory<>("LoginScap"));
         columnAdministrador.setCellValueFactory(new PropertyValueFactory<>("Administrador"));
         columnAtivo.setCellValueFactory(new PropertyValueFactory<>("Ativo"));
-        //columnDelete.setCellValueFactory(new PropertyValueFactory<>("Delete"))
     }
 
     @Override
     public void onDataChanged() {
         updateTableView();
     }
+
+
+
 }

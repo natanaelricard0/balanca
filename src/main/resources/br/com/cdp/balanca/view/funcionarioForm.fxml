@@ -12,7 +12,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <!--Tela formulario de cadastro de gerenciamento de funcionario-->
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="500.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.FuncionarioFormController">
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="500.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.FuncionarioFormController">
     <children>
         <GridPane>
             <columnConstraints>
@@ -31,32 +32,32 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <TextField fx:id="txtNome" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                <TextField fx:id="txtLoginRede" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Label text="Nome:" GridPane.rowIndex="1">
-                    <GridPane.margin>
-                        <Insets right="10.0" />
-                    </GridPane.margin>
-                </Label>
-                <Label text="Login da Rede:" GridPane.rowIndex="2">
-                    <GridPane.margin>
-                        <Insets right="10.0" />
-                    </GridPane.margin>
-                </Label>
-                <Label text="Login Scap:" GridPane.rowIndex="3">
-                    <GridPane.margin>
-                        <Insets right="10.0" />
-                    </GridPane.margin>
-                </Label>
-                <TextField fx:id="txtLoginScap" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <CheckBox fx:id="checkAdministrador" mnemonicParsing="false" text="Administrador" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <CheckBox fx:id="checkAtivo" mnemonicParsing="false" text="Ativo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <TextField fx:id="txtId" disable="true" GridPane.columnIndex="1" />
                 <Label text="Identificador:">
                     <GridPane.margin>
                         <Insets right="10.0" />
                     </GridPane.margin>
                 </Label>
-                <TextField fx:id="txtId" disable="true" GridPane.columnIndex="1" />
+                <TextField fx:id="txtNome" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                <Label text="Nome:" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="txtLoginRede" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Label text="Login da Rede:" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <TextField fx:id="txtLoginScap" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Label text="Login Scap:" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets right="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <CheckBox fx:id="checkAdministrador" mnemonicParsing="false" styleClass="text-bold" text="Administrador" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <CheckBox fx:id="checkAtivo" mnemonicParsing="false" styleClass="text-bold" text="Ativo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
 
                 <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#btnOnActionSalvar" text="Salvar" GridPane.columnIndex="1" GridPane.rowIndex="6">
                     <styleClass>
@@ -70,6 +71,7 @@
                         <String fx:value="btn-danger" />
                     </styleClass>
                 </Button>
+
             </children>
         </GridPane>
     </children>

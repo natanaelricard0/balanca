@@ -58,7 +58,7 @@ public class FuncionarioFormController implements Initializable {
     }
 
     @FXML
-    private void btnOnActionSalvar(ActionEvent event) {
+    private void btnOnActionSalvar(ActionEvent event) { //action salvar
         if (funcionario == null) {
             throw new IllegalStateException("Funcionario as null");
         }
