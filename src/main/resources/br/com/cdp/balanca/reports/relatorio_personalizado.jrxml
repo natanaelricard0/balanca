@@ -36,10 +36,10 @@
 		</band>
 	</title>
 	<pageHeader>
-		<band height="26" splitType="Stretch"/>
+		<band height="41" splitType="Stretch"/>
 	</pageHeader>
 	<columnHeader>
-		<band height="51" splitType="Stretch">
+		<band height="58" splitType="Stretch">
 			<staticText>
 				<reportElement x="0" y="15" width="80" height="30" forecolor="#000203" backcolor="#FFFFFF" uuid="9a2876f2-d1d1-4b6a-b1de-e897205d57fd">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="de7de077-bc0a-4593-9dba-1c410428c958"/>
@@ -120,10 +120,16 @@
 				</textElement>
 				<text><![CDATA[Peso Liquido]]></text>
 			</staticText>
+			<line>
+				<reportElement mode="Opaque" x="0" y="50" width="550" height="1" forecolor="#8C8C8C" uuid="5c3bc918-8a0e-4ad6-a3fb-fda47ca825b9"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#1C1C1C"/>
+				</graphicElement>
+			</line>
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="55" splitType="Stretch">
+		<band height="57" splitType="Stretch">
 			<textField>
 				<reportElement x="0" y="0" width="80" height="30" uuid="22c9534f-d534-4663-9ea8-5ff26406f8ad">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="381e7c34-99da-431d-8cbf-4a44e0656220"/>
@@ -159,6 +165,30 @@
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
 				<textFieldExpression><![CDATA[$F{pesoLiquido}]]></textFieldExpression>
 			</textField>
+			<line>
+				<reportElement x="320" y="-7" width="1" height="62" forecolor="#8C8C8C" uuid="c088d70a-0aed-458e-953b-a5114cac38fb"/>
+			</line>
+			<line>
+				<reportElement x="549" y="-8" width="1" height="63" forecolor="#8C8C8C" uuid="ba05e08f-c60c-450e-96c3-68c73b44dae2"/>
+			</line>
+			<line>
+				<reportElement mode="Opaque" x="0" y="55" width="550" height="1" forecolor="#8C8C8C" uuid="81fc02f3-2af2-430b-9667-e6422adec00a"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#1C1C1C"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="430" y="-8" width="1" height="63" forecolor="#8C8C8C" uuid="948109c2-c0de-478d-bb62-a85e5ff4cb7a"/>
+			</line>
+			<line>
+				<reportElement x="210" y="-8" width="1" height="63" forecolor="#8C8C8C" uuid="007f7f2a-15c4-4e91-af8a-a28b8f57043a"/>
+			</line>
+			<line>
+				<reportElement x="90" y="-8" width="1" height="63" forecolor="#8C8C8C" uuid="7d7a021e-9c01-4a61-a4eb-918ecb67709f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="-8" width="1" height="63" forecolor="#8C8C8C" uuid="a080efca-0e6d-4e63-866f-8b047ee8bd1d"/>
+			</line>
 		</band>
 	</detail>
 	<columnFooter>

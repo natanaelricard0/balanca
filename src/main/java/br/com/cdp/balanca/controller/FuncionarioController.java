@@ -83,14 +83,10 @@ public class FuncionarioController implements Initializable, DataChangeListeners
 
 /*
    private void deleteAction(ActionEvent event){
-        List<Funcionario> list;
-        list = service.findAll();
-        obsList = FXCollections.observableArrayList(list);
-        tabelaFuncionario.setItems(obsList);
-        initDeleteButtons();
-   }s2ferr
 
-   private void initDeleteButtons(){
+   }
+
+   private void tDeleteButton(){
 
    }
 */
