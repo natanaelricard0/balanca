@@ -85,11 +85,8 @@ public class FuncionarioController implements Initializable, DataChangeListeners
    private void deleteAction(ActionEvent event){
 
    }
-
-   private void tDeleteButton(){
-
-   }
 */
+
 
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));

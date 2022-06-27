@@ -65,11 +65,17 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
 
     private ObservableList<Pesagem> obslist;
 
-    public void setService(PesagemServices service){ this.service = service;}
+    public void setService(PesagemServices service){
+        this.service = service;
+    }
 
-    public void setVeiculoServices(VeiculoServices veiculoServices){ this.veiculoServices = veiculoServices;}
+    public void setVeiculoServices(VeiculoServices veiculoServices){
+        this.veiculoServices = veiculoServices;
+    }
 
-    public void setAutorizacaoEntradaSaidaServices(AutorizacaoEntradaSaidaServices autorizacaoEntradaSaidaServices){this.autorizacaoEntradaSaidaServices = autorizacaoEntradaSaidaServices;}
+    public void setAutorizacaoEntradaSaidaServices(AutorizacaoEntradaSaidaServices autorizacaoEntradaSaidaServices){
+        this.autorizacaoEntradaSaidaServices = autorizacaoEntradaSaidaServices;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -78,7 +84,6 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
 
     public void updateTableView(){
         List<Pesagem> list;
-
         list = service.listarPesagensPendentes();
         obslist = FXCollections.observableArrayList(list);
         tabelaPesagem.setItems(obslist);
@@ -87,7 +92,6 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
 
     public void pesquisarActionTableView(){
         List<Pesagem> list;
-
         list = service.listarPesagensPesquisa(txtPesquisar.getText());
         obslist = FXCollections.observableArrayList(list);
         tabelaPesagem.setItems(obslist);

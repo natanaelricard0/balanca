@@ -13,7 +13,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
-
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -60,10 +59,10 @@ public class FuncionarioFormController implements Initializable {
     @FXML
     private void btnOnActionSalvar(ActionEvent event) { //action salvar
         if (funcionario == null) {
-            throw new IllegalStateException("Funcionario as null");
+            throw new IllegalStateException("Funcionario é null");
         }
         if (funcionarioServices == null) {
-            throw new IllegalStateException("Service as null");
+            throw new IllegalStateException("Service é null");
         }
         try {
             funcionario = getFormData();
@@ -71,7 +70,8 @@ public class FuncionarioFormController implements Initializable {
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
         } catch (RuntimeException exceptionMsg) {
-            Alerts.showAlert("Erro em Salvar Funcionario", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
+
+            Alerts.showAlert("Erro em Salvar Funcionário", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
     }
 

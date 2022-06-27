@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="algumas mudanças relatório">
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="melhoras no designer do relatório">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/PesagensPendentesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/PesagensPendentesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioFormController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +82,7 @@
       <workItem from="1655984648989" duration="12600000" />
       <workItem from="1655999424104" duration="4029000" />
       <workItem from="1656072763638" duration="8281000" />
-      <workItem from="1656331061960" duration="3398000" />
+      <workItem from="1656331061960" duration="6753000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1655903525679</created>
@@ -132,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656089115274</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="melhoras no designer do relatório">
+      <created>1656336794118</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1656336794118</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -155,6 +170,7 @@
     <MESSAGE value="teste" />
     <MESSAGE value="algumas mudanças" />
     <MESSAGE value="algumas mudanças relatório" />
-    <option name="LAST_COMMIT_MESSAGE" value="algumas mudanças relatório" />
+    <MESSAGE value="melhoras no designer do relatório" />
+    <option name="LAST_COMMIT_MESSAGE" value="melhoras no designer do relatório" />
   </component>
 </project>

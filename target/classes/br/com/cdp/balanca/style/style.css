@@ -1,5 +1,5 @@
 .background {
-    -fx-background-color: #F8F8FF;
+    -fx-background-color: #d1ffff;
 }
 .background-submenu{
     -fx-background-color: #2E8B57;
@@ -120,7 +120,7 @@
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: derive(#1d1d1d,20%);
     -fx-opacity: 1;
-    -fx-background-color: derive(#FFD500,20%);
+    -fx-background-color: derive(#00c4ff,20%);
 }
 
 .button {
