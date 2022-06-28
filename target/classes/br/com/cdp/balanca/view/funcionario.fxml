@@ -68,7 +68,6 @@
                 </GridPane>
             </children>
         </GridPane>
-
         <!--Tabela funcionário balança-->
         <TableView fx:id="tabelaFuncionario" prefHeight="480.0" prefWidth="200.0">
             <columns>
@@ -78,7 +77,6 @@
                 <TableColumn fx:id="columnLoginRede" minWidth="7.0" prefWidth="90.0" text="Login Rede" />
                 <TableColumn fx:id="columnAtivo" prefWidth="55.0" text="Ativo" />
                 <TableColumn fx:id="columnAdministrador" prefWidth="103.0" text="Administrador" />
-                <!--campo-->
                 <TableColumn fx:id="columnEdit" prefWidth="120.0" text="Editar" />
                 <TableColumn fx:id="columnDelete" prefWidth="120.0" text="Deletar"/>
             </columns>

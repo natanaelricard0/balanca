@@ -81,12 +81,14 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         initEditButtons();
     }
 
-/*
-   private void deleteAction(ActionEvent event){
-
-   }
-*/
-
+    private void searchTableView(){   //new    ('-')
+        //String pesquisar = txtPesquisar.getText();
+        List<Funcionario> list;
+        list = service.findByNameOrLogin(txtPesquisar.getText());
+        obsList = FXCollections.observableArrayList(list);
+        tabelaFuncionario.setItems(obsList);
+        initEditButtons();    //
+    }
 
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
@@ -107,21 +109,6 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         });
     }
 
-    //   public void searchTableView(){
-
-//   }
-
-    @FXML
-    private void onBtActionPesquisar() {
-//        searchTableView();
-//adicionar depois
-    }
-
-    @FXML
-    private void onBtnActionCadastrar(ActionEvent event) {
-        Funcionario obj = new Funcionario();
-        createDialog(obj, ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/funcionarioForm.fxml", "Cadastro De Usuário da Balança");
-    }
 
     private void createDialog(Funcionario obj, Stage parentStage, String url, String title) {
         try {
@@ -141,7 +128,6 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         }
     }
 
-
     private void initialNodes() {
         columnId.setCellValueFactory(new PropertyValueFactory<>("id"));
         columnNome.setCellValueFactory(new PropertyValueFactory<>("Nome"));
@@ -156,6 +142,15 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         updateTableView();
     }
 
+    @FXML
+    private void onBtActionPesquisar() {
+        searchTableView();
+    }
 
+   @FXML
+    private void onBtnActionCadastrar(ActionEvent event) {
+        Funcionario obj = new Funcionario();
+        createDialog(obj, ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/funcionarioForm.fxml", "Cadastro De Usuário da Balança");
+    }
 
 }

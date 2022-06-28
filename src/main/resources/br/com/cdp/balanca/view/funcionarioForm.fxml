@@ -71,7 +71,6 @@
                         <String fx:value="btn-danger" />
                     </styleClass>
                 </Button>
-
             </children>
         </GridPane>
     </children>

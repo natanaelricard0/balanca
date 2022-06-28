@@ -14,10 +14,9 @@ import java.util.List;
 public class PesagemServices {
 
     PesagemDAO service = DaoFactory.createPesagemDao();
-
     ItemPesagemDAO itemPesagemService = DaoFactory.createItemPesagemDao();
-
     ItemAutorizacaoDAO itemAutorizacaoService = DaoFactory.createItemAutorizacaoDao();
+
 
     public List<Pesagem> listarPesagensPendentes(){
         return service.pesagensPendentes();
@@ -27,9 +26,11 @@ public class PesagemServices {
         return service.buscarPesagensPorPlaca(valor);
     }
 
-    public void insertPrimeiraPesagem(Pesagem pesagem){ service.insertPesagemPendente(pesagem);}
+    public void insertPrimeiraPesagem(Pesagem pesagem){
+        service.insertPesagemPendente(pesagem);}
 
-    public void insertSegundaPesagem(Pesagem pesagem){ service.updatePesagemPendente(pesagem);}
+    public void insertSegundaPesagem(Pesagem pesagem){
+        service.updatePesagemPendente(pesagem);}
 
     public Pesagem findById(int id){ return service.findById(id); }
 

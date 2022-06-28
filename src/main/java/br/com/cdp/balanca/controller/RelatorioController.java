@@ -95,10 +95,10 @@ public class RelatorioController implements Initializable {
 
     private void updateTableView() {
         char tipo = cmbTipo.getSelectionModel().getSelectedItem().charAt(0);
-        String placa = txtVeiculo.getText();
+        String placa = txtVeiculo.getText(); //
         Timestamp dataInicial = Timestamp.valueOf(this.dataInicial.getValue().atTime(0, 0));
         Timestamp dataFinal = Timestamp.valueOf(this.dataFinal.getValue().atTime(23, 59));
-        String operador = txtUsuario.getText();
+        String operador = txtUsuario.getText(); //
 
         List<Pesagem> result = pesagemServices.findByRelatorio(operador ,placa, Timestamp.valueOf(dataInicial.toString()), Timestamp.valueOf(dataFinal.toString()), tipo);
 

@@ -70,7 +70,6 @@ public class FuncionarioFormController implements Initializable {
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
         } catch (RuntimeException exceptionMsg) {
-
             Alerts.showAlert("Erro em Salvar Funcionário", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
     }
