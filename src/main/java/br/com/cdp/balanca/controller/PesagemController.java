@@ -265,7 +265,9 @@ public class PesagemController implements Initializable {
         }
     }
 
-    public void buscarVeiculoPlaca(String placa){ veiculo = veiculoServices.findByPlaca(placa);}
+    public void buscarVeiculoPlaca(String placa){
+        veiculo = veiculoServices.findByPlaca(placa);
+    }
 
     public void updateFormData(){
         if(pesagem == null){

@@ -81,7 +81,7 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         initEditButtons();
     }
 
-    private void searchTableView(){   //new    ('-')
+    private void searchTableView(){   //new
         //String pesquisar = txtPesquisar.getText();
         List<Funcionario> list;
         list = service.findByNameOrLogin(txtPesquisar.getText());
@@ -89,6 +89,7 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         tabelaFuncionario.setItems(obsList);
         initEditButtons();    //
     }
+
 
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));

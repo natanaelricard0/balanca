@@ -74,6 +74,10 @@ public class FuncionarioFormController implements Initializable {
         }
     }
 
+
+
+
+
     @FXML
     private void btnOnActionCancelar(ActionEvent event) {
         ResourceStage.currentStage(event).close();

@@ -16,7 +16,9 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
 
     Connection conn;
 
-    public VeiculoDaoJDBC(Connection conn){ this.conn = conn; }
+    public VeiculoDaoJDBC(Connection conn){
+        this.conn = conn;
+    }
 
     @Override
     public Veiculo findById(int id) {
