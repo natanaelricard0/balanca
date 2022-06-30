@@ -78,7 +78,7 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
             return null;
         }catch (SQLException e){
             throw new DbException(e.getMessage());
-        }finally {
+        } finally {
             DB.closeStatment(st);
             DB.closeResultSet(rs);
         }
@@ -101,7 +101,7 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
             return list;
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
-        }finally {
+        } finally {
             DB.closeStatment(st);
             DB.closeResultSet(rs);
         }

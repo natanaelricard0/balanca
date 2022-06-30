@@ -28,4 +28,5 @@ public class DaoFactory {
     public static ItemAutorizacaoDAO createItemAutorizacaoDao(){
         return new ItemAutorizacaoDaoJDBC(DB.getConnection());
     }
+
 }

@@ -63,6 +63,9 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         }
     }
 
+
+
+
     @Override
     public Funcionario findById(int id) {
         PreparedStatement st = null;
