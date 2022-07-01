@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="600.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.LoginController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.LoginController">
    <children>
       <GridPane prefHeight="400.0" prefWidth="100.0">
         <columnConstraints>
@@ -26,19 +26,19 @@
             <Pane prefHeight="200.0" prefWidth="200.0" styleClass="background-submenu" GridPane.columnIndex="1">
                <children>
                   <TextField fx:id="txtLogin" layoutX="93.0" layoutY="118.0" />
-                   <Label layoutX="145.0" layoutY="78.0" styleClass="label-bright" text="Login">
-                       <graphic>
-                           <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="25" />
-                       </graphic>
-                   </Label>
-                   <PasswordField fx:id="pswSenha" layoutX="90.0" layoutY="249.0" />
-                   <Label layoutX="144.0" layoutY="212.0" styleClass="label-bright" text="Senha">
-                       <graphic>
-                           <FontIcon iconColor="WHITE" iconLiteral="mdi-key" iconSize="25" />
-                       </graphic>
-                   </Label>
+                  <PasswordField fx:id="pswSenha" layoutX="90.0" layoutY="249.0" />
                   <Button fx:id="btnEntrar" layoutX="34.0" layoutY="335.0" mnemonicParsing="false" onAction="#onLoginAction" text="Entrar" />
                   <Button fx:id="btnSair" layoutX="244.0" layoutY="335.0" mnemonicParsing="false" onAction="#onExitAction" text="Sair" />
+                  <Label layoutX="145.0" layoutY="78.0" styleClass="label-bright" text="Login">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="25" />
+                     </graphic>
+                  </Label>
+                  <Label layoutX="144.0" layoutY="212.0" styleClass="label-bright" text="Senha">
+                     <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-key" iconSize="25" />
+                     </graphic>
+                  </Label>
                </children>
             </Pane>
          </children>

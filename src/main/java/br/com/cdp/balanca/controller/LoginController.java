@@ -46,7 +46,7 @@ public class LoginController implements Initializable {
     private boolean validateInput(){
         if(txtLogin.getText().equals("") || pswSenha.getText().equals("")){
             return false;
-        } else {
+        }else {
             return true;
         }
     }
@@ -71,7 +71,7 @@ public class LoginController implements Initializable {
                         pswSenha.clear();
                         Main.setDataUser(func);
                         Main.changeScene("Home");
-                    } else {
+                    }else {
                         Alerts.showAlert("Atenção!", "", "Login ou Senha está Incorreta", Alert.AlertType.ERROR);
                     }
                 } else {
@@ -87,6 +87,4 @@ public class LoginController implements Initializable {
     private void onExitAction() {
         System.exit(1);
     }
-
-
 }

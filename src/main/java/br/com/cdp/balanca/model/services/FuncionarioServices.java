@@ -15,7 +15,7 @@ public class FuncionarioServices {
     }
 
     public List<Funcionario> findByNameOrLogin(String str) {
-        return funcionarioDao.find(str);  //conectado com FUNCIONARIODaoJDBC e FuncionarioDAO
+        return funcionarioDao.find(str); //conectado com FUNCIONARIODaoJDBC e FuncionarioDAO
     }
 
     public void insertOrUpdate(Funcionario obj) {
@@ -31,14 +31,11 @@ public class FuncionarioServices {
         return DB.atenticacaoUsuarioAd(obj);
     }
 
-
-    //Não estão sendo utilizados ainda
-    public Funcionario getFuncionario(String login) { //getFuncionario
+    public Funcionario getFuncionario(String login) {
         return funcionarioDao.findByLogin(login);
     }
 
     public Funcionario getNameAndLoginScap(String cpf) {
         return funcionarioDao.findLoginByCpf(cpf);
     }
-
 }

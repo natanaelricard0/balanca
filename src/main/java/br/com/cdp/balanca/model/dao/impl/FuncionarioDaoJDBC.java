@@ -33,9 +33,9 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
             st.setBoolean(5, func.getAtivo());
 
             st.executeUpdate();
-        } catch (SQLException e){
+        }catch (SQLException e){
             throw new RuntimeException(e.getMessage());
-        } finally {
+        }finally {
             DB.closeStatment(st);
         }
     }
@@ -62,9 +62,6 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
             DB.closeStatment(st);
         }
     }
-
-
-
 
     @Override
     public Funcionario findById(int id) {
@@ -140,7 +137,7 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         PreparedStatement st = null;
         ResultSet rs = null;
         List<Funcionario> list = new ArrayList<>();
-
+        // AJEITAR O EXECUTE
         try {
             st = conn.prepareStatement("EXECUTE pr_balanca_buscar_funcionario ?");
             st.setString(1, pesquisa);
@@ -194,6 +191,7 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         func.setLoginScap(rs.getString("login_scap"));
         func.setAdministrador(rs.getBoolean("administrador"));
         func.setAtivo(rs.getBoolean("ativo"));
+
         return func;
     }
 }

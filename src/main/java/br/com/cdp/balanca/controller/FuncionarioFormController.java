@@ -13,6 +13,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -57,12 +58,12 @@ public class FuncionarioFormController implements Initializable {
     }
 
     @FXML
-    private void btnOnActionSalvar(ActionEvent event) { //action salvar
+    private void btnOnActionSalvar(ActionEvent event) {
         if (funcionario == null) {
-            throw new IllegalStateException("Funcionario é null");
+            throw new IllegalStateException("Funcionario as null");
         }
         if (funcionarioServices == null) {
-            throw new IllegalStateException("Service é null");
+            throw new IllegalStateException("Service as null");
         }
         try {
             funcionario = getFormData();
@@ -70,13 +71,9 @@ public class FuncionarioFormController implements Initializable {
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
         } catch (RuntimeException exceptionMsg) {
-            Alerts.showAlert("Erro em Salvar Funcionário", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
+            Alerts.showAlert("Erro em Salvar Funcionario", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
     }
-
-
-
-
 
     @FXML
     private void btnOnActionCancelar(ActionEvent event) {
@@ -120,6 +117,4 @@ public class FuncionarioFormController implements Initializable {
         checkAdministrador.setSelected(funcionario.getAdministrador() == null ? false : funcionario.getAdministrador());
         checkAtivo.setSelected(funcionario.getAtivo() == null ? false : funcionario.getAtivo());
     }
-
-
 }

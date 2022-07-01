@@ -19,5 +19,4 @@ public interface FuncionarioDAO {
     List<Funcionario> find(String pesquisa);
 
     Funcionario findLoginByCpf(String cpf);
-
 }

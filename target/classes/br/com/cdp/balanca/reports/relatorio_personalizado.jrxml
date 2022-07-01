@@ -34,8 +34,8 @@
 				<text><![CDATA[Relátorio de Exportação]]></text>
 			</staticText>
 			<image>
-				<reportElement x="0" y="0" width="240" height="79" uuid="351b94cf-c5b0-4dc2-8f6a-57387d46f233"/>
-				<imageExpression><![CDATA["CDP-logo.png"]]></imageExpression>
+				<reportElement x="0" y="0" width="250" height="70" uuid="f8d05fd4-69d4-4d2e-bd75-fef69fb859a9"/>
+				<imageExpression><![CDATA["C:/Users/s2ferreira/Downloads/Balanca/Balanca/src/main/resources/br/com/cdp/balanca/images/cdp_logo.png"]]></imageExpression>
 			</image>
 		</band>
 	</title>

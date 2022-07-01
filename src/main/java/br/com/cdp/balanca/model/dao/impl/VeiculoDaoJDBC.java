@@ -16,9 +16,7 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
 
     Connection conn;
 
-    public VeiculoDaoJDBC(Connection conn){
-        this.conn = conn;
-    }
+    public VeiculoDaoJDBC(Connection conn){ this.conn = conn; }
 
     @Override
     public Veiculo findById(int id) {
@@ -78,7 +76,7 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
             return null;
         }catch (SQLException e){
             throw new DbException(e.getMessage());
-        } finally {
+        }finally {
             DB.closeStatment(st);
             DB.closeResultSet(rs);
         }
@@ -101,7 +99,7 @@ public class VeiculoDaoJDBC implements VeiculoDAO {
             return list;
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
-        } finally {
+        }finally {
             DB.closeStatment(st);
             DB.closeResultSet(rs);
         }

@@ -60,7 +60,7 @@
 }
 
 .table-view .label{
-    -fx-text-fill: black;
+    -fx-text-fill: #00fff8;
 }
 
 .table-view .column-header .label {

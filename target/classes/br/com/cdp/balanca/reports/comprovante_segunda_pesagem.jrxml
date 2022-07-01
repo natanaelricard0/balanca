@@ -33,20 +33,20 @@
 	<title>
 		<band height="90" splitType="Stretch">
 			<staticText>
-				<reportElement x="10" y="0" width="164" height="40" uuid="b6165e26-0a51-40d3-a995-aa7bb8a1f419"/>
+				<reportElement x="20" y="50" width="146" height="30" uuid="60eb2b46-fbc0-43f5-8e51-7d1c5476f97e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROVANTE DE PESAGEM]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="0" width="146" height="60" uuid="662af389-29b6-4abf-9b3b-1a5c564f5f05"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Trebuchet MS" size="11" isBold="true"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<text><![CDATA[COMPANHIA DOCAS DO PARÁ
 CNPJ: 04.933.552/0001-03]]></text>
-			</staticText>
-			<staticText>
-				<reportElement x="14" y="40" width="156" height="20" uuid="546aeee1-d324-464a-941e-344bd0c3a6b1"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font isBold="true"/>
-				</textElement>
-				<text><![CDATA[ COMPROVANTE DE PESAGEM ]]></text>
 			</staticText>
 		</band>
 	</title>

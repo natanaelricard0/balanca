@@ -21,7 +21,6 @@ public class Veiculo {
     }
 
     public Integer getIdVeiculo() {
-
         return idVeiculo;
     }
 

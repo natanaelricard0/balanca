@@ -51,9 +51,6 @@ public class FuncionarioController implements Initializable, DataChangeListeners
     private TableColumn<Funcionario, Funcionario> columnEdit;
 
     @FXML
-    private TableColumn<Funcionario, Funcionario> columnDelete; //new
-
-    @FXML
     private Button btnCadastrarUsuario;
 
     @FXML
@@ -75,22 +72,12 @@ public class FuncionarioController implements Initializable, DataChangeListeners
 
     public void updateTableView() {
         List<Funcionario> list;
+
         list = service.findAll();
         obsList = FXCollections.observableArrayList(list);
         tabelaFuncionario.setItems(obsList);
         initEditButtons();
     }
-
-    private void searchTableView(){   //new
-        List<Funcionario> list;
-        //String pesquisar = txtPesquisar.getText();
-        //list = service.findByNameOrLogin(pesquisar);
-        list = service.findByNameOrLogin(txtPesquisar.getText());
-        obsList = FXCollections.observableArrayList(list);
-        tabelaFuncionario.setItems(obsList);
-        initEditButtons();    //
-    }
-
 
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
@@ -110,6 +97,17 @@ public class FuncionarioController implements Initializable, DataChangeListeners
             }
         });
     }
+
+    private void searchTableView(){   //new
+        List<Funcionario> list;
+        //String pesquisar = txtPesquisar.getText();
+        //list = service.findByNameOrLogin(pesquisar);
+        list = service.findByNameOrLogin(txtPesquisar.getText());
+        obsList = FXCollections.observableArrayList(list);
+        tabelaFuncionario.setItems(obsList);
+        initEditButtons();    //
+    }
+
 
 
     private void createDialog(Funcionario obj, Stage parentStage, String url, String title) {
@@ -149,7 +147,7 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         searchTableView();
     }
 
-   @FXML
+    @FXML
     private void onBtnActionCadastrar(ActionEvent event) {
         Funcionario obj = new Funcionario();
         createDialog(obj, ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/funcionarioForm.fxml", "Cadastro De Usuário da Balança");

@@ -25,14 +25,14 @@
 	<title>
 		<band height="82" splitType="Stretch">
 			<staticText>
-				<reportElement x="14" y="40" width="156" height="20" uuid="3d023848-8d58-4d60-ab71-f3381cc62868"/>
+				<reportElement x="20" y="50" width="146" height="30" uuid="3d023848-8d58-4d60-ab71-f3381cc62868"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[ COMPROVANTE DE PESAGEM ]]></text>
+				<text><![CDATA[COMPROVANTE DE PESAGEM]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="10" y="0" width="164" height="40" uuid="593c6b63-b12a-49ce-bddf-4167c0e8f628"/>
+				<reportElement x="20" y="0" width="146" height="60" uuid="593c6b63-b12a-49ce-bddf-4167c0e8f628"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Trebuchet MS" size="11" isBold="true"/>
 					<paragraph lineSpacing="Single"/>
