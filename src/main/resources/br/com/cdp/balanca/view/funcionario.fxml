@@ -78,7 +78,6 @@
                 <TableColumn fx:id="columnAtivo" prefWidth="55.0" text="Ativo" />
                 <TableColumn fx:id="columnAdministrador" prefWidth="103.0" text="Administrador" />
                 <TableColumn fx:id="columnEdit" prefWidth="120.0" text="Editar" />
-                <TableColumn fx:id="columnDelete" prefWidth="120.0" text="Deletar"/>
             </columns>
         </TableView>
     </children>

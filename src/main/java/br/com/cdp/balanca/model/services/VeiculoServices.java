@@ -17,7 +17,11 @@ public class VeiculoServices {
         return service.findByPlaca(placa);
     }
 
-    public void updateTara(Veiculo veiculo){ service.updateTara(veiculo); }
+    public void updateTara(Veiculo veiculo){
+        service.updateTara(veiculo);
+    }
 
-    public List findAll(){ return service.findAll(); }
+    public List findAll(){   //Não está sendo utilizado ainda
+        return service.findAll();
+    }
 }

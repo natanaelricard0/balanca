@@ -20,5 +20,4 @@ public interface FuncionarioDAO {
 
     Funcionario findLoginByCpf(String cpf);
 
-
 }

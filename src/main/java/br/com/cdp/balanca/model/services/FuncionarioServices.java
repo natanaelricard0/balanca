@@ -31,7 +31,9 @@ public class FuncionarioServices {
         return DB.atenticacaoUsuarioAd(obj);
     }
 
-    public Funcionario getFuncionario(String login) {
+
+    //Não estão sendo utilizados ainda
+    public Funcionario getFuncionario(String login) { //getFuncionario
         return funcionarioDao.findByLogin(login);
     }
 

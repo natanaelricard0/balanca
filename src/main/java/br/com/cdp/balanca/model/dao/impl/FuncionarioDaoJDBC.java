@@ -33,9 +33,9 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
             st.setBoolean(5, func.getAtivo());
 
             st.executeUpdate();
-        }catch (SQLException e){
+        } catch (SQLException e){
             throw new RuntimeException(e.getMessage());
-        }finally {
+        } finally {
             DB.closeStatment(st);
         }
     }
@@ -194,7 +194,6 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         func.setLoginScap(rs.getString("login_scap"));
         func.setAdministrador(rs.getBoolean("administrador"));
         func.setAtivo(rs.getBoolean("ativo"));
-
         return func;
     }
 }
