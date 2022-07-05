@@ -25,6 +25,7 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: 2500 100;
     -fx-background-position: center;
+    -fx-background-attachment: scroll;
 }
 
 .text-teste {

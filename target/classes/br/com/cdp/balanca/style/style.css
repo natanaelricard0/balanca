@@ -25,9 +25,10 @@
     -fx-background-repeat: no-repeat;
     -fx-background-size: 2500 100;
     -fx-background-position: center;
+    -fx-background-attachment: scroll;
 }
 
-.text-toolbar {
+.text-teste {
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 12pt;
     -fx-text-fill: #ffffff;

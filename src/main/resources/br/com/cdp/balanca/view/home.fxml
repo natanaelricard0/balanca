@@ -5,12 +5,15 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
+<!--?import org.kordamp.ikonli.javafx.FontIcon?-->
 
-<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="600.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="600.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
     <items>
         <GridPane>
             <columnConstraints>
@@ -33,6 +36,9 @@
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />
                         <Label fx:id="lblUser" />
                     </items>
+               <GridPane.margin>
+                  <Insets top="-10.0" />
+               </GridPane.margin>
                 </ToolBar>
                 <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" GridPane.rowIndex="5">
                     <graphic>
@@ -79,6 +85,15 @@
                 <Label text="Pesagem Importação Saída Rodoviária (F4)" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                 <Label text="Tara de Veículo (F2)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label text="Relatórios (F5)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+               <ImageView id="cdp_image" fitHeight="90.0" fitWidth="280.0" style="-fx-background-attachment: scroll;" GridPane.rowIndex="0">
+               <GridPane.margin>
+                  <Insets right="200.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../images/cdp.png" />
+               </image></ImageView>
+
             </children>
         </GridPane>
     </items>
