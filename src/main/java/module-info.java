@@ -1,4 +1,4 @@
-module br.com.cdp.balanca {
+module br.com.cdp.balanca{
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -16,4 +16,5 @@ module br.com.cdp.balanca {
     opens br.com.cdp.balanca.controller to javafx.fxml;
     exports br.com.cdp.balanca.model.entities to javafx.fxml;
     opens br.com.cdp.balanca.model.entities;
+
 }

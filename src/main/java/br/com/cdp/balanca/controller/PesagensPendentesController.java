@@ -65,11 +65,17 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
 
     private ObservableList<Pesagem> obslist;
 
-    public void setService(PesagemServices service){ this.service = service;}
+    public void setService(PesagemServices service){
+        this.service = service;
+    }
 
-    public void setVeiculoServices(VeiculoServices veiculoServices){ this.veiculoServices = veiculoServices;}
+    public void setVeiculoServices(VeiculoServices veiculoServices){
+        this.veiculoServices = veiculoServices;
+    }
 
-    public void setAutorizacaoEntradaSaidaServices(AutorizacaoEntradaSaidaServices autorizacaoEntradaSaidaServices){this.autorizacaoEntradaSaidaServices = autorizacaoEntradaSaidaServices;}
+    public void setAutorizacaoEntradaSaidaServices(AutorizacaoEntradaSaidaServices autorizacaoEntradaSaidaServices){
+        this.autorizacaoEntradaSaidaServices = autorizacaoEntradaSaidaServices;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

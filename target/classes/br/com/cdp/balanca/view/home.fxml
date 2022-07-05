@@ -27,7 +27,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="200.0" styleClass="background" GridPane.columnSpan="2">
+                <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="1000.0" styleClass="background2" GridPane.columnSpan="2">
                     <items>
                         <Button fx:id="btnSair" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onBtActionTrocaUsuarioAction" text="Sair" />
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />

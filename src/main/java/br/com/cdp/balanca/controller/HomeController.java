@@ -13,6 +13,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToolBar;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
@@ -130,10 +133,14 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void onBtPesagemImportacaoSaidaRodoviaria(ActionEvent event){ pesagemImportacao(event);}
+    private void onBtPesagemImportacaoSaidaRodoviaria(ActionEvent event){
+        pesagemImportacao(event);
+    }
 
     @FXML
-    private void onBtnFuncionarioAction(ActionEvent event) { gerenciamentoFuncionario(event);}
+    private void onBtnFuncionarioAction(ActionEvent event) {
+        gerenciamentoFuncionario(event);
+    }
 
     private synchronized <T> void loadView(Stage parentStage, String absolutName, String title, Consumer<T> initializingAction) {
         try {
@@ -154,4 +161,5 @@ public class HomeController implements Initializable {
         Main.setDataUser(null);
         Main.changeScene("Login");
     }
+
 }
