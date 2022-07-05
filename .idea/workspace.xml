@@ -4,36 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment=".">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/balanca.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_17_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_18_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Balanca.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/images/banner.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/images/cdp_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="mudanças no estilo do app">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/PesagensPendentesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/PesagensPendentesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/images/pexels-asad-photo-maldives-3426867.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/images/pexels-asad-photo-maldives-3426867.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +121,7 @@
       <workItem from="1656938953867" duration="7698000" />
       <workItem from="1657022308425" duration="8635000" />
       <workItem from="1657031040711" duration="236000" />
-      <workItem from="1657031301853" duration="1105000" />
+      <workItem from="1657031301853" duration="3916000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1655903525679</created>
@@ -252,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656692325773</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="mudanças no estilo do app">
+      <created>1657032662615</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1657032662615</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +261,7 @@
     <MESSAGE value="algumas mudanças" />
     <MESSAGE value="Mudanças na cor do sistema" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="mudanças no estilo do app" />
+    <option name="LAST_COMMIT_MESSAGE" value="mudanças no estilo do app" />
   </component>
 </project>

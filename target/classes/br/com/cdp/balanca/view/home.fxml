@@ -14,8 +14,8 @@
     <items>
         <GridPane>
             <columnConstraints>
-                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
-                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1000.0" minWidth="0.0" prefWidth="498.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1000.0" minWidth="0.0" prefWidth="502.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -27,7 +27,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="1000.0" styleClass="background2" GridPane.columnSpan="2">
+                <ToolBar fx:id="toolbar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="2500.0" styleClass="background-toolbar" GridPane.columnSpan="2">
                     <items>
                         <Button fx:id="btnSair" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onBtActionTrocaUsuarioAction" text="Sair" />
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />
