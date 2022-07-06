@@ -6,10 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="mudanças no estilo do app">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +121,8 @@
       <workItem from="1656938953867" duration="7698000" />
       <workItem from="1657022308425" duration="8635000" />
       <workItem from="1657031040711" duration="236000" />
-      <workItem from="1657031301853" duration="7082000" />
+      <workItem from="1657031301853" duration="7578000" />
+      <workItem from="1657109190759" duration="9768000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1655903525679</created>
@@ -249,7 +250,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657037094042</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="mudanças no estilo do app">
+      <created>1657040258225</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1657040258225</updated>
+    </task>
+    <task id="LOCAL-00020" summary="mudanças no estilo do app">
+      <created>1657040282194</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1657040282194</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
