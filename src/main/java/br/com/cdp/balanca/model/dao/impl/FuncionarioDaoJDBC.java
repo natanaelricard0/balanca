@@ -137,9 +137,9 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         PreparedStatement st = null;
         ResultSet rs = null;
         List<Funcionario> list = new ArrayList<>();
-        // AJEITAR O EXECUTE
+        // AJEITAR O EXECUTE PROCEDURES2FERRE
         try {
-            st = conn.prepareStatement("EXECUTE pr_balanca_buscar_funcionario ?");
+            st = conn.prepareStatement("select * from funcionario_balanca where login_rede = ? or nome_funcionario = ?");
             st.setString(1, pesquisa);
             rs = st.executeQuery();
 

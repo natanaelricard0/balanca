@@ -6,6 +6,8 @@
     -fx-background-color: #003764;
 }
 
+
+
 .background-login{
     -fx-background-color: #d1edff;
     -fx-background-image: url("https://i.pinimg.com/originals/29/fc/f1/29fcf1aaf90031a6d6feac9a50e8b68a.jpg");
@@ -17,21 +19,11 @@
 .background-toolbar {
     -fx-background-radius: 0;
     -fx-background-color: #003764 ;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 12pt;
-    -fx-text-fill: #ffffff;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
     -fx-background-image: url("https://www.etu.edu.tr/files/haber/2019/08/05/5828982d715d6c957bc263e64290c2c0.jpg");
     -fx-background-repeat: no-repeat;
-    -fx-background-size: 2500 100;
+    -fx-background-size: 2500 130;
     -fx-background-position: center;
-    -fx-background-attachment: scroll;
-}
-
-.text-teste {
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 12pt;
-    -fx-text-fill: #ffffff;
 }
 
 .label {

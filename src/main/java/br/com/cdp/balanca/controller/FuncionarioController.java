@@ -79,6 +79,7 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         initEditButtons();
     }
 
+    //AÇAO DE EDITAR OS USERS JÁ CADASTRADOS COMO ADM'S
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
         columnEdit.setCellFactory(param -> new TableCell<Funcionario, Funcionario>() {
