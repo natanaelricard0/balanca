@@ -17,13 +17,16 @@
 }
 
 .background-toolbar {
-    -fx-background-radius: 0;
-    -fx-background-color: #003764 ;
-    -fx-background-insets: 0 0 0 0, 0, 1, 2;
     -fx-background-image: url("https://www.etu.edu.tr/files/haber/2019/08/05/5828982d715d6c957bc263e64290c2c0.jpg");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 2500 130;
     -fx-background-position: center;
+}
+
+.label_user {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #42ddf5;
 }
 
 .label {

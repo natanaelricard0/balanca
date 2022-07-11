@@ -36,9 +36,9 @@
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />
                         <Label fx:id="lblUser" />
                     </items>
-               <GridPane.margin>
-                  <Insets top="-35.0" />
-               </GridPane.margin>
+                    <GridPane.margin>
+                        <Insets top="-35.0" />
+                    </GridPane.margin>
                 </ToolBar>
                 <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" GridPane.rowIndex="5">
                     <graphic>
