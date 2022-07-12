@@ -20,6 +20,7 @@
 }
 
 .background-toolbar {
+    -fx-background-color: #003764;
     -fx-background-image: url("https://www.etu.edu.tr/files/haber/2019/08/05/5828982d715d6c957bc263e64290c2c0.jpg");
     -fx-background-repeat: no-repeat;
     -fx-background-size: 2500 130;
@@ -153,8 +154,9 @@
 .button {
     -fx-padding: 5 22 5 22;
     -fx-border-color: #FFFFFF;
+    -fx-border-radius: 5;
     -fx-border-width: 2;
-    -fx-background-radius: 0;
+    -fx-background-radius: 7;
     -fx-background-color: #254fab;
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;

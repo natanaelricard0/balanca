@@ -61,6 +61,11 @@ public class FuncionarioFormController implements Initializable {
         if (funcionario == null){
             throw new IllegalStateException("Funcionário é null");
         }
+        try {
+
+        } catch (RuntimeException exceptionMsg) {
+
+        }
 
     }
 
@@ -79,6 +84,7 @@ public class FuncionarioFormController implements Initializable {
             funcionarioServices.insertOrUpdate(funcionario);
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
+
         } catch (RuntimeException exceptionMsg) {
             Alerts.showAlert("Erro em Salvar Funcionário", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }

@@ -99,17 +99,13 @@ public class FuncionarioController implements Initializable, DataChangeListeners
         });
     }
 
-    private void searchTableView(){   //new
-        //String pesquisar = txtPesquisar.getText();
-        //list = service.findByNameOrLogin(pesquisar);
+    private void searchTableView(){
         List<Funcionario> list;
         list = service.findByNameOrLogin(txtPesquisar.getText());
         obsList = FXCollections.observableArrayList(list);
         tabelaFuncionario.setItems(obsList);
         initEditButtons();
     }
-
-
 
     private void createDialog(Funcionario obj, Stage parentStage, String url, String title) {
         try {
