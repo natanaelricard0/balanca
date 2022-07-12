@@ -66,7 +66,6 @@ public class FuncionarioFormController implements Initializable {
         } catch (RuntimeException exceptionMsg) {
 
         }
-
     }
 
 
