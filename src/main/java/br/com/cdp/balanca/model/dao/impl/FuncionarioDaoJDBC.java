@@ -137,10 +137,10 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         PreparedStatement st = null;
         ResultSet rs = null;
         List<Funcionario> list = new ArrayList<>();
-        // AJEITAR O EXECUTE PROCEDURE
+        //
         try {
             //st = conn.prepareStatement("select * from funcionario_balanca where login_rede = ? or nome_funcionario = ?");
-            st = conn.prepareStatement("EXECUTE dbo.pr_Balanca_Buscar_Funcionarios @login_rede = ?");
+            st = conn.prepareStatement("EXECUTE dbo.pr_Balanca_Buscar_Funcionario ?");
             st.setString(1, pesquisa);
             rs = st.executeQuery();
 
@@ -183,7 +183,6 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         }
     }
 
-
     private Funcionario instantiateFuncionario(ResultSet rs) throws SQLException {
         Funcionario func = new Funcionario();
         func.setId(rs.getLong("id_funcionario"));
@@ -192,7 +191,6 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         func.setLoginScap(rs.getString("login_scap"));
         func.setAdministrador(rs.getBoolean("administrador"));
         func.setAtivo(rs.getBoolean("ativo"));
-
         return func;
     }
 }
