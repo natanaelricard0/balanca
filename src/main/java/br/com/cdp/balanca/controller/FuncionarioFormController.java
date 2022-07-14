@@ -86,7 +86,6 @@ public class FuncionarioFormController implements Initializable {
             funcionarioServices.insertOrUpdate(funcionario);
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
-
         } catch (RuntimeException exceptionMsg) {
             Alerts.showAlert("Erro em Salvar Funcionário", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
@@ -96,10 +95,10 @@ public class FuncionarioFormController implements Initializable {
     @FXML
     private void btnOnActionLimpar(ActionEvent event) {
         if (funcionario == null) {
-            throw new IllegalStateException("Funcionário é null");
+            throw new IllegalStateException("Funcionário as null");
         }
         if (funcionarioServices == null) {
-            throw new IllegalStateException("Service é null");
+            throw new IllegalStateException("Service as null");
         }
         try{
             funcionario = getFormClear();
@@ -107,29 +106,10 @@ public class FuncionarioFormController implements Initializable {
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
         } catch (RuntimeException exceptionMsg) {
-            Alerts.showAlert("Erro ao apagar Campo", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
+            Alerts.showAlert("Erro ao limpar Campo", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
 
     }
-
-
-    private Funcionario getFormClear() {
-        /*
-        txtNome.setText("");
-        txtLoginRede.setText("");
-        txtLoginScap.setText("");
-        */
-        if (funcionario == null) {
-            throw new IllegalStateException("Funcionário é Null");
-        }
-        txtNome.setText("");
-        txtLoginRede.setText("");
-        txtLoginScap.setText("");
-        return getFormClear();
-    }
-
-
-
 
     @FXML
     private void btnOnActionCancelar(ActionEvent event) {
@@ -164,7 +144,7 @@ public class FuncionarioFormController implements Initializable {
 
     public void updateFormData() {
         if (funcionario == null) {
-            throw new IllegalStateException("Funcionario as Null");
+            throw new IllegalStateException("Funcionário é Null");
         }
         txtId.setText(String.valueOf(funcionario.getId() == null ? "" : funcionario.getId()));
         txtNome.setText(funcionario.getNome());
@@ -172,6 +152,15 @@ public class FuncionarioFormController implements Initializable {
         txtLoginScap.setText(funcionario.getLoginScap());
         checkAdministrador.setSelected(funcionario.getAdministrador() == null ? false : funcionario.getAdministrador());
         checkAtivo.setSelected(funcionario.getAtivo() == null ? false : funcionario.getAtivo());
+    }
+
+    private Funcionario getFormClear() {
+        txtNome.setText("");
+        txtLoginRede.setText("");
+        txtLoginScap.setText("");
+        checkAdministrador.setSelected(false);
+        checkAtivo.setSelected(false);
+        return getFormClear();
     }
 
 
