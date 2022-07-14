@@ -49,6 +49,9 @@ public class FuncionarioFormController implements Initializable {
     @FXML
     private Button btnCancelar;
 
+    @FXML
+    private Button btnLimpar;
+
     public void setFuncionario(Funcionario funcionario) {
         this.funcionario = funcionario;
     }
@@ -87,7 +90,46 @@ public class FuncionarioFormController implements Initializable {
         } catch (RuntimeException exceptionMsg) {
             Alerts.showAlert("Erro em Salvar Funcionário", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
+
     }
+
+    @FXML
+    private void btnOnActionLimpar(ActionEvent event) {
+        if (funcionario == null) {
+            throw new IllegalStateException("Funcionário é null");
+        }
+        if (funcionarioServices == null) {
+            throw new IllegalStateException("Service é null");
+        }
+        try{
+            funcionario = getFormClear();
+            funcionarioServices.insertOrUpdate(funcionario);
+            notifyDataChangeListener();
+            ResourceStage.currentStage(event).close();
+        } catch (RuntimeException exceptionMsg) {
+            Alerts.showAlert("Erro ao apagar Campo", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
+        }
+
+    }
+
+
+    private Funcionario getFormClear() {
+        /*
+        txtNome.setText("");
+        txtLoginRede.setText("");
+        txtLoginScap.setText("");
+        */
+        if (funcionario == null) {
+            throw new IllegalStateException("Funcionário é Null");
+        }
+        txtNome.setText("");
+        txtLoginRede.setText("");
+        txtLoginScap.setText("");
+        return getFormClear();
+    }
+
+
+
 
     @FXML
     private void btnOnActionCancelar(ActionEvent event) {
