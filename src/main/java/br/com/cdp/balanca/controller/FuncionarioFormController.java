@@ -80,7 +80,6 @@ public class FuncionarioFormController implements Initializable {
         if (funcionarioServices == null) {
             throw new IllegalStateException("Service as null");
         }
-
         try {
             funcionario = getFormData();
             funcionarioServices.insertOrUpdate(funcionario);
@@ -94,21 +93,12 @@ public class FuncionarioFormController implements Initializable {
 
     @FXML
     private void btnOnActionLimpar(ActionEvent event) {
-        if (funcionario == null) {
-            throw new IllegalStateException("Funcionário as null");
-        }
-        if (funcionarioServices == null) {
-            throw new IllegalStateException("Service as null");
-        }
-        try{
-            funcionario = getFormClear();
-            funcionarioServices.insertOrUpdate(funcionario);
+        try {
+            getFormClear();
             notifyDataChangeListener();
-            ResourceStage.currentStage(event).close();
         } catch (RuntimeException exceptionMsg) {
-            Alerts.showAlert("Erro ao limpar Campo", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
+            Alerts.showAlert("Erro ao limpar campo", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
-
     }
 
     @FXML
@@ -142,6 +132,20 @@ public class FuncionarioFormController implements Initializable {
         return obj;
     }
 
+    private void getFormClear() {
+        if (funcionario == null) {
+            throw new IllegalStateException("Funcionário é null");
+        }
+        if (funcionarioServices == null) {
+            throw new IllegalStateException("Service é null");
+        }
+        txtNome.setText("");
+        txtLoginRede.setText("");
+        txtLoginScap.setText("");
+        checkAdministrador.setSelected(false);
+        checkAtivo.setSelected(false);
+    }
+
     public void updateFormData() {
         if (funcionario == null) {
             throw new IllegalStateException("Funcionário é Null");
@@ -150,17 +154,10 @@ public class FuncionarioFormController implements Initializable {
         txtNome.setText(funcionario.getNome());
         txtLoginRede.setText(funcionario.getLoginRede());
         txtLoginScap.setText(funcionario.getLoginScap());
-        checkAdministrador.setSelected(funcionario.getAdministrador() == null ? false : funcionario.getAdministrador());
-        checkAtivo.setSelected(funcionario.getAtivo() == null ? false : funcionario.getAtivo());
-    }
-
-    private Funcionario getFormClear() {
-        txtNome.setText("");
-        txtLoginRede.setText("");
-        txtLoginScap.setText("");
-        checkAdministrador.setSelected(false);
-        checkAtivo.setSelected(false);
-        return getFormClear();
+    //    checkAdministrador.setSelected(funcionario.getAdministrador() == null ? false : funcionario.getAdministrador());
+        checkAdministrador.setSelected(funcionario.getAdministrador() != null && funcionario.getAdministrador());
+    //    checkAtivo.setSelected(funcionario.getAtivo() == null ? false : funcionario.getAtivo());
+        checkAtivo.setSelected(funcionario.getAtivo() != null && funcionario.getAtivo());
     }
 
 
