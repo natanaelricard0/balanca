@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-
-<?import org.kordamp.ikonli.javafx.FontIcon?>
 <!--?import org.kordamp.ikonli.javafx.FontIcon?-->
 
 <BorderPane onKeyPressed="#handleOnKeyReleased" prefHeight="880.0" prefWidth="1100.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
@@ -26,9 +14,9 @@
             <items>
                 <Button fx:id="btnSair" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onBtActionTrocaUsuarioAction" prefHeight="35.0" prefWidth="107.0" text="Sair" />
                 <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />
-                <Label fx:id="lblUser" />
+                <Label fx:id="lblUser" prefHeight="21.0" prefWidth="0.0" />
 
-                <ImageView id="cdp_image" fitHeight="92.0" fitWidth="310.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="tam_logo">
+                <ImageView id="cdp_image" fitHeight="108.0" fitWidth="314.0" nodeOrientation="LEFT_TO_RIGHT" styleClass="tam_logo">
                     <GridPane.margin>
                         <Insets left="200.0" top="-20.0" />
                     </GridPane.margin>
@@ -51,11 +39,12 @@
 
                         <VBox id="vbox" prefHeight="880.0" prefWidth="343.0" styleClass="background">
                             <children>
-                                <GridPane prefHeight="332.0" prefWidth="385.0">
+                                <GridPane prefHeight="362.0" prefWidth="350.0">
                                     <columnConstraints>
                                         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                     </columnConstraints>
                                     <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -87,7 +76,7 @@
                                             </GridPane.margin>
                                         </FontIcon>
 
-                                        <Button fx:id="btnImportacaoSaidaRodoviaria" mnemonicParsing="false" onAction="#onBtPesagemImportacaoSaidaRodoviaria" prefHeight="56.0" prefWidth="335.0" text="  Pesagem Importação Saída Rodoviária (F4)" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
+                                        <Button fx:id="btnImportacaoSaidaRodoviaria" mnemonicParsing="false" onAction="#onBtPesagemImportacaoSaidaRodoviaria" prefHeight="56.0" prefWidth="335.0" text="    Pesagem Importação Saída Rodoviária" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                                             <GridPane.margin>
                                                 <Insets left="5.0" />
                                             </GridPane.margin>
@@ -120,6 +109,19 @@
                                             </GridPane.margin>
                                         </FontIcon>
 
+
+                                        <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" prefHeight="56.0" prefWidth="335.0" text="Configuraçoes do Sistema" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="5">
+                                            <GridPane.margin>
+                                                <Insets left="5.0" />
+                                            </GridPane.margin>
+                                        </Button>
+                                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account-multiple" iconSize="28" text="" GridPane.rowIndex="4">
+                                            <GridPane.margin>
+                                                <Insets left="25.0" />
+                                            </GridPane.margin>
+                                        </FontIcon>
+
+
                                     </children>
                                 </GridPane>
                             </children>
@@ -130,7 +132,7 @@
         </ScrollPane>
     </left>
     <center>
-        <Pane id="painel" prefHeight="200.0" prefWidth="200.0" styleClass="background" BorderPane.alignment="CENTER" />
+        <Pane id="painel" prefHeight="200.0" prefWidth="200.0" styleClass="background2" BorderPane.alignment="CENTER" />
     </center>
     <bottom>
         <ButtonBar prefHeight="23.0" prefWidth="1100.0" styleClass="background-submenu" BorderPane.alignment="CENTER" />

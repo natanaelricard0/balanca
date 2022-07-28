@@ -13,7 +13,7 @@
 .background2{
     -fx-background-image: url("https://images.pexels.com/photos/314726/pexels-photo-314726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     -fx-background-repeat: no-repeat;
-    -fx-background-size: 1000 500;
+    -fx-background-size: 800 500;
     -fx-background-position: center center;
 
 }
