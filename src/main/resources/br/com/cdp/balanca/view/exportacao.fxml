@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="700.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemController">
     <children>
         <GridPane>
             <columnConstraints>
@@ -34,25 +27,33 @@
                 <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <GridPane>
+                <GridPane prefHeight="56.0" prefWidth="323.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="150.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="244.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="107.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="103.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="262.0" minWidth="10.0" prefWidth="103.0"/>
                     </columnConstraints>
                     <rowConstraints>
                         <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#onBtActionSalvar" text="Salvar" GridPane.columnIndex="1">
-                            <GridPane.margin>
-                                <Insets left="10.0" top="10.0" />
-                            </GridPane.margin>
-                        </Button>
+
                         <Button fx:id="btnPesar" mnemonicParsing="false" onAction="#onBtActionPesar" text="Pesar">
                             <GridPane.margin>
                                 <Insets left="15.0" top="10.0" />
                             </GridPane.margin>
                         </Button>
+                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#onBtActionSalvar" text="Salvar" GridPane.columnIndex="1">
+                            <GridPane.margin>
+                                <Insets left="15.0" top="10.0" />
+                            </GridPane.margin>
+                        </Button>
+                        <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#onBtActionClear" prefHeight="33.0" prefWidth="97.0" text="Limpar" GridPane.columnIndex="2">
+                            <GridPane.margin>
+                                <Insets left="15.0" top="10.0" />
+                            </GridPane.margin>
+                        </Button>
+
                     </children>
                 </GridPane>
                 <Label text="Veículo: *" GridPane.rowIndex="1">

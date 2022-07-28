@@ -26,7 +26,7 @@ public class FuncionarioServices {
         }
     }
 
-    //USAR PARA AUTENTICACAO ADD NO FUNCIONARIO_FORM_CONTROLLER
+    //USAR PARA AUTENTICACAO ADD NO --> FUNCIONARIO_FORM_CONTROLLER
     public boolean loginAdConfirmation(Funcionario obj) {
         return DB.atenticacaoUsuarioAd(obj);
     }

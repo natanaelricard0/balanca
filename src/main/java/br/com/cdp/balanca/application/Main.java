@@ -35,7 +35,8 @@ public class Main extends Application {
 
     private static void setHomeScene() {
         try {
-            SplitPane fxmlHome = FXMLLoader.load(Main.class.getResource("/br/com/cdp/balanca/view/home.fxml"));
+            //SplitPane fxmlHome = FXMLLoader.load(Main.class.getResource("/br/com/cdp/balanca/view/home.fxml"));
+            BorderPane fxmlHome = FXMLLoader.load(Main.class.getResource("/br/com/cdp/balanca/view/home.fxml"));
             homeScene = new Scene(fxmlHome);
 
             stage.setScene(homeScene);

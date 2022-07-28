@@ -71,7 +71,7 @@ public class LoginController implements Initializable {
                         pswSenha.clear();
                         Main.setDataUser(func);
                         Main.changeScene("Home");
-                    }else {
+                    } else {
                         Alerts.showAlert("Atenção!", "", "Login ou Senha está Incorreta", Alert.AlertType.ERROR);
                     }
                 } else {

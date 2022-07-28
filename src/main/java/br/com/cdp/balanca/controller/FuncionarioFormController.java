@@ -60,18 +60,6 @@ public class FuncionarioFormController implements Initializable {
         this.funcionarioServices = funcionarioServices;
     }
 
-    public void autenticar_usuario(){
-        if (funcionario == null){
-            throw new IllegalStateException("Funcionário é null");
-        }
-        try {
-
-        } catch (RuntimeException exceptionMsg) {
-
-        }
-    }
-
-
     @FXML
     private void btnOnActionSalvar(ActionEvent event) {
         if (funcionario == null) {
@@ -83,6 +71,7 @@ public class FuncionarioFormController implements Initializable {
         try {
             funcionario = getFormData();
             funcionarioServices.insertOrUpdate(funcionario);
+            //autenticar_usuario();
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
         } catch (RuntimeException exceptionMsg) {
@@ -91,8 +80,18 @@ public class FuncionarioFormController implements Initializable {
 
     }
 
+    public void autenticar_usuario() {
+         try {
+            //funcionario  = funcionarioServices.getFuncionario(txtLoginRede.getText());
+            funcionarioServices.loginAdConfirmation(funcionario);
+         } catch (RuntimeException exceptionMsg){
+             Alerts.showAlert("Erro ao Salvar Funcionário", null, "Usuário já existe no Sistema como Administrador ou Ativo.",  Alert.AlertType.ERROR);
+         }
+
+    }
+
     @FXML
-    private void btnOnActionLimpar(ActionEvent event) {
+    private void btnOnActionLimpar() {
         try {
             getFormClear();
             notifyDataChangeListener();
@@ -133,12 +132,6 @@ public class FuncionarioFormController implements Initializable {
     }
 
     private void getFormClear() {
-        if (funcionario == null) {
-            throw new IllegalStateException("Funcionário é null");
-        }
-        if (funcionarioServices == null) {
-            throw new IllegalStateException("Service é null");
-        }
         txtNome.setText("");
         txtLoginRede.setText("");
         txtLoginScap.setText("");
@@ -154,9 +147,7 @@ public class FuncionarioFormController implements Initializable {
         txtNome.setText(funcionario.getNome());
         txtLoginRede.setText(funcionario.getLoginRede());
         txtLoginScap.setText(funcionario.getLoginScap());
-    //    checkAdministrador.setSelected(funcionario.getAdministrador() == null ? false : funcionario.getAdministrador());
         checkAdministrador.setSelected(funcionario.getAdministrador() != null && funcionario.getAdministrador());
-    //    checkAtivo.setSelected(funcionario.getAtivo() == null ? false : funcionario.getAtivo());
         checkAtivo.setSelected(funcionario.getAtivo() != null && funcionario.getAtivo());
     }
 

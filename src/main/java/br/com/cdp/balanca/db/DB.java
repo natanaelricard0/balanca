@@ -68,6 +68,7 @@ public class DB {
         }
     }
 
+    //Usado para autenticar o usuário no sistema
     public static boolean atenticacaoUsuarioAd(Funcionario func) {
         if (func.getLoginRede() != "" && func.getSenha() != "") {
 

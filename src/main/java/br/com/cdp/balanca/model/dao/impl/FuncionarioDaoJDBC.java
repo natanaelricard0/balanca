@@ -87,6 +87,8 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         }
     }
 
+
+    //getFuncionario da tela FuncionarioServices
     @Override
     public Funcionario findByLogin(String loginRede) {
         PreparedStatement st = null;

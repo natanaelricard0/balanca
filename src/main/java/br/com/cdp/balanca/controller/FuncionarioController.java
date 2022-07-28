@@ -72,14 +72,13 @@ public class FuncionarioController implements Initializable, DataChangeListeners
 
     public void updateTableView() {
         List<Funcionario> list;
-
         list = service.findAll();
         obsList = FXCollections.observableArrayList(list);
         tabelaFuncionario.setItems(obsList);
         initEditButtons();
     }
 
-    //AÇAO DE EDITAR OS USERS JÁ CADASTRADOS COMO ADM'S
+    //AÇAO DE EDITAR OS USERS JÁ CADASTRADOS COMO ADM'S ou ATIVOS NO SISTEMA
     private void initEditButtons() {
         columnEdit.setCellValueFactory(param -> new ReadOnlyObjectWrapper<>(param.getValue()));
         columnEdit.setCellFactory(param -> new TableCell<Funcionario, Funcionario>() {
