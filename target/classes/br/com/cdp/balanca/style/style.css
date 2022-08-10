@@ -1,3 +1,11 @@
+.background-login{
+    -fx-background-color: #d1edff;
+    -fx-background-image: url("https://i.pinimg.com/originals/29/fc/f1/29fcf1aaf90031a6d6feac9a50e8b68a.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 600 900;
+    -fx-background-position: center center;
+}
+
 .background {
     -fx-background-color: #d1edff;
     -fx-background-image: url("https://img.freepik.com/vetores-gratis/fundo-de-textura-fluindo-de-tinta-aquarela_1055-13702.jpg?w=1060&t=st=1658161061~exp=1658161661~hmac=cb38f3cb1e375d800");
@@ -10,19 +18,12 @@
     -fx-background-color: #003764;
 }
 
-.background2{
-    -fx-background-image: url("https://images.pexels.com/photos/314726/pexels-photo-314726.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 800 500;
-    -fx-background-position: center center;
 
-}
-
-.background-login{
+.background_ {
     -fx-background-color: #d1edff;
-    -fx-background-image: url("https://i.pinimg.com/originals/29/fc/f1/29fcf1aaf90031a6d6feac9a50e8b68a.jpg");
+    -fx-background-image: url("https://images.pexels.com/photos/314726/pexels-photo-314726.jpeg");
     -fx-background-repeat: no-repeat;
-    -fx-background-size: 600 900;
+    -fx-background-size: 800 880;
     -fx-background-position: center center;
 }
 
