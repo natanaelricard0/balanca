@@ -8,7 +8,7 @@ import jssc.SerialPortException;
 public class SerialTest {
 
     public static void main(String[] args) {
-        SerialPort serialPort = new SerialPort("COM1");
+        SerialPort serialPort = new SerialPort("COM4");
 
         try {
 
