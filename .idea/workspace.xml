@@ -11,12 +11,21 @@
   <component name="ChangeListManager">
     <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="Mudanças feitas na interface do projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/PesagemImportacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/PesagemImportacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/TaraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/TaraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/DialogForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/DialogForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionarioForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionarioForm.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +211,7 @@
       <workItem from="1660056811444" duration="3020000" />
       <workItem from="1660132372472" duration="1861000" />
       <workItem from="1660147580687" duration="1232000" />
-      <workItem from="1660228442778" duration="1110000" />
+      <workItem from="1660228442778" duration="5553000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1655903525679</created>
@@ -449,7 +458,28 @@
       <option name="project" value="LOCAL" />
       <updated>1660229149021</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Mudanças feitas na interface do projeto">
+      <created>1660229568077</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1660229568077</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Mudanças feitas na interface do projeto">
+      <created>1660229781015</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1660229781015</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Mudanças feitas na interface do projeto">
+      <created>1660229797637</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1660229797637</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

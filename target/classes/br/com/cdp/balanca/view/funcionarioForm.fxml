@@ -5,9 +5,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.FuncionarioFormController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.FuncionarioFormController">
     <children>
-        <GridPane prefHeight="535.0" prefWidth="983.0">
+        <GridPane prefHeight="566.0" prefWidth="972.0">
             <columnConstraints>
                 <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                 <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -48,8 +48,8 @@
                         <Insets right="10.0" />
                     </GridPane.margin>
                 </Label>
-                <CheckBox fx:id="checkAdministrador" mnemonicParsing="false" text="Administrador" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <CheckBox fx:id="checkAtivo" mnemonicParsing="false" text="Ativo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <CheckBox fx:id="checkAdministrador" mnemonicParsing="false" prefHeight="26.0" prefWidth="188.0" styleClass="label" text="Administrador" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <CheckBox fx:id="checkAtivo" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" styleClass="label" text="Ativo" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                 <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#btnOnActionLimpar" text="Limpar" GridPane.columnIndex="1" GridPane.rowIndex="6">
                     <styleClass>
                         <String fx:value="btn" />
