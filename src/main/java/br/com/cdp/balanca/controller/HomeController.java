@@ -177,7 +177,7 @@ public class HomeController implements Initializable {
         }
     }
 
-    public interface EventHandler<T extends ActionEvent> extends EventListener {}
+  /*  public interface EventHandler<T extends ActionEvent> extends EventListener {}*/
 
     @FXML
     private void onBtActionTrocaUsuarioAction() throws IOException {
