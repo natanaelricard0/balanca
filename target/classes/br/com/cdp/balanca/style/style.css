@@ -1,40 +1,56 @@
 .background-login{
     -fx-background-color: #d1edff;
-    -fx-background-image: url("https://i.pinimg.com/originals/29/fc/f1/29fcf1aaf90031a6d6feac9a50e8b68a.jpg");
+    -fx-background-image: url("https://img.freepik.com/vetores-gratis/vetor-de-modelo-de-quadro-de-curva-azul_53876-111537.jpg");
+
     -fx-background-repeat: no-repeat;
-    -fx-background-size: 600 900;
+    -fx-background-size: 600 550;
     -fx-background-position: center center;
 }
 
-.background {
-    -fx-background-color: #d1edff;
-    -fx-background-image: url("https://img.freepik.com/vetores-gratis/fundo-de-textura-fluindo-de-tinta-aquarela_1055-13702.jpg?w=1060&t=st=1658161061~exp=1658161661~hmac=cb38f3cb1e375d800");
-    -fx-background-repeat: no-repeat;
-    -fx-background-size: 2500 1500;
-    -fx-background-position: center center;
-}
-
-.background-submenu{
+.background-center{
     -fx-background-color: #003764;
 }
 
-
-.background_ {
+.background{
     -fx-background-color: #d1edff;
-    -fx-background-image: url("https://images.pexels.com/photos/314726/pexels-photo-314726.jpeg");
+}
+
+.background-submenu{
+    -fx-background-color: #0056B7;
+}
+
+.fundo{
+    -fx-background-color: #0056B7;
+}
+
+.fundo-teste{
+    -fx-background-image: url("https://img.freepik.com/vetores-gratis/fundo-de-meio-tom-azul-em-branco_53876-99003.jpg");
     -fx-background-repeat: no-repeat;
-    -fx-background-size: 800 880;
+    -fx-background-size: 500 900;
     -fx-background-position: center center;
 }
 
+.fundo-teste02{
+    -fx-background-image: url("https://img.freepik.com/vetores-gratis/fundo-de-meio-tom-azul-e-rosa_53876-144365.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 500 900;
+    -fx-background-position: center center;
+}
+
+.text_name_balance {
+    -fx-font-size: 50pt;
+    -fx-font-family: "Open Sans";
+    -fx-text-fill: black;
+}
+
 .label {
-    -fx-font-size: 11pt;
+    -fx-font-size: 13pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: black;
 }
 
 .label-bright {
-    -fx-font-size: 11pt;
+    -fx-font-size: 13pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
     -fx-opacity: 1;
@@ -62,9 +78,9 @@
 
 .tool-bar{
     -fx-background-radius: 0;
-    -fx-background-color: #003764 ;
+    -fx-background-color: #003764;
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 12pt;
+    -fx-font-size: 13pt;
     -fx-text-fill: #ffffff;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
@@ -86,7 +102,7 @@
 }
 
 .table-view .column-header .label {
-    -fx-font-size: 10pt;
+    -fx-font-size: 13pt;
     -fx-font-family: "Segoe UI Light";
     -fx-text-fill: white;
     -fx-alignment: center-left;
@@ -126,19 +142,19 @@
 }
 
 .text-field {
-    -fx-font-size: 10pt;
+    -fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Semibold";
 }
 
 .text-bold {
-    -fx-font-size: 9pt;
+    -fx-font-size: 12pt;
     -fx-text-fill: black;
     -fx-font-family: "Segoe UI Semibold";
     -fx-font-weight: bold;
 }
 
 .text-field-bright {
-    -fx-font-size: 10pt;
+    -fx-font-size: 12pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: derive(#1d1d1d,20%);
     -fx-opacity: 1;
@@ -147,36 +163,29 @@
 
 .button {
     -fx-padding: 5 22 5 22;
-    -fx-border-color: #FFFFFF;
+    -fx-border-color: #bae1ff, #FFFFFF;
     -fx-border-radius: 35;
     -fx-border-width: 1;
     -fx-background-radius: 35;
-    -fx-background-color: rgba(0, 30, 84, 0.74);
+    -fx-background-color: rgba(7, 28, 49, 0.96);
     -fx-font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
     -fx-text-fill: #FFFFFF;
     -fx-background-insets: 0 0 0 0, 0, 1, 2;
 }
 
-.button2 {
-    -fx-background-color: #254fab;
-    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 11pt;
-    -fx-text-fill: #FFFFFF;
-}
-
 .button:hover {
-    -fx-background-color: #29c2e7;
+    -fx-background-color: #254fab;
 }
 
 .button:pressed, .button:default:hover:pressed {
-    -fx-background-color: #77b9dd;
+    -fx-background-color: #21a1c2;
     -fx-text-fill: #1d1d1d;
 }
 
 
 .button:focused {
-    -fx-border-color: white, white;
+    -fx-border-color:  #64ffff, white;
     -fx-border-width: 1, 1;
     -fx-border-style: solid;
     -fx-border-radius: 35, 35;

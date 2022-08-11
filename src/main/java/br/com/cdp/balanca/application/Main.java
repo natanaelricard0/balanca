@@ -25,7 +25,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
         Parent fxmlLogin = FXMLLoader.load(Main.class.getResource("/br/com/cdp/balanca/view/login.fxml"));
-        loginScene = new Scene(fxmlLogin, 600, 400);
+        loginScene = new Scene(fxmlLogin, 600, 500);
 
         primaryStage.setTitle("Balança Rodoviária CDP");
         primaryStage.setScene(loginScene);
@@ -55,7 +55,7 @@ public class Main extends Application {
                 stage.setMaximized(false);
                 stage.setResizable(false);
                 stage.setWidth(600);
-                stage.setHeight(425);
+                stage.setHeight(500);
                 stage.show();
                 break;
             case "Home":

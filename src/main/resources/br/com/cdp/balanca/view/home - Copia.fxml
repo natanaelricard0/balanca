@@ -1,24 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import org.kordamp.ikonli.javafx.FontIcon?>
-<!--?import org.kordamp.ikonli.javafx.FontIcon?-->
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
 
-<SplitPane  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="880.0" prefWidth="1100.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" onKeyPressed="#handleOnKeyReleased" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
     <items>
         <GridPane>
             <columnConstraints>
-                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="1000.0" minWidth="0.0" prefWidth="502.0" />
-                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="1000.0" minWidth="0.0" prefWidth="502.0" />
+                <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -30,16 +23,18 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <ToolBar fx:id="toolbar" nodeOrientation="RIGHT_TO_LEFT" prefHeight="130.0" prefWidth="2500.0" styleClass="background-submenu" GridPane.columnSpan="2">
+                <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="130.0" prefWidth="200.0" styleClass="background-submenu" GridPane.columnSpan="2">
                     <items>
                         <Button fx:id="btnSair" contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#onBtActionTrocaUsuarioAction" text="Sair" />
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30" />
-                        <Label fx:id="lblUser" />
+                        <Label fx:id="lblUser"  styleClass="label-bright" />
                     </items>
+
                     <GridPane.margin>
-                        <Insets top="-35.0" />
+                        <Insets top="-32.0" />
                     </GridPane.margin>
                 </ToolBar>
+
                 <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" GridPane.rowIndex="5">
                     <graphic>
                         <FontIcon iconColor="WHITE" iconLiteral="mdi-account-multiple" iconSize="40" />
@@ -86,13 +81,16 @@
                 <Label text="Tara de Veículo (F2)" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Label text="Relatórios (F5)" GridPane.columnIndex="1" GridPane.rowIndex="4" />
 
-               <ImageView id="cdp_image" nodeOrientation="LEFT_TO_RIGHT" fitHeight="100.0" fitWidth="280.0" styleClass="tam_logo"  GridPane.rowIndex="0">
-                   <GridPane.margin>
-                       <Insets top="-20.0" right="200.0" />
-                   </GridPane.margin>
+            <ImageView fitHeight="130.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="0">
                <image>
                   <Image url="@../images/cdp.png" />
-               </image></ImageView>
+               </image>
+                <GridPane.margin>
+                    <Insets right="200.0" />
+                </GridPane.margin>
+            </ImageView>
+
+
 
             </children>
         </GridPane>

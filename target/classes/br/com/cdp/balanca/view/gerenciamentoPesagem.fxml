@@ -12,22 +12,25 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagensPendentesController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1576.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagensPendentesController">
    <children>
       <GridPane>
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="325.0" minWidth="10.0" prefWidth="272.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="665.0" minWidth="10.0" prefWidth="665.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField fx:id="txtPesquisar" GridPane.columnIndex="2" />
-            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#onActionCadastrar" styleClass="b" text="Adicionar Pesagem" />
-            <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#onActionPesquisar" text="Pesquisar" GridPane.columnIndex="1">
+            <TextField fx:id="txtPesquisar" prefHeight="35.0" prefWidth="669.0" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets right="50.0" />
+               </GridPane.margin></TextField>
+            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#onActionCadastrar" prefHeight="38.0" prefWidth="170.0" styleClass="b" text="Adicionar Pesagem" />
+            <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#onActionPesquisar" prefHeight="38.0" text="Pesquisar" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="10.0" />
                </GridPane.margin>
@@ -44,14 +47,14 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </padding>
       </GridPane>
-      <TableView fx:id="tabelaPesagem" prefHeight="250.0" prefWidth="200.0">
+      <TableView fx:id="tabelaPesagem" prefHeight="750.0" prefWidth="1576.0">
         <columns>
-          <TableColumn fx:id="columnAutorizacao" prefWidth="93.0" text="Autorização" />
-            <TableColumn fx:id="columnPlaca" prefWidth="75.0" text="Placa" />
-            <TableColumn fx:id="columnDataPrimeiraPesagem" prefWidth="153.0" text="Data Primeira pesagem" />
-            <TableColumn fx:id="columnPesoBruto" prefWidth="107.0" text="Peso Bruto" />
-            <TableColumn fx:id="columnBalanceiro" prefWidth="115.0" text="Balanceiro" />
-            <TableColumn fx:id="columnEdit" prefWidth="128.0" text="Pesar" />
+          <TableColumn fx:id="columnAutorizacao" prefWidth="164.0" resizable="false" text="Autorização" />
+            <TableColumn fx:id="columnPlaca" minWidth="0.0" prefWidth="197.0" resizable="false" text="Placa" />
+            <TableColumn fx:id="columnDataPrimeiraPesagem" prefWidth="356.0" text="Data da Primeira pesagem" />
+            <TableColumn fx:id="columnPesoBruto" prefWidth="285.0" resizable="false" text="Peso Bruto" />
+            <TableColumn fx:id="columnBalanceiro" prefWidth="276.0" resizable="false" text="Balanceiro" />
+            <TableColumn fx:id="columnEdit" prefWidth="276.0" resizable="false" text="Pesar" />
         </columns>
       </TableView>
    </children>

@@ -9,7 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="classe auxiliar para detectar porta serial v2" />
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="classe auxiliar para detectar porta serial v2">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2022_11_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2022_11_01__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/exportacao.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/exportacao.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionarioForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionarioForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home - Copia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home - Copia.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/tara.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/tara.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,31 +53,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;ToolWindowBuild.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/s2ferreira/Downloads/Balanca/balanca&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32068965&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowBuild.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/JavaLib/javafx-sdk-17.0.2/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32068965",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\s2ferreira\Downloads\Balanca\balanca\src\main\resources\br\com\cdp\balanca\view" />
@@ -70,15 +88,20 @@
       <recent name="C:\Users\s2ferreira\Downloads\Balanca\Balanca\src\main\resources\br\com\cdp\balanca\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SerialTest">
-    <configuration name="SerialTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.SerialTest" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.Main" />
       <module name="Balanca" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.cdp.balanca.application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -108,12 +131,12 @@
     </configuration>
     <list>
       <item itemvalue="Application.br.com.cdp.balanca.application.Main" />
-      <item itemvalue="Application.SerialTest" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Teste" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SerialTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Teste" />
       </list>
     </recent_temporary>
@@ -188,6 +211,7 @@
       <workItem from="1660056811444" duration="3020000" />
       <workItem from="1660132372472" duration="1861000" />
       <workItem from="1660147580687" duration="1232000" />
+      <workItem from="1660228442778" duration="389000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1655903525679</created>
