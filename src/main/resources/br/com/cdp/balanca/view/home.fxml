@@ -20,7 +20,7 @@
 <?import org.kordamp.ikonli.javafx.*?-->
 <!--?import org.kordamp.ikonli.javafx.FontIcon?-->
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="900.0" prefWidth="1350.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="900.0" prefWidth="1350.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
     <top>
         <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="130.0" prefWidth="1000.0" styleClass="background-submenu" GridPane.columnSpan="2">
             <items>
