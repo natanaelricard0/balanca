@@ -135,7 +135,7 @@ public class PesagemImportacaoController implements Initializable {
         if(valor != "") {
             AutorizacaoEntradaSaida autorizacaoEntradaSaida = autorizacaoEntradaSaidaServices.findById(Integer.parseInt(valor));
             if(autorizacaoEntradaSaida != null && autorizacaoEntradaSaidaServices.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("S")){
-                txtAutorizacaoSaida.setStyle("-fx-border-color: green;  -fx-border-width: 2px");
+                txtAutorizacaoSaida.setStyle("-fx-border-color: #7bd1ff;  -fx-border-width: 2px");
                 pesagem.setIdAutorizacao(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida());
             }else {
                 txtAutorizacaoSaida.setStyle("-fx-border-color: red");
@@ -158,9 +158,9 @@ public class PesagemImportacaoController implements Initializable {
     //PREEENCHE OS CAMPOS DO TARA E PESO
     private void preencheCampos(Veiculo veiculo){
         if (veiculo != null) {
-            txtVeiculo.setStyle("-fx-border-color: green");
+            txtVeiculo.setStyle("-fx-border-color: #7bd1ff");
             gridPaneVeiculo.setVisible(true);
-            gridPaneVeiculo.setStyle("-fx-background-color: green");
+            gridPaneVeiculo.setStyle("-fx-background-color: #7bd1ff");
             txtTara.setText(veiculo.getPesoTara() + " KG");
             lblCodigo.setText(veiculo.getIdVeiculo() + "");
             lblPlaca.setText(veiculo.getPlacaVeiculo());
@@ -197,7 +197,7 @@ public class PesagemImportacaoController implements Initializable {
             Alerts.showAlert("Atenção", "","Tara maior que peso total", Alert.AlertType.ERROR);
             txtPesoLiquido.setStyle("-fx-border-color: red");
         }else {
-            txtPesoLiquido.setStyle("-fx-border-color: green");
+            txtPesoLiquido.setStyle("-fx-border-color: #7bd1ff");
         }
     }
 

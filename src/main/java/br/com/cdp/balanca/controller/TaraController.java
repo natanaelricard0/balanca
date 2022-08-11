@@ -59,8 +59,8 @@ public class TaraController implements Initializable{
             buscarVeiculo();
             if(veiculo != null){
                 gridPaneVeiculo.setVisible(true);
-                gridPaneVeiculo.setStyle("-fx-background-color: green");
-                txtIdVeiculo.setStyle("-fx-border-color: green");
+                gridPaneVeiculo.setStyle("-fx-background-color: #7bd1ff");
+                txtIdVeiculo.setStyle("-fx-border-color: #7bd1ff");
                 lblIdVeiculo.setText(veiculo.getIdVeiculo().toString());
                 lblPlacaVeiculo.setText(veiculo.getPlacaVeiculo());
                 lblTaraVeiculo.setText(veiculo.getPesoTara().toString());
