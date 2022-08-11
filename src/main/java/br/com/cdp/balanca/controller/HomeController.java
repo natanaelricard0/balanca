@@ -7,22 +7,19 @@ import br.com.cdp.balanca.utils.DialogForm;
 import br.com.cdp.balanca.utils.ResourceStage;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.event.EventHandler; //new
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToolBar;
-/*Adicionais*/
-import javafx.scene.control.ButtonBar;
 
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent; //new
 import javafx.scene.layout.Pane;
+
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -31,6 +28,10 @@ import java.util.ResourceBundle;
 import java.util.function.Consumer;
 
 public class HomeController implements Initializable {
+
+    @FXML
+    private Pane tela;
+
     @FXML
     private Label lblUser;
 
@@ -62,6 +63,7 @@ public class HomeController implements Initializable {
 
     private void initializeNodes() {
         lblUser.setText(Main.getDataUser().getNome());
+
     }
 
     //ACTION DE ATALHO DE TECLAS
@@ -105,7 +107,8 @@ public class HomeController implements Initializable {
     }
 
     private void cadastroTara(Event event){
-        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/tara.fxml", "Cadastro de Tara", (TaraController controller) -> controller.setServices(new VeiculoServices()));
+        loadView(ResourceStage.currentStage(event), "/br/com/cdp/balanca/view/tara.fxml", "Cadastro de Tara", (TaraController controller) ->
+           controller.setServices(new VeiculoServices()));
     }
 
     private void pesagemImportacao(Event event){
@@ -121,20 +124,37 @@ public class HomeController implements Initializable {
         });
     }
 
+
     @FXML
-    private void onBtRelatorioAction(ActionEvent event) {
-        relatorio(event);
+    private void onBtCadastroTara(ActionEvent event) {
+        cadastroTara(event);
+        btnTara.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent click) {
+                if (click.getClickCount() == 1) {
+                    try {
+                        cadastroTara(event);
+                    } catch (RuntimeException e) {
+                        e.printStackTrace();
+                       // Alerts.showAlert("Erro ao abrir tela Cadastro Tara.", null, e.getMessage(), Alert.AlertType.ERROR);
+                    }
+                }
+            }
+        });
     }
 
     @FXML
     private void onBtPesagemExportacaoAction(ActionEvent event) {
         pesagemExportacao(event);
+        /*
+        try {
+
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            //Alerts.showAlert("Erro ao abrir tela Pesagem de Exportação.", null, e.getMessage(), Alert.AlertType.ERROR);
+        }*/
     }
 
-    @FXML
-    private void onBtCadastroTara(ActionEvent event) {
-        cadastroTara(event);
-    }
 
     @FXML
     private void onBtPesagemImportacaoSaidaRodoviaria(ActionEvent event){
@@ -142,19 +162,25 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void onBtnFuncionarioAction(ActionEvent event) {
-        gerenciamentoFuncionario(event);
+    private void onBtRelatorioAction(ActionEvent event) {
+        relatorio(event);
     }
+
+
+    @FXML
+    private void onBtnFuncionarioAction(ActionEvent event) { gerenciamentoFuncionario(event);}
 
     private synchronized <T> void loadView(Stage parentStage, String absolutName, String title, Consumer<T> initializingAction) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absolutName));
             Pane pane = loader.load();
 
+            tela.getChildren().addAll(pane); //new
+
             T controller = loader.getController();
             initializingAction.accept(controller);
-
             DialogForm.createDialogForm(pane, title, parentStage);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -165,5 +191,4 @@ public class HomeController implements Initializable {
         Main.setDataUser(null);
         Main.changeScene("Login");
     }
-
 }
