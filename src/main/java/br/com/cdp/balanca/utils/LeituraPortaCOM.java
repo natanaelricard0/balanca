@@ -12,7 +12,7 @@ public class LeituraPortaCOM {
     public static double leituraPeso() {
         double peso = 0;
         try {
-            port = new SerialPort("COM4");
+            port = new SerialPort("COM1");
             port.openPort();
             port.setParams(BAUDRATE_9600, DATABITS_8, STOPBITS_2, PARITY_NONE);
 //            port.writeBytes(new byte[]{0x04});
