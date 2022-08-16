@@ -142,7 +142,7 @@
             </GridPane>
             </children>
         </GridPane>
-        <TableView fx:id="tableViewItemAutorizacao" prefHeight="300.0" prefWidth="980.0">
+        <TableView fx:id="tableViewItemAutorizacao" prefHeight="345.0" prefWidth="980.0">
             <columns>
                 <TableColumn fx:id="tableColumnAutorizacao" prefWidth="213.0" text="Autorização" />
                 <TableColumn fx:id="tableColumnDescricao" minWidth="0.0" prefWidth="279.0" text="Descrição" />
