@@ -24,6 +24,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.EventListener; //new
 import java.util.ResourceBundle;
 import java.util.function.Consumer;
 
@@ -124,11 +125,10 @@ public class HomeController implements Initializable {
         });
     }
 
-
     @FXML
     private void onBtCadastroTara(ActionEvent event) {
         cadastroTara(event);
-        btnTara.setOnMouseClicked(new EventHandler<MouseEvent>() {
+    /*    btnTara.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent click) {
                 if (click.getClickCount() == 1) {
@@ -140,21 +140,13 @@ public class HomeController implements Initializable {
                     }
                 }
             }
-        });
+        });*/
     }
 
     @FXML
     private void onBtPesagemExportacaoAction(ActionEvent event) {
         pesagemExportacao(event);
-        /*
-        try {
-
-        } catch (RuntimeException e) {
-            e.printStackTrace();
-            //Alerts.showAlert("Erro ao abrir tela Pesagem de Exportação.", null, e.getMessage(), Alert.AlertType.ERROR);
-        }*/
     }
-
 
     @FXML
     private void onBtPesagemImportacaoSaidaRodoviaria(ActionEvent event){
@@ -165,7 +157,6 @@ public class HomeController implements Initializable {
     private void onBtRelatorioAction(ActionEvent event) {
         relatorio(event);
     }
-
 
     @FXML
     private void onBtnFuncionarioAction(ActionEvent event) { gerenciamentoFuncionario(event);}
@@ -185,6 +176,8 @@ public class HomeController implements Initializable {
             e.printStackTrace();
         }
     }
+
+  /*  public interface EventHandler<T extends ActionEvent> extends EventListener {}*/
 
     @FXML
     private void onBtActionTrocaUsuarioAction() throws IOException {

@@ -17,7 +17,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <Button fx:id="btnCadastrarUsuario" mnemonicParsing="false" onAction="#onBtnActionCadastrar" prefHeight="35.0" prefWidth="75.0">
+                <Button fx:id="btnCadastrarUsuario" mnemonicParsing="false" onAction="#onBtnActionCadastrar" prefHeight="38.0" prefWidth="87.0">
                     <GridPane.margin>
                         <Insets left="20.0" />
                     </GridPane.margin>
@@ -40,7 +40,7 @@
                     </rowConstraints>
                     <children>
                         <TextField fx:id="txtPesquisar" prefHeight="35.0" prefWidth="493.0" />
-                        <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#onBtActionPesquisar" prefHeight="35.0" prefWidth="73.0" GridPane.columnIndex="1">
+                        <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#onBtActionPesquisar" prefHeight="39.0" prefWidth="97.0" GridPane.columnIndex="1">
                             <GridPane.margin>
                                 <Insets right="55.0" />
                             </GridPane.margin>
@@ -57,7 +57,7 @@
                 </GridPane>
             </children>
         </GridPane>
-        <TableView fx:id="tabelaFuncionario" prefHeight="696.0" prefWidth="1000.0">
+        <TableView fx:id="tabelaFuncionario" prefHeight="761.0" prefWidth="1576.0">
             <columns>
                 <TableColumn fx:id="columnId" prefWidth="98.0" resizable="false" text="Id" />
                 <TableColumn fx:id="columnNome" prefWidth="385.0" text="Nome" />

@@ -9,20 +9,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="atualização de classe de leitura da porta COM">
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="Mudanças feitas na interface do projeto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController$EventHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/exportacao.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/exportacao.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/tara.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/tara.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,32 +49,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ToolWindowBuild.ShowToolbar&quot;: &quot;false&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/n2carvalho/IdeaProjects/balanca/out/artifacts/teste&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.32068965&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ToolWindowBuild.ShowToolbar": "false",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "C:/JavaLib/javafx-sdk-17.0.2/src",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.32068965",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlserver&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlserver"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\s2ferreira\Downloads\Balanca\balanca\src\main\resources\br\com\cdp\balanca\view" />
@@ -80,15 +84,20 @@
       <recent name="C:\Users\s2ferreira\Downloads\Balanca\Balanca\src\main\resources\br\com\cdp\balanca\images" />
     </key>
   </component>
-  <component name="RunManager" selected="JAR Application.Balanca.jar">
-    <configuration name="SerialTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.SerialTest" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.Main" />
       <module name="Balanca" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="br.com.cdp.balanca.application.*" />
           <option name="ENABLED" value="true" />
         </pattern>
+      </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,20 +125,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Balanca.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/teste/Balanca.jar" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Application.br.com.cdp.balanca.application.Main" />
-      <item itemvalue="Application.SerialTest" />
+      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Teste" />
-      <item itemvalue="JAR Application.Balanca.jar" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JAR Application.Balanca.jar" />
-        <item itemvalue="Application.SerialTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.Teste" />
       </list>
     </recent_temporary>
@@ -204,16 +207,7 @@
       <workItem from="1660056811444" duration="3020000" />
       <workItem from="1660132372472" duration="1861000" />
       <workItem from="1660147580687" duration="1232000" />
-      <workItem from="1660305335758" duration="990000" />
-      <workItem from="1660307964780" duration="1797000" />
-      <workItem from="1660310549319" duration="594000" />
-      <workItem from="1660311288753" duration="206000" />
-      <workItem from="1660311625731" duration="48000" />
-      <workItem from="1660312476574" duration="1598000" />
-      <workItem from="1660314274969" duration="3835000" />
-      <workItem from="1660321949963" duration="34000" />
-      <workItem from="1660322069648" duration="1413000" />
-      <workItem from="1660652882209" duration="409000" />
+      <workItem from="1660228442778" duration="6155000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1655903525679</created>
@@ -446,14 +440,63 @@
       <option name="project" value="LOCAL" />
       <updated>1660148726481</updated>
     </task>
-    <task id="LOCAL-00034" summary="atualização de classe de leitura da porta COM">
-      <created>1660323303067</created>
+    <task id="LOCAL-00034" summary="Mudanças feitas na interface do projeto">
+      <created>1660229001980</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1660323303067</updated>
+      <updated>1660229001980</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Mudanças feitas na interface do projeto">
+      <created>1660229149021</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1660229149021</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Mudanças feitas na interface do projeto">
+      <created>1660229568077</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1660229568077</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Mudanças feitas na interface do projeto">
+      <created>1660229781015</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1660229781015</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Mudanças feitas na interface do projeto">
+      <created>1660229797637</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1660229797637</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Mudanças feitas na interface do projeto">
+      <created>1660236191453</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1660236191453</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Mudanças feitas na interface do projeto">
+      <created>1660236226128</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1660236226128</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Mudanças feitas na interface do projeto">
+      <created>1660236294869</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1660236294869</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -486,7 +529,7 @@
     <MESSAGE value="Mudanças feitas na tela Home" />
     <MESSAGE value="classe auxiliar para detectar porta serial" />
     <MESSAGE value="classe auxiliar para detectar porta serial v2" />
-    <MESSAGE value="atualização de classe de leitura da porta COM" />
-    <option name="LAST_COMMIT_MESSAGE" value="atualização de classe de leitura da porta COM" />
+    <MESSAGE value="Mudanças feitas na interface do projeto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mudanças feitas na interface do projeto" />
   </component>
 </project>

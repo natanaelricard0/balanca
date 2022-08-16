@@ -9,6 +9,7 @@ public class DialogForm {
     public static void createDialogForm(Pane pane, String title, Stage parentStage) {
         Scene scene = new Scene(pane);
         Stage dialogStage = new Stage();
+
         dialogStage.setTitle(title);
         dialogStage.setScene(scene);
         dialogStage.setResizable(false);
