@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ButtonBar?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import org.kordamp.ikonli.javafx.*?>
 
 <!--?import javafx.scene.image.*?>
-<?import org.kordamp.ikonli.javafx.*?-->
-<!--?import org.kordamp.ikonli.javafx.FontIcon?-->
+<!?import org.kordamp.ikonli.javafx.FontIcon?-->
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="900.0" prefWidth="1350.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="900.0" prefWidth="1350.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
     <top>
         <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="130.0" prefWidth="1000.0" styleClass="background-submenu" GridPane.columnSpan="2">
             <items>
@@ -33,11 +22,11 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <!--FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30">
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="30">
                             <GridPane.margin>
                                             <Insets left="105.0" />
                                         </GridPane.margin>
-                                    </FontIcon-->
+                                    </FontIcon>
                         <Label fx:id="lblUser" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="136.0" styleClass="label-bright">
                             <GridPane.margin>
                                 <Insets left="115.0" />
@@ -89,73 +78,72 @@
 
 
                                     <children>
-                                        <Button fx:id="btnTara" mnemonicParsing="false" onAction="#onBtCadastroTara" prefHeight="55.0" prefWidth="335.0" text="Tara de Veículo (F2)" wrapText="true" GridPane.rowIndex="0">
+                                        <Button fx:id="btnTara" mnemonicParsing="false" onAction="#onBtCadastroTara" prefHeight="55.0" prefWidth="335.0" text="Tara de Veículo     " wrapText="true" GridPane.rowIndex="0">
                                             <GridPane.margin>
                                                 <Insets left="5.0" />
                                             </GridPane.margin>
                                         </Button>
-                                        <!--FontIcon iconColor="WHITE" iconLiteral="mdi-truck" iconSize="28" smooth="false">
+                                        <FontIcon iconColor="WHITE" iconLiteral="mdi-truck" iconSize="28" smooth="false">
                                             <GridPane.margin>
                                                 <Insets left="25.0" />
                                             </GridPane.margin>
-                                        </FontIcon-->
+                                        </FontIcon>
 
-                                        <Button fx:id="btnExportacao" mnemonicParsing="false" onAction="#onBtPesagemExportacaoAction" prefHeight="55.0" prefWidth="335.0" text="   Pesagem De Exportação (F3)" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
+                                        <Button fx:id="btnExportacao" mnemonicParsing="false" onAction="#onBtPesagemExportacaoAction" prefHeight="55.0" prefWidth="335.0" text="   Pesagem De Exportação     " textAlignment="CENTER" wrapText="true" GridPane.rowIndex="1">
                                             <GridPane.margin>
                                                 <Insets left="5.0" />
                                             </GridPane.margin>
                                         </Button>
-                                        <!--FontIcon iconColor="WHITE" iconLiteral="mdi-scale" iconSize="28" GridPane.rowIndex="1">
+                                        <FontIcon iconColor="WHITE" iconLiteral="mdi-scale" iconSize="28" GridPane.rowIndex="1">
                                             <GridPane.margin>
                                                 <Insets left="25.0" />
                                             </GridPane.margin>
-                                        </FontIcon-->
+                                        </FontIcon>
 
-                                        <Button fx:id="btnImportacaoSaidaRodoviaria" mnemonicParsing="false" onAction="#onBtPesagemImportacaoSaidaRodoviaria" prefHeight="56.0" prefWidth="335.0" text="    Pesagem Importação Saída Rodoviária" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
+                                        <Button fx:id="btnImportacaoSaidaRodoviaria" mnemonicParsing="false" onAction="#onBtPesagemImportacaoSaidaRodoviaria" prefHeight="56.0" prefWidth="335.0" text="       Pesagem Importação Saída Rodoviária" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="2">
                                             <GridPane.margin>
                                                 <Insets left="5.0" />
                                             </GridPane.margin>
                                         </Button>
-                                        <!--FontIcon iconColor="WHITE" iconLiteral="mdi-truck-delivery" iconSize="28" GridPane.rowIndex="2">
+                                        <FontIcon iconColor="WHITE" iconLiteral="mdi-truck-delivery" iconSize="28" GridPane.rowIndex="2">
                                             <GridPane.margin>
                                                 <Insets left="25.0" />
                                             </GridPane.margin>
-                                        </FontIcon-->
+                                        </FontIcon>
 
-                                        <Button fx:id="btnRelatorios" mnemonicParsing="false" onAction="#onBtRelatorioAction" prefHeight="55.0" prefWidth="335.0" text="Visualizar Relatórios F5)" wrapText="true" GridPane.rowIndex="3">
+                                        <Button fx:id="btnRelatorios" mnemonicParsing="false" onAction="#onBtRelatorioAction" prefHeight="55.0" prefWidth="335.0" text="Visualizar Relatórios     " wrapText="true" GridPane.rowIndex="3">
                                             <GridPane.margin>
                                                 <Insets left="5.0" />
                                             </GridPane.margin>
                                         </Button>
-                                        <!--FontIcon iconColor="WHITE" iconLiteral="mdi-file-pdf" iconSize="28" GridPane.rowIndex="3">
+                                        <FontIcon iconColor="WHITE" iconLiteral="mdi-file-pdf" iconSize="28" GridPane.rowIndex="3">
                                             <GridPane.margin>
                                                 <Insets left="25.0" />
                                             </GridPane.margin>
-                                        </FontIcon-->
+                                        </FontIcon>
 
-                                        <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" prefHeight="56.0" prefWidth="335.0" text="     Gerenciamento de Funcionário (F6)" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="4">
+                                        <Button fx:id="btnFuncionario" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" prefHeight="56.0" prefWidth="335.0" text="     Gerenciamento de Funcionário     " textAlignment="CENTER" wrapText="true" GridPane.rowIndex="4">
                                             <GridPane.margin>
                                                 <Insets left="5.0" />
                                             </GridPane.margin>
                                         </Button>
-                                        <!--FontIcon iconColor="WHITE" iconLiteral="mdi-account-multiple" iconSize="28" text="" GridPane.rowIndex="4">
+                                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account-multiple" iconSize="28" text="" GridPane.rowIndex="4">
                                             <GridPane.margin>
                                                 <Insets left="25.0" />
                                             </GridPane.margin>
-                                        </FontIcon-->
+                                        </FontIcon>
 
 
-                                        <Button fx:id="btnConfiguracao" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" prefHeight="56.0" prefWidth="335.0" text="Configuraçoes do Sistema" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="5">
+                                        <!--Button fx:id="btnConfiguracao" mnemonicParsing="false" onAction="#onBtnFuncionarioAction" prefHeight="56.0" prefWidth="335.0" text="Configuraçoes do Sistema" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="5">
                                             <GridPane.margin>
                                                 <Insets left="5.0" />
                                             </GridPane.margin>
                                         </Button>
-                                        <!--FontIcon iconColor="WHITE" iconLiteral="mdi-account-multiple" iconSize="28" text="" GridPane.rowIndex="4">
+                                        <FontIcon iconColor="WHITE" iconLiteral="mdi-account-multiple" iconSize="28" text="" GridPane.rowIndex="4">
                                             <GridPane.margin>
                                                 <Insets left="25.0" />
                                             </GridPane.margin>
                                         </FontIcon-->
-
 
                                     </children>
                                 </GridPane>
@@ -168,20 +156,17 @@
     </left>
 
     <bottom>
-        <ButtonBar prefHeight="23.0" prefWidth="1100.0" styleClass="background-center" BorderPane.alignment="CENTER">
+        <ButtonBar prefHeight="35.0" prefWidth="1350.0" styleClass="background-center" BorderPane.alignment="CENTER">
             <buttons>
-                <AnchorPane nodeOrientation="RIGHT_TO_LEFT" prefHeight="116.0" prefWidth="527.0">
-                    <opaqueInsets>
-                        <Insets left="250.0" />
-                    </opaqueInsets>
-                </AnchorPane>
+            <Label fx:id="txtDate" prefHeight="25.0" prefWidth="90.0" styleClass="label-bright" />
+            <Label fx:id="txtHora" prefHeight="26.0" prefWidth="90.0" styleClass="label-bright" />
             </buttons></ButtonBar>
     </bottom>
     <center>
         <AnchorPane prefHeight="747.0" prefWidth="110.0" BorderPane.alignment="CENTER">
          <children>
       
-                <Pane fx:id="tela" layoutX="-1.0" layoutY="-1.0" prefHeight="748.0" prefWidth="1009.0" styleClass="fundo-painel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                <Pane fx:id="tela" layoutX="-1.0" layoutY="-1.0" prefHeight="747.0" prefWidth="1006.0" styleClass="fundo-painel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
         </AnchorPane>
     </center>

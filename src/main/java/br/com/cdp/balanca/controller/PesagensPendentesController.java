@@ -93,7 +93,6 @@ public class PesagensPendentesController implements Initializable , DataChangeLi
 
     public void pesquisarActionTableView(){
         List<Pesagem> list;
-
         list = service.listarPesagensPesquisa(txtPesquisar.getText());
         obslist = FXCollections.observableArrayList(list);
         tabelaPesagem.setItems(obslist);

@@ -24,12 +24,18 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.EventListener; //new
-import java.util.ResourceBundle;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 import java.util.function.Consumer;
 
 public class HomeController implements Initializable {
 
+    @FXML
+    private Label txtDate;
+    @FXML
+    private Label txtHora;
     @FXML
     private Pane tela;
 
@@ -57,6 +63,8 @@ public class HomeController implements Initializable {
     @FXML
     private Button btnSair;
 
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         initializeNodes();
@@ -64,8 +72,17 @@ public class HomeController implements Initializable {
 
     private void initializeNodes() {
         lblUser.setText(Main.getDataUser().getNome());
-
+        getDateSystem();
     }
+
+    private void getDateSystem() {
+       // DateTimeFormatter time = DateTimeFormatter.ofPattern("dd/MM/YY HH:mm:ss");
+       // txtDate.setText(time.format(LocalDateTime.now()));
+        Date time = new Date();
+        txtDate.setText(new SimpleDateFormat("dd/MM/yy").format(time));
+        txtHora.setText(new SimpleDateFormat("HH:mm:ss").format(time));
+    }
+
 
     //ACTION DE ATALHO DE TECLAS
     @FXML
@@ -177,7 +194,7 @@ public class HomeController implements Initializable {
         }
     }
 
-  /*  public interface EventHandler<T extends ActionEvent> extends EventListener {}*/
+    /*  public interface EventHandler<T extends ActionEvent> extends EventListener {}*/
 
     @FXML
     private void onBtActionTrocaUsuarioAction() throws IOException {

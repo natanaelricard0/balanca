@@ -14,8 +14,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -68,25 +70,33 @@ public class FuncionarioFormController implements Initializable {
         if (funcionarioServices == null) {
             throw new IllegalStateException("Service as null");
         }
+        autenticar_usuario(funcionario);
         try {
             funcionario = getFormData();
             funcionarioServices.insertOrUpdate(funcionario);
-            //autenticar_usuario();
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
-        } catch (RuntimeException exceptionMsg) {
+        } catch(RuntimeException exceptionMsg) {
             Alerts.showAlert("Erro em Salvar Funcionário", null, exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
 
     }
 
-    public void autenticar_usuario() {
-         try {
-            //funcionario  = funcionarioServices.getFuncionario(txtLoginRede.getText());
-            funcionarioServices.loginAdConfirmation(funcionario);
-         } catch (RuntimeException exceptionMsg){
-             Alerts.showAlert("Erro ao Salvar Funcionário", null, "Usuário já existe no Sistema como Administrador ou Ativo.",  Alert.AlertType.ERROR);
-         }
+    public void autenticar_usuario(Funcionario funcionario) {
+        if (funcionario == null) {
+            throw new IllegalStateException("Funcionário as null");
+        }
+        try {
+            List<Funcionario> funcionarios;
+            funcionarios = (List<Funcionario>) funcionarioServices.getFuncionario(txtLoginRede.getText());  //list = Collections.singletonList(funcionarioServices.getFuncionario(txtLoginRede.getText()));
+
+            //Boolean funcionario = funcionarioServices.loginAdConfirmation((Funcionario) list);
+            //funcionario  = funcionarioServices.getNameAndLoginScap(txtLoginScap.getText()) ;
+            //funcionarioServices.loginAdConfirmation(funcionario);
+
+        } catch (RuntimeException exceptionMsg){
+             //Alerts.showAlert("Erro ao Salvar Funcionário", null, "Usuário já existe no Sistema como Administrador ou Ativo.",  Alert.AlertType.ERROR);
+        }
 
     }
 

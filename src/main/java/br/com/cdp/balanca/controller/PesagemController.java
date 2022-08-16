@@ -182,7 +182,7 @@ public class PesagemController implements Initializable {
             autorizacaoEntradaSaida = service.findById(Integer.parseInt(txtAutorizacaoEntrada.getText()));
             if(autorizacaoEntradaSaida != null){
                 if(service.autorizacaoIsValid(autorizacaoEntradaSaida.getIdAutorizacaoEntradaSaida()) && autorizacaoEntradaSaida.getTipoEntradaSaida().equals("E")){
-                    txtAutorizacaoEntrada.setStyle("-fx-border-color: green");
+                    txtAutorizacaoEntrada.setStyle("-fx-border-color: #7bd1ff");
                     updateTableView();
                 }else {
                     txtAutorizacaoEntrada.setStyle("-fx-border-color: red");
@@ -238,11 +238,11 @@ public class PesagemController implements Initializable {
             veiculo = veiculoServices.findById(Integer.parseInt(txtVeiculo.getText()));
             if(veiculo != null){
                 gridPaneVeiculo.setVisible(true);
-                gridPaneVeiculo.setStyle("-fx-background-color: green");
+                gridPaneVeiculo.setStyle("-fx-background-color: #7bd1ff");
                 lblCodigo.setText(veiculo.getIdVeiculo().toString());
                 lblPlaca.setText(veiculo.getPlacaVeiculo());
                 lblTara.setText(veiculo.getPesoTara().toString());
-                txtVeiculo.setStyle("-fx-border-color: green");
+                txtVeiculo.setStyle("-fx-border-color: #7bd1ff");
             }else {
                 Alerts.showAlert("Error","","Veiculo não encontrado", Alert.AlertType.ERROR);
                 txtVeiculo.setStyle("-fx-border-color: red");
@@ -252,11 +252,11 @@ public class PesagemController implements Initializable {
             veiculo = veiculoServices.findByPlaca(txtVeiculo.getText());
             if(veiculo != null) {
                 gridPaneVeiculo.setVisible(true);
-                gridPaneVeiculo.setStyle("-fx-background-color: green");
+                gridPaneVeiculo.setStyle("-fx-background-color: #7bd1ff");
                 lblCodigo.setText(veiculo.getIdVeiculo().toString());
                 lblPlaca.setText(veiculo.getPlacaVeiculo());
                 lblTara.setText(veiculo.getPesoTara().toString());
-                txtVeiculo.setStyle("-fx-border-color: green");
+                txtVeiculo.setStyle("-fx-border-color: #7bd1ff");
             } else  {
                 Alerts.showAlert("Error","","Veiculo não encontrado", Alert.AlertType.ERROR);
                 txtVeiculo.setStyle("-fx-border-color: red");

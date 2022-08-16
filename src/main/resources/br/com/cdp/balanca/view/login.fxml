@@ -22,16 +22,16 @@
          <children>
             <Pane prefHeight="540.0" prefWidth="600.0" styleClass="background-center" GridPane.columnIndex="1">
                <children>
-                  <Button fx:id="btnEntrar" layoutX="62.0" layoutY="424.0" mnemonicParsing="false" onAction="#onLoginAction" prefHeight="35.0" prefWidth="92.0" text="Entrar" />
-                  <Button fx:id="btnSair" layoutX="210.0" layoutY="424.0" mnemonicParsing="false" onAction="#onExitAction" prefHeight="35.0" prefWidth="92.0" text="Sair" />
-                   <TextField fx:id="txtLogin" layoutX="116.0" layoutY="253.0" />
-                   <Label layoutX="35.0" layoutY="257.0" styleClass="label-bright" text="Login">
+                  <Button fx:id="btnEntrar" layoutX="53.0" layoutY="389.0" mnemonicParsing="false" onAction="#onLoginAction" prefHeight="35.0" prefWidth="92.0" text="Entrar" />
+                  <Button fx:id="btnSair" layoutX="210.0" layoutY="389.0" mnemonicParsing="false" onAction="#onExitAction" prefHeight="35.0" prefWidth="92.0" text="Sair" />
+                   <TextField fx:id="txtLogin" layoutX="116.0" layoutY="240.0" />
+                   <Label layoutX="35.0" layoutY="245.0" styleClass="label-bright" text="Login">
                        <graphic>
                            <FontIcon iconColor="WHITE" iconLiteral="mdi-account" iconSize="25" />
                        </graphic>
                    </Label>
-                   <PasswordField fx:id="pswSenha" layoutX="116.0" layoutY="323.0" />
-                   <Label layoutX="33.0" layoutY="327.0" styleClass="label-bright" text="Senha">
+                   <PasswordField fx:id="pswSenha" layoutX="116.0" layoutY="300.0" />
+                   <Label layoutX="33.0" layoutY="304.0" styleClass="label-bright" text="Senha">
                        <graphic>
                            <FontIcon iconColor="WHITE" iconLiteral="mdi-key" iconSize="25" />
                        </graphic>
