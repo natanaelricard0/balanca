@@ -10,16 +10,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="implementação data e hora na tela home">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/images/fundo.webp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/FuncionarioFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/TaraController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/TaraController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/model/dao/impl/FuncionarioDaoJDBC.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/model/dao/impl/FuncionarioDaoJDBC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/model/services/FuncionarioServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/model/services/FuncionarioServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/Alerts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/Alerts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/exportacao.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/exportacao.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionarioForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/funcionarioForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home - Copia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home - Copia.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/tara.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/tara.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioFormController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/FuncionarioFormController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagensPendentesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/images/fundo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/model/dao/impl/FuncionarioDaoJDBC.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/model/dao/impl/FuncionarioDaoJDBC.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/model/services/FuncionarioServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/model/services/FuncionarioServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/style/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/utils/Alerts.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/utils/Alerts.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/exportacao.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/exportacao.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionario.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionario.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/funcionarioForm.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/gerenciamentoPesagem.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home - Copia.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home - Copia.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/importacaoSaidaRodoviaria.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/tara.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/tara.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +91,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.32068965&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -117,15 +141,25 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="br.com.cdp.balanca.application.Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/Desktop/ARQUIVOS/jdk-17.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH" value="zulu-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.Main" />
       <module name="Balanca" />
+      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
+        <option name="credential" />
+        <option name="region" />
+        <option name="useCurrentConnection" value="false" />
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -215,7 +249,21 @@
       <workItem from="1660228442778" duration="6155000" />
       <workItem from="1660315169481" duration="6163000" />
       <workItem from="1660653124752" duration="3129000" />
-      <workItem from="1660658358540" duration="8032000" />
+      <workItem from="1660658358540" duration="8579000" />
+      <workItem from="1660739640810" duration="734000" />
+      <workItem from="1660740394589" duration="7480000" />
+      <workItem from="1660748094426" duration="2531000" />
+      <workItem from="1660753468223" duration="2170000" />
+      <workItem from="1660824431878" duration="14883000" />
+      <workItem from="1660910786664" duration="6833000" />
+      <workItem from="1660918020547" duration="395000" />
+      <workItem from="1660918460055" duration="1533000" />
+      <workItem from="1660920333423" duration="631000" />
+      <workItem from="1660920983989" duration="4148000" />
+      <workItem from="1660926216988" duration="883000" />
+      <workItem from="1660927125752" duration="1113000" />
+      <workItem from="1660928272228" duration="410000" />
+      <workItem from="1661261515411" duration="4828000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1655903525679</created>
@@ -511,7 +559,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660668820976</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="implementação data e hora na tela home">
+      <created>1660668854238</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1660668854238</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -548,5 +603,15 @@
     <MESSAGE value="implementação data e hora na home" />
     <MESSAGE value="implementação data e hora na tela home" />
     <option name="LAST_COMMIT_MESSAGE" value="implementação data e hora na tela home" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" log-message="true" log-stack="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

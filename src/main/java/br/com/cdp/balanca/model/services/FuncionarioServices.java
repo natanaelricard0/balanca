@@ -14,6 +14,7 @@ public class FuncionarioServices {
         return funcionarioDao.findAll();
     }
 
+    //Usado no FuncionarioController para pesquisar
     public List<Funcionario> findByNameOrLogin(String str) {
         return funcionarioDao.find(str); //conectado com FUNCIONARIODaoJDBC e FuncionarioDAO
     }
@@ -31,7 +32,7 @@ public class FuncionarioServices {
         return DB.atenticacaoUsuarioAd(obj);
     }
 
-
+    //Login Rede
     public Funcionario getFuncionario(String login) {
         return funcionarioDao.findByLogin(login);
     }

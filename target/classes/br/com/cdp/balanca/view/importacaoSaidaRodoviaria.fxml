@@ -5,9 +5,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1576.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemImportacaoController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1576.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemImportacaoController">
    <children>
-      <ToolBar prefHeight="40.0" prefWidth="200.0" styleClass="background-center">
+      <ToolBar prefHeight="40.0" prefWidth="200.0" styleClass="background">
          <items>
             <GridPane prefHeight="60.0">
               <columnConstraints>
@@ -18,13 +18,13 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button fx:id="btnSalvar" mnemonicParsing="false" text="Salvar" GridPane.columnIndex="1" />
-                  <Button fx:id="btnPesar" mnemonicParsing="false" text="Pesar" />
+                  <Button fx:id="btnSalvar" mnemonicParsing="false" prefHeight="36.0" prefWidth="85.0" text="Salvar" GridPane.columnIndex="1" />
+                  <Button fx:id="btnPesar" mnemonicParsing="false" prefHeight="36.0" prefWidth="81.0" text="Pesar" />
                </children>
             </GridPane>
          </items>
       </ToolBar>
-      <GridPane prefHeight="505.0" prefWidth="1226.0">
+      <GridPane prefHeight="524.0" prefWidth="1576.0" styleClass="background-nav">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="191.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="548.0" minWidth="10.0" prefWidth="548.0" />
@@ -40,39 +40,51 @@
             <RowConstraints maxHeight="140.0" minHeight="10.0" prefHeight="104.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Autorização de Saída: *">
+            <Label styleClass="label-bright" text="Autorização de Saída: *">
                <padding>
                   <Insets left="5.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
             </Label>
-            <Label text="Nota Fiscal:" GridPane.rowIndex="3">
+            <Label styleClass="label-bright" text="Nota Fiscal:" GridPane.rowIndex="3">
                <padding>
                   <Insets left="5.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
             </Label>
-            <Label text="Veículo: *" GridPane.rowIndex="1">
+            <Label styleClass="label-bright" text="Veículo: *" GridPane.rowIndex="1">
                <padding>
                   <Insets left="5.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
             </Label>
             <TextField fx:id="txtAutorizacaoSaida" style="-fx-border-radius: 8px;" GridPane.columnIndex="1" />
             <TextField fx:id="txtVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Tara:" GridPane.rowIndex="2">
+            <Label styleClass="label-bright" text="Tara:" GridPane.rowIndex="2">
                <padding>
                   <Insets left="5.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
             </Label>
             <TextField fx:id="txtTara" editable="false" styleClass="text-field-bright" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="txtNotaFiscal" prefHeight="34.0" prefWidth="701.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3">
@@ -80,24 +92,30 @@
                   <Insets />
                </GridPane.margin></TextField>
             <TextField fx:id="txtPesoTotal" editable="false" styleClass="text-field-bright" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Label text="Peso Total:" GridPane.rowIndex="4">
+            <Label styleClass="label-bright" text="Peso Total:" GridPane.rowIndex="4">
                <padding>
                   <Insets left="5.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
             </Label>
-            <Label text="Peso Líquido:" GridPane.rowIndex="5">
+            <Label styleClass="label-bright" text="Peso Líquido:" GridPane.rowIndex="5">
                <padding>
                   <Insets left="5.0" />
                </padding>
                <font>
                   <Font name="System Bold" size="12.0" />
                </font>
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
             </Label>
             <TextField fx:id="txtPesoLiquido" editable="false" styleClass="text-field-bright" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <GridPane fx:id="gridPaneVeiculo" gridLinesVisible="true" prefWidth="496.0" visible="false" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="2">
+            <GridPane fx:id="gridPaneVeiculo" gridLinesVisible="true" prefHeight="160.0" prefWidth="751.0" visible="false" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="2">
                <columnConstraints>
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

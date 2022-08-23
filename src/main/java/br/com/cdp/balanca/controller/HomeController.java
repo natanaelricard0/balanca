@@ -7,35 +7,27 @@ import br.com.cdp.balanca.utils.DialogForm;
 import br.com.cdp.balanca.utils.ResourceStage;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
-import javafx.event.EventHandler; //new
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-
+import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent; //new
 import javafx.scene.layout.Pane;
-
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.*;
 import java.util.function.Consumer;
 
 public class HomeController implements Initializable {
 
     @FXML
-    private Label txtDate;
-    @FXML
-    private Label txtHora;
+    private Label txtTime;
     @FXML
     private Pane tela;
 
@@ -76,11 +68,10 @@ public class HomeController implements Initializable {
     }
 
     private void getDateSystem() {
-       // DateTimeFormatter time = DateTimeFormatter.ofPattern("dd/MM/YY HH:mm:ss");
-       // txtDate.setText(time.format(LocalDateTime.now()));
-        Date time = new Date();
-        txtDate.setText(new SimpleDateFormat("dd/MM/yy").format(time));
-        txtHora.setText(new SimpleDateFormat("HH:mm:ss").format(time));
+        DateTimeFormatter formatter = DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM);
+        LocalDateTime ldtNow = LocalDateTime.now();
+        String date = formatter.format(ldtNow);
+        txtTime.setText(date);
     }
 
 
@@ -143,21 +134,15 @@ public class HomeController implements Initializable {
     }
 
     @FXML
-    private void onBtCadastroTara(ActionEvent event) {
+    private void onBtCadastroTara(Event event){
         cadastroTara(event);
-    /*    btnTara.setOnMouseClicked(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent click) {
-                if (click.getClickCount() == 1) {
-                    try {
-                        cadastroTara(event);
-                    } catch (RuntimeException e) {
-                        e.printStackTrace();
-                       // Alerts.showAlert("Erro ao abrir tela Cadastro Tara.", null, e.getMessage(), Alert.AlertType.ERROR);
-                    }
-                }
-            }
-        });*/
+        /*try {
+            cadastroTara(event);
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+        // Alerts.showAlert("Erro ao abrir tela Cadastro Tara.", null, e.getMessage(), Alert.AlertType.ERROR);
+        }*/
+
     }
 
     @FXML

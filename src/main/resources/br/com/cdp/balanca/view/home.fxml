@@ -11,7 +11,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handleOnKeyReleased" prefHeight="900.0" prefWidth="1350.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.HomeController">
     <top>
-        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="130.0" prefWidth="1000.0" styleClass="background-submenu" GridPane.columnSpan="2">
+        <ToolBar nodeOrientation="RIGHT_TO_LEFT" prefHeight="130.0" prefWidth="1000.0" styleClass="background-center" GridPane.columnSpan="2">
             <items>
                 <GridPane prefHeight="113.0" prefWidth="1324.0">
                     <columnConstraints>
@@ -27,7 +27,7 @@
                                             <Insets left="105.0" />
                                         </GridPane.margin>
                                     </FontIcon>
-                        <Label fx:id="lblUser" alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="136.0" styleClass="label-bright">
+                        <Label fx:id="lblUser" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="213.0" styleClass="label-bright">
                             <GridPane.margin>
                                 <Insets left="115.0" />
                             </GridPane.margin>
@@ -44,6 +44,9 @@
                             <image>
                                 <Image url="@../images/cdp.png" />
                             </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
                         </ImageView>
                     </children>
                 </GridPane>
@@ -56,7 +59,7 @@
         </ToolBar>
     </top>
     <left>
-        <ScrollPane prefHeight="600.0" prefWidth="344.0" styleClass="background-submenu" BorderPane.alignment="CENTER">
+        <ScrollPane prefHeight="600.0" prefWidth="344.0" styleClass="background-center" BorderPane.alignment="CENTER">
             <content>
                 <AnchorPane id="ancorar_scrollpane" minHeight="0.0" minWidth="0.0" prefHeight="380.0" prefWidth="340.0" styleClass="fundo-teste02">
                     <children>
@@ -156,19 +159,25 @@
     </left>
 
     <bottom>
-        <ButtonBar prefHeight="35.0" prefWidth="1350.0" styleClass="background-center" BorderPane.alignment="CENTER">
+        <ButtonBar prefHeight="42.0" prefWidth="1350.0" styleClass="background-center" BorderPane.alignment="CENTER">
             <buttons>
-            <Label fx:id="txtDate" prefHeight="25.0" prefWidth="90.0" styleClass="label-bright" />
-            <Label fx:id="txtHora" prefHeight="26.0" prefWidth="90.0" styleClass="label-bright" />
-            </buttons></ButtonBar>
+               <Label fx:id="txtTime" prefHeight="26.0" prefWidth="288.0" styleClass="label-bright" />
+            </buttons>
+        </ButtonBar>
     </bottom>
     <center>
-        <AnchorPane prefHeight="747.0" prefWidth="110.0" BorderPane.alignment="CENTER">
+          <Pane fx:id="tela" styleClass="fundo-painel">
          <children>
-      
-                <Pane fx:id="tela" layoutX="-1.0" layoutY="-1.0" prefHeight="747.0" prefWidth="1006.0" styleClass="fundo-painel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="323.0" layoutY="26.0" prefHeight="54.0" prefWidth="530.0" styleClass="label-header" text="Sistema Portuário Balança Rodoviária" textAlignment="CENTER">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Label>
+         </children></Pane>
+        <!--AnchorPane prefHeight="747.0" prefWidth="110.0" BorderPane.alignment="CENTER">
+         <children>
+                <Pane fx:id="tela" layoutX="-3.0" layoutY="-1.0" prefHeight="730.0" prefWidth="1009.0" styleClass="fundo-painel" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
-        </AnchorPane>
+        </AnchorPane-->
     </center>
 
 </BorderPane>
