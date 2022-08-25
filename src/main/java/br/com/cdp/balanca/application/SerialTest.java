@@ -17,7 +17,7 @@ public class SerialTest {
             System.out.println("\"Hello World!!!\" successfully writen to port: " + serialPort.writeBytes("Hello World!!!".getBytes()));
             System.out.println("Get port " + serialPort.getPortName());
             System.out.println("Estado da porta: " + serialPort.isOpened());
-            System.out.println("aaaaaaaaaaaaaaaaa");
+            System.out.println("aaaaaaaaaaaaaaaaaaa");
 
 
 

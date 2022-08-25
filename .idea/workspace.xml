@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="atualização relatório">
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="update teste">
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/application/SerialTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/application/SerialTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -516,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661432290406</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="update teste">
+      <created>1661432427786</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1661432427786</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -553,6 +560,7 @@
     <MESSAGE value="adição de fields no relatorio personalizado" />
     <MESSAGE value="atualização icon web" />
     <MESSAGE value="atualização relatório" />
-    <option name="LAST_COMMIT_MESSAGE" value="atualização relatório" />
+    <MESSAGE value="update teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="update teste" />
   </component>
 </project>
