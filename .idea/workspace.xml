@@ -9,7 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="adição de fields no relatorio personalizado" />
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="atualização icon web">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -500,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661431864453</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="atualização icon web">
+      <created>1661432082816</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1661432082816</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -535,6 +544,7 @@
     <MESSAGE value="classe auxiliar para detectar porta serial v2" />
     <MESSAGE value="Mudanças feitas na interface do projeto" />
     <MESSAGE value="adição de fields no relatorio personalizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="adição de fields no relatorio personalizado" />
+    <MESSAGE value="atualização icon web" />
+    <option name="LAST_COMMIT_MESSAGE" value="atualização icon web" />
   </component>
 </project>
