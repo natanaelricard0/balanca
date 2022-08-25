@@ -136,7 +136,7 @@ public class RelatorioController implements Initializable {
         colPesoLiquido.setCellValueFactory(new PropertyValueFactory<>("pesoLiquido"));
         colTara.setCellValueFactory(new PropertyValueFactory<>("tara"));
         colusuarioPrimeiraPesagem.setCellValueFactory((new PropertyValueFactory<>("usuarioPrimeiraPesagem")));
-       // colusuarioSegundaPesagem.setCellValueFactory(new PropertyValueFactory<>("usuarioSegundaPesagem"));
+       colusuarioSegundaPesagem.setCellValueFactory(new PropertyValueFactory<>("usuarioSegundaPesagem"));
 
     }
 }
