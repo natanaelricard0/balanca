@@ -81,6 +81,8 @@
             <TableColumn fx:id="colDataHora" prefWidth="288.0" text="Data Hora" />
             <TableColumn fx:id="colOperdador" prefWidth="318.0" text="Operador" />
             <TableColumn fx:id="colPesoLiquido" prefWidth="241.0" text="Peso Liquido" />
+             <TableColumn fx:id="colusuarioPrimeiraPesagem" prefWidth="241.0" text="Usuário Primeira Pesagem" />
+             <TableColumn fx:id="colusuarioSegundaPesagem" prefWidth="241.0" text="Usuário Segunda Pesagem" />
          </columns></TableView>
    </children>
 </VBox>
