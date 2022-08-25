@@ -46,8 +46,7 @@ public class ShowReports {
             InputStream fonte = ShowReports.class.getResourceAsStream("/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml");
             JasperReport relatorio = JasperCompileManager.compileReport(fonte);
             JasperPrint impressao = JasperFillManager.fillReport(relatorio,null, new JRBeanCollectionDataSource(lista));
-//            JasperPrintManager.printPage(impressao,0,true);
-
+//          JasperPrintManager.printPage(impressao,0,true);
             JasperViewer.viewReport(impressao,false);
 
         }catch (JRException e){

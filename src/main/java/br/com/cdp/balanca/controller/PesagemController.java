@@ -146,6 +146,7 @@ public class PesagemController implements Initializable {
                 Alerts.showAlert("Sucesso","", "Pesagem inserida com sucesso", Alert.AlertType.INFORMATION);
                 notifyDataChangeListener();
                 ResourceStage.currentStage(event).close();
+
             } else {
                 pesagem.setUsuarioSegundaPesagem(Main.getDataUser().getLoginScap());
                 pesagem.setTara(Float.parseFloat(txtPesoVazio.getText()));

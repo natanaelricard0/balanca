@@ -95,7 +95,8 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         ResultSet rs = null;
 
         try {
-            st = conn.prepareStatement("SELECT * FROM dbo.funcionario_balanca WHERE login_rede = ?");
+           // st = conn.prepareStatement("SELECT * FROM dbo.funcionario_balanca WHERE login_rede = ?");
+            st = conn.prepareStatement("SELECT * FROM dbo.funcionario_balanca WHERE login_rede = ? ");
             st.setString(1, loginRede);
             rs = st.executeQuery();
 

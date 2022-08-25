@@ -72,32 +72,32 @@ public class FuncionarioFormController implements Initializable {
             throw new IllegalStateException("Service as null");
         }
         try {
-           /* funcionario = getFormData();
-            funcionarioServices.insertOrUpdate(funcionario); */
+          /* funcionario = getFormData();
+            funcionarioServices.insertOrUpdate(funcionario);*/
             autenticar_usuario();
             notifyDataChangeListener();
             ResourceStage.currentStage(event).close();
         } catch(RuntimeException exceptionMsg) {
-            Alerts.showAlert("Erro ao Salvar Funcionário", "Erro ao tentar inserir usuário campos vazios.", exceptionMsg.getMessage(), Alert.AlertType.ERROR);
+            Alerts.showAlert("Erro ao Salvar Funcionário", "Erro ao tentar inserir usuário.", exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
-    public void  autenticar_usuario() {
-        try {
+    public void autenticar_usuario() {
+       try {
             List<Funcionario> listFuncionario;
             listFuncionario = (List<Funcionario>) funcionarioServices.getFuncionario(txtLoginRede.getText());
 
-            if (getFormData() != null && funcionario.equals(listFuncionario)) {  //   if (funcionario.getLoginRede() != null && funcionario.equals(listFuncionario)) {
-               funcionarioServices.loginAdConfirmation(funcionario);
+            if (getFormData() != null && funcionario.getLoginScap() != null || funcionario.equals(listFuncionario)) {  //if (funcionario.getLoginRede() != null && funcionario.equals(listFuncionario)) {
+                funcionario = getFormData();
+                funcionarioServices.loginAdConfirmation(funcionario);
 
             } else {
                 funcionario = getFormData();
                 funcionarioServices.insertOrUpdate(funcionario);
             }
 
-        } catch (RuntimeException exceptionMsg) {
-                Alerts.showAlert("Erro ao Cadastrar Funcionário", "Usuário já cadastrado no sistema.", exceptionMsg.getMessage(), Alert.AlertType.ERROR);
-
+       } catch (RuntimeException exceptionMsg) {
+                Alerts.showAlert("Erro ao Cadastrar Funcionário", "Funcionário já existente no sistema", exceptionMsg.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
