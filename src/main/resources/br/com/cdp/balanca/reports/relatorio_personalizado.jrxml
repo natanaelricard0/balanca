@@ -26,7 +26,7 @@
 	<field name="pesoLiquido" class="java.lang.Float"/>
 	<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
 	<field name="usuarioSegundaPesagem" class="java.lang.String"/>
-	<field name="dataPrimeiraPesagem" class="java.util.Date"/>
+	<field name="dataPrimeiraPesagem" class="java.util.Date" />
 	<background>
 		<band splitType="Stretch"/>
 	</background>
