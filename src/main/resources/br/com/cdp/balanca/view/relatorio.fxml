@@ -84,7 +84,6 @@
              <TableColumn fx:id="colusuarioPrimeiraPesagem" prefWidth="241.0" text="Usuário Primeira Pesagem" />
              <TableColumn fx:id="colusuarioSegundaPesagem" prefWidth="241.0" text="Usuário Segunda Pesagem" />
              <TableColumn fx:id="coldataPrimeiraPesagem" prefWidth="241.0" text="Data Primeira Pesagem" />
-             <TableColumn fx:id="coldataSegundaPesagem" prefWidth="241.0" text="Data Segunda Pesagem" />
          </columns></TableView>
    </children>
 </VBox>

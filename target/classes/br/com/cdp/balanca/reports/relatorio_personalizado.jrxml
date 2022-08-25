@@ -14,7 +14,6 @@
 		<field name="pesoLiquido" class="java.lang.Float"/>
 		<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
 		<field name="usuarioSegundaPesagem" class="java.lang.String"/>
-		<field name="dataSegundaPesagem" class="java.lang.String"/>
 		<field name="dataPrimeiraPesagem" class="java.lang.String"/>
 	</subDataset>
 	<queryString language="csv">
@@ -27,8 +26,8 @@
 	<field name="pesoLiquido" class="java.lang.Float"/>
 	<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
 	<field name="usuarioSegundaPesagem" class="java.lang.String"/>
-	<field name="dataSegundaPesagem" class="java.lang.String"/>
 	<field name="dataPrimeiraPesagem" class="java.lang.String"/>
+
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -169,7 +168,7 @@
 		</band>
 	</columnHeader>
 	<detail>
-		<band height="44" splitType="Stretch">
+		<band height="47" splitType="Stretch">
 			<textField>
 				<reportElement x="71" y="0" width="89" height="30" uuid="0f1b4076-1ed6-488b-802f-94aea6161651">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63c703a0-84fa-425d-80ff-56adfa73db00"/>
