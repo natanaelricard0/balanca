@@ -72,6 +72,12 @@ public class RelatorioController implements Initializable {
     @FXML
     private TableColumn<Pesagem, String> colusuarioSegundaPesagem;
 
+    @FXML
+    private TableColumn<Pesagem, String> coldataPrimeiraPesagem;
+
+    @FXML
+    private TableColumn<Pesagem, String> coldataSegundaPesagem;
+
     private ObservableList<Pesagem> pesagens;
 
     @Override
@@ -131,5 +137,7 @@ public class RelatorioController implements Initializable {
         colTara.setCellValueFactory(new PropertyValueFactory<>("tara"));
         colusuarioPrimeiraPesagem.setCellValueFactory((new PropertyValueFactory<>("usuarioPrimeiraPesagem")));
         colusuarioSegundaPesagem.setCellValueFactory(new PropertyValueFactory<>("usuarioSegundaPesagem"));
+        coldataPrimeiraPesagem.setCellValueFactory(new PropertyValueFactory<>("dataPrimeiraPesagem"));
+        coldataSegundaPesagem.setCellValueFactory(new PropertyValueFactory<>("dataSegundaPesagem"));
     }
 }

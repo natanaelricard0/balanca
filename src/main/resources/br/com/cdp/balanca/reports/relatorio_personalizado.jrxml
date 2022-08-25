@@ -14,6 +14,8 @@
 		<field name="pesoLiquido" class="java.lang.Float"/>
 		<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
 		<field name="usuarioSegundaPesagem" class="java.lang.String"/>
+		<field name="dataSegundaPesagem" class="java.lang.String" />
+		<field name="dataPrimeiraPesagem" class="java.lang.String" />
 	</subDataset>
 	<queryString language="csv">
 		<![CDATA[]]>
@@ -25,6 +27,8 @@
 	<field name="pesoLiquido" class="java.lang.Float"/>
 	<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
 	<field name="usuarioSegundaPesagem" class="java.lang.String"/>
+	<field name="dataSegundaPesagem" class="java.lang.String" />
+	<field name="dataPrimeiraPesagem" class="java.lang.String" />
 	<background>
 		<band splitType="Stretch"/>
 	</background>
