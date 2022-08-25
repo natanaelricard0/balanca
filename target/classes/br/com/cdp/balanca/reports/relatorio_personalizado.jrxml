@@ -14,6 +14,9 @@
 		<field name="pesoLiquido" class="java.lang.Float"/>
 		<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
 		<field name="usuarioSegundaPesagem" class="java.lang.String"/>
+		<field name="dataPrimeiraPesagem" class="java.lang.String" />
+		<field name="dataSegundaPesagem" class="java.lang.String" />
+
 	</subDataset>
 	<queryString language="csv">
 		<![CDATA[]]>
@@ -25,6 +28,8 @@
 	<field name="pesoLiquido" class="java.lang.Float"/>
 	<field name="usuarioPrimeiraPesagem" class="java.lang.String"/>
 	<field name="usuarioSegundaPesagem" class="java.lang.String"/>
+	<field name="dataPrimeiraPesagem" class="java.lang.String" />
+	<field name="dataSegundaPesagem" class="java.lang.String" />
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -39,10 +44,10 @@
 			</staticText>
 			<image>
 				<reportElement x="0" y="0" width="250" height="70" uuid="f8d05fd4-69d4-4d2e-bd75-fef69fb859a9"/>
-				<imageExpression><![CDATA["C:/Users/n2carvalho/IdeaProjects/balanca/src/main/resources/br/com/cdp/balanca/images/cdp_logo.png"]]></imageExpression>
+				<imageExpression><![CDATA["https://github.com/yuutognr/balanca/blob/7957d28000de3f04b52b2df0941788a2b3cf871c/src/main/resources/br/com/cdp/balanca/images/cdp_logo.png?raw=true"]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="450" y="10" width="100" height="30" uuid="d71d0fd1-d34c-4e12-83ba-4b370173d47e"/>
+				<reportElement x="0" y="70" width="100" height="30" uuid="d71d0fd1-d34c-4e12-83ba-4b370173d47e"/>
 				<textFieldExpression><![CDATA[$F{usuarioSegundaPesagem}]]></textFieldExpression>
 			</textField>
 		</band>
