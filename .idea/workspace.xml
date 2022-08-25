@@ -9,14 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="fix relatorio">
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="fix data relatorio final">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/RelatorioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/RelatorioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/RelatorioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/RelatorioController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -543,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661433488373</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="fix data relatorio final">
+      <created>1661437543012</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1661437543012</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -582,6 +585,7 @@
     <MESSAGE value="atualização relatório" />
     <MESSAGE value="update teste" />
     <MESSAGE value="adicionando fields no relatorio" />
-    <option name="LAST_COMMIT_MESSAGE" value="adicionando fields no relatorio" />
+    <MESSAGE value="fix data relatorio final" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix data relatorio final" />
   </component>
 </project>
