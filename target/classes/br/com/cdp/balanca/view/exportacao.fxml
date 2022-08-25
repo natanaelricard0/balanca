@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="840.0" prefWidth="1000.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.PesagemController">
     <children>
         <GridPane>
             <columnConstraints>
@@ -142,7 +142,7 @@
             </GridPane>
             </children>
         </GridPane>
-        <TableView fx:id="tableViewItemAutorizacao" prefHeight="300.0" prefWidth="980.0">
+        <TableView fx:id="tableViewItemAutorizacao" prefHeight="345.0" prefWidth="980.0">
             <columns>
                 <TableColumn fx:id="tableColumnAutorizacao" prefWidth="213.0" text="Autorização" />
                 <TableColumn fx:id="tableColumnDescricao" minWidth="0.0" prefWidth="279.0" text="Descrição" />

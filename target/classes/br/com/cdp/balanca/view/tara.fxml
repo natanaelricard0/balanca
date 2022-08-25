@@ -4,9 +4,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="850.0" prefWidth="1576.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.TaraController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1576.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.TaraController">
     <children>
-        <ToolBar prefHeight="80.0" prefWidth="1000.0" styleClass="">
+        <ToolBar prefHeight="80.0" prefWidth="1000.0" styleClass="background">
             <items>
                 <GridPane prefHeight="50.0" prefWidth="530.0">
                     <columnConstraints>
@@ -18,18 +18,18 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                     <children>
-                        <Button fx:id="btnPesar" mnemonicParsing="false" onAction="#btOnActionPesar" text="Pesar" />
-                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btOnActionSalvarPesagem" text="Salvar" GridPane.columnIndex="1" />
+                        <Button fx:id="btnPesar" mnemonicParsing="false" onAction="#btOnActionPesar" prefHeight="36.0" prefWidth="81.0" text="Pesar" />
+                        <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#btOnActionSalvarPesagem" prefHeight="36.0" prefWidth="85.0" text="Salvar" GridPane.columnIndex="1" />
                     </children>
                 </GridPane>
             </items>
         </ToolBar>
-      <Pane prefHeight="606.0" prefWidth="1000.0">
+      <Pane prefHeight="606.0" prefWidth="1000.0" styleClass="background-nav">
          <children>
-              <GridPane prefHeight="287.0" prefWidth="1010.0">
+              <GridPane prefHeight="362.0" prefWidth="1576.0" styleClass="background-nav">
                   <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="852.0" minWidth="10.0" prefWidth="852.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="782.0" minWidth="10.0" prefWidth="724.0" />
                   </columnConstraints>
                   <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
@@ -43,22 +43,28 @@
                               <Insets left="10.0" right="10.0" />
                           </GridPane.margin>
                       </TextField>
-                      <TextField fx:id="txtPeso" editable="false" styleClass="text-field-bright" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                      <TextField fx:id="txtPeso" editable="false" layoutX="20.0" layoutY="239.0" prefHeight="35.0" prefWidth="200.0" styleClass="text-field-bright" GridPane.rowIndex="3">
                           <GridPane.margin>
                               <Insets left="10.0" right="10.0" />
                           </GridPane.margin>
                       </TextField>
-                      <Label text="Veículo: *">
+                      <Label styleClass="label-bright" text="Veículo: *">
                           <GridPane.margin>
                               <Insets left="10.0" />
                           </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                       </Label>
-                      <Label text="Peso da Balança:" GridPane.rowIndex="2">
+                      <Label styleClass="label-bright" text="Peso da Balança:" GridPane.rowIndex="2">
                           <GridPane.margin>
                               <Insets left="10.0" />
                           </GridPane.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
                       </Label>
-                  <GridPane fx:id="gridPaneVeiculo" gridLinesVisible="true" prefHeight="160.0" prefWidth="473.0" visible="false" GridPane.columnIndex="1" GridPane.rowSpan="3">
+                  <GridPane fx:id="gridPaneVeiculo" gridLinesVisible="true" prefWidth="778.0" visible="false" GridPane.columnIndex="1" GridPane.columnSpan="1" GridPane.rowSpan="2">
                     <columnConstraints>
                       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                       <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -79,6 +85,9 @@
                      <GridPane.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets top="5.0" />
+                     </opaqueInsets>
                   </GridPane>
                   </children>
               </GridPane>

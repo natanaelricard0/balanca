@@ -23,4 +23,7 @@ public class Alerts {
         alert.setContentText(content);
         return alert.showAndWait();
     }
+
+    public static void showAlert(String s, String s1, AlertType error) {
+    }
 }

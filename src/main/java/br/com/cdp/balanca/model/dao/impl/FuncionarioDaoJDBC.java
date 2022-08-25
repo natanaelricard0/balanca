@@ -112,6 +112,7 @@ public class FuncionarioDaoJDBC implements FuncionarioDAO {
         }
     }
 
+    //
     @Override
     public List<Funcionario> findAll() {
         PreparedStatement st = null;

@@ -1,28 +1,28 @@
 .background-login{
     -fx-background-color: #d1edff;
     -fx-background-image: url("https://img.freepik.com/vetores-gratis/vetor-de-modelo-de-quadro-de-curva-azul_53876-111537.jpg");
-
     -fx-background-repeat: no-repeat;
     -fx-background-size: 600 550;
     -fx-background-position: center center;
 }
 
-.background-center{
+.background-center {
     -fx-background-color: #003764;
+}
+
+.background-nav{
+    -fx-background-color: #143349;
 }
 
 .background{
     -fx-background-color: #d1edff;
 }
 
-.background-submenu{
+.background-fundo{
     -fx-background-color: #0056B7;
 }
 
-.fundo{
-    -fx-background-color: #0056B7;
-}
-
+/*campo teste background*/
 .fundo-teste{
     -fx-background-image: url("https://img.freepik.com/vetores-gratis/fundo-de-meio-tom-azul-em-branco_53876-99003.jpg");
     -fx-background-repeat: no-repeat;
@@ -36,11 +36,14 @@
     -fx-background-size: 500 900;
     -fx-background-position: center center;
 }
+/*campo teste background*/
 
-.text_name_balance {
-    -fx-font-size: 50pt;
-    -fx-font-family: "Open Sans";
-    -fx-text-fill: black;
+.label-header {
+    -fx-font-size: 30pt;
+    -fx-text-alignment: center;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: #000000;
+    -fx-opacity: 1;
 }
 
 .label {
@@ -53,13 +56,6 @@
     -fx-font-size: 13pt;
     -fx-font-family: "Segoe UI Semibold";
     -fx-text-fill: white;
-    -fx-opacity: 1;
-}
-
-.label-header {
-    -fx-font-size: 32pt;
-    -fx-font-family: "Segoe UI Light";
-    -fx-text-fill: #42ddf5;
     -fx-opacity: 1;
 }
 
@@ -78,7 +74,6 @@
 
 .tool-bar{
     -fx-background-radius: 0;
-    -fx-background-color: #003764;
     -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     -fx-font-size: 13pt;
     -fx-text-fill: #ffffff;
@@ -164,9 +159,9 @@
 .button {
     -fx-padding: 5 22 5 22;
     -fx-border-color: #bae1ff, #FFFFFF;
-    -fx-border-radius: 35;
+    -fx-border-radius: 30;
     -fx-border-width: 1;
-    -fx-background-radius: 35;
+    -fx-background-radius: 30;
     -fx-background-color: rgba(7, 28, 49, 0.96);
     -fx-font-family: "Merriweather Sans", Helvetica, Arial, sans-serif;
     -fx-font-size: 11pt;
@@ -188,7 +183,7 @@
     -fx-border-color:  #64ffff, white;
     -fx-border-width: 1, 1;
     -fx-border-style: solid;
-    -fx-border-radius: 35, 35;
+    -fx-border-radius: 30, 30;
     -fx-border-insets: 1 1 1 1, 0;
 }
 
