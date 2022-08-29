@@ -130,13 +130,12 @@ public class RelatorioController implements Initializable {
     private void initialNodes(){
         colAutorizacao.setCellValueFactory(new PropertyValueFactory<>("idAutorizacao"));
         colDataHora.setCellValueFactory(new PropertyValueFactory<>("dataSegundapesagem"));
-        colOperdador.setCellValueFactory(new PropertyValueFactory<>("usuarioSegundaPesagem"));
         colPlaca.setCellValueFactory(new PropertyValueFactory<>("placa"));
         colPesoCheio.setCellValueFactory(new PropertyValueFactory<>("pesoBruto"));
         colPesoLiquido.setCellValueFactory(new PropertyValueFactory<>("pesoLiquido"));
         colTara.setCellValueFactory(new PropertyValueFactory<>("tara"));
         colusuarioPrimeiraPesagem.setCellValueFactory((new PropertyValueFactory<>("usuarioPrimeiraPesagem")));
-       colusuarioSegundaPesagem.setCellValueFactory(new PropertyValueFactory<>("usuarioSegundaPesagem"));
-
+        colusuarioSegundaPesagem.setCellValueFactory(new PropertyValueFactory<>("usuarioSegundaPesagem"));
+        coldataPrimeiraPesagem.setCellValueFactory(new PropertyValueFactory<>("dataPrimeiraPesagem"));
     }
 }

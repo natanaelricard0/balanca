@@ -74,16 +74,15 @@
             <Insets top="20.0" />
          </VBox.margin>
          <columns>
-            <TableColumn fx:id="colPlaca" prefWidth="130.0" text="Placa" />
-            <TableColumn fx:id="colAutorizacao" prefWidth="175.0" text="Autorização" />
-            <TableColumn fx:id="colTara" prefWidth="157.0" text="Tara" />
-            <TableColumn fx:id="colPesoCheio" prefWidth="244.0" text="Pesagem Cheio" />
-            <TableColumn fx:id="colDataHora" prefWidth="288.0" text="Data Hora" />
-            <TableColumn fx:id="colOperdador" prefWidth="318.0" text="Operador" />
-            <TableColumn fx:id="colPesoLiquido" prefWidth="241.0" text="Peso Liquido" />
-             <TableColumn fx:id="colusuarioPrimeiraPesagem" prefWidth="241.0" text="Usuário Primeira Pesagem" />
-             <TableColumn fx:id="colusuarioSegundaPesagem" prefWidth="241.0" text="Usuário Segunda Pesagem" />
+             <TableColumn fx:id="colPlaca" prefWidth="130.0" text="Placa" />
+             <TableColumn fx:id="colAutorizacao" prefWidth="175.0" text="Autorização" />
+             <TableColumn fx:id="colTara" prefWidth="157.0" text="Tara" />
+             <TableColumn fx:id="colPesoCheio" prefWidth="244.0" text="Pesagem Cheio" />
+             <TableColumn fx:id="colPesoLiquido" prefWidth="241.0" text="Peso Liquido" />
              <TableColumn fx:id="coldataPrimeiraPesagem" prefWidth="241.0" text="Data Primeira Pesagem" />
+             <TableColumn fx:id="colusuarioPrimeiraPesagem" prefWidth="241.0" text="Usuário Primeira Pesagem" />
+             <TableColumn fx:id="colDataHora" prefWidth="288.0" text="Data Segunda Pesagem" />
+             <TableColumn fx:id="colusuarioSegundaPesagem" prefWidth="241.0" text="Usuário Segunda Pesagem" />
          </columns></TableView>
    </children>
 </VBox>

@@ -9,9 +9,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="atualizado">
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="atualização da tela de rekatirui">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Balanca_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_08_2022_09_19_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_08_2022_09_19__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_08_2022_11_20_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_25_08_2022_11_20__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/application/Main_1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/images/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/images/fundo.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/images/pexels-asad-photo-maldives-3426867.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/windows-x64.warp-packer.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/RelatorioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/RelatorioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/RelatorioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/RelatorioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/relatorio.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,13 +224,7 @@
       <workItem from="1660315169481" duration="6163000" />
       <workItem from="1660653124752" duration="3129000" />
       <workItem from="1660658358540" duration="7911000" />
-    </task>
-    <task id="LOCAL-00002" summary="teste">
-      <created>1655903570056</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1655903570056</updated>
+      <workItem from="1661773893755" duration="3048000" />
     </task>
     <task id="LOCAL-00003" summary="mudança tela gerenciamento de funcionario">
       <created>1655907347886</created>
@@ -552,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661442053005</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="teste">
+      <created>1661444452055</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1661444452055</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,7 +589,6 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="mudança tela gerenciamento de funcionario" />
-    <MESSAGE value="teste" />
     <MESSAGE value="algumas mudanças relatório" />
     <MESSAGE value="melhoras no designer do relatório" />
     <MESSAGE value="Mudanças na cor do sistema" />
@@ -594,6 +610,8 @@
     <MESSAGE value="fix data relatorio final" />
     <MESSAGE value="fix data e hora do relatorio" />
     <MESSAGE value="atualizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="atualizado" />
+    <MESSAGE value="teste" />
+    <MESSAGE value="atualização da tela de rekatirui" />
+    <option name="LAST_COMMIT_MESSAGE" value="atualização da tela de rekatirui" />
   </component>
 </project>
