@@ -186,7 +186,7 @@
 				<text><![CDATA[Data/Hora - 1ª pesagem]]></text>
 			</staticText>
 			<staticText>
-				<reportElement mode="Opaque" x="450" y="0" width="99" height="30" forecolor="#050DFF" backcolor="#E6FEFF" uuid="afa49619-4667-4fc3-8bb3-db0a7ea99142">
+				<reportElement mode="Opaque" x="431" y="0" width="118" height="30" forecolor="#050DFF" backcolor="#E6FEFF" uuid="afa49619-4667-4fc3-8bb3-db0a7ea99142">
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fb4f817d-3404-4aea-9bf0-687d29f09ab3"/>
 				</reportElement>
 				<box>
@@ -276,7 +276,7 @@
 				<reportElement x="430" y="-31" width="1" height="61" forecolor="#9C9C9C" uuid="adb402cd-2196-430b-8806-4ff051a11d48"/>
 			</line>
 			<textField>
-				<reportElement x="477" y="9" width="100" height="30" uuid="9d577c58-ad12-41ec-9cab-92d2bd63d075"/>
+				<reportElement x="431" y="-1" width="118" height="30" uuid="9d577c58-ad12-41ec-9cab-92d2bd63d075"/>
 				<textFieldExpression><![CDATA["Text Field"]]></textFieldExpression>
 			</textField>
 		</band>
