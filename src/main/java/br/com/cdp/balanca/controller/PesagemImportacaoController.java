@@ -191,7 +191,7 @@ public class PesagemImportacaoController implements Initializable {
     private void pesoLiquido(){
         Float pesoCheio = Float.parseFloat(txtPesoTotal.getText());
         Float tara = Float.parseFloat(txtTara.getText().replaceAll("[^0-9]", ""));
-        Float resultado = pesoCheio - tara;
+        Float resultado = tara - pesoCheio;
         txtPesoLiquido.setText(resultado.toString());
         if(resultado <= 0.0){
             Alerts.showAlert("Atenção", "","Tara maior que peso total", Alert.AlertType.ERROR);
