@@ -87,8 +87,8 @@ public class FuncionarioFormController implements Initializable {
             List<Funcionario> listFuncionario;
             listFuncionario = (List<Funcionario>) funcionarioServices.getFuncionario(txtLoginRede.getText());
 
-            if (getFormData() != null && funcionario.getLoginScap() != null || funcionario.equals(listFuncionario)) {  //if (funcionario.getLoginRede() != null && funcionario.equals(listFuncionario)) {
-                funcionario = getFormData();
+            if (getFormData() != null && funcionario.getLoginScap() != null || funcionario.equals(listFuncionario)) {
+                //if (funcionario.getLoginRede() != null && funcionario.equals(listFuncionario)) {
                 funcionarioServices.loginAdConfirmation(funcionario);
 
             } else {

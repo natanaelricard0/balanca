@@ -37,7 +37,6 @@
     -fx-background-position: center center;
 }
 /*campo teste background*/
-
 .label-header {
     -fx-font-size: 40pt;
     -fx-text-alignment: center;
@@ -180,7 +179,7 @@
 
 
 .button:focused {
-    -fx-border-color:  #64ffff, white;
+    -fx-border-color:  #2eff77, #ffffff;
     -fx-border-width: 1, 1;
     -fx-border-style: solid;
     -fx-border-radius: 30, 30;
