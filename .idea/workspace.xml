@@ -9,17 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="atualização sistema">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="adiconando exceção de erro java na tela home">
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/LeituraPortaCOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/LeituraPortaCOM.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/HomeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagemImportacaoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/controller/PesagemImportacaoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/reports/relatorio_personalizado.jrxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/utils/LeituraPortaCOM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/utils/LeituraPortaCOM.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/view/home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,13 +214,6 @@
       <workItem from="1661773893755" duration="3048000" />
       <workItem from="1661777593552" duration="4725000" />
       <workItem from="1661863005378" duration="743000" />
-    </task>
-    <task id="LOCAL-00006" summary="algumas mudanças">
-      <created>1655987768711</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1655987768711</updated>
     </task>
     <task id="LOCAL-00007" summary="algumas mudanças">
       <created>1656001382784</created>
@@ -567,7 +551,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661786487589</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="adiconando exceção de erro java na tela home">
+      <created>1661963170456</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1661963170457</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,8 +577,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="mudança tela gerenciamento de funcionario" />
-    <MESSAGE value="algumas mudanças relatório" />
     <MESSAGE value="melhoras no designer do relatório" />
     <MESSAGE value="Mudanças na cor do sistema" />
     <MESSAGE value="mudanças no estilo do app" />
@@ -611,6 +600,8 @@
     <MESSAGE value="teste" />
     <MESSAGE value="atualização da tela de rekatirui" />
     <MESSAGE value="atualizando relatorio personalizado" />
-    <option name="LAST_COMMIT_MESSAGE" value="atualizando relatorio personalizado" />
+    <MESSAGE value="atualização sistema" />
+    <MESSAGE value="adiconando exceção de erro java na tela home" />
+    <option name="LAST_COMMIT_MESSAGE" value="adiconando exceção de erro java na tela home" />
   </component>
 </project>
