@@ -33,9 +33,9 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="160" splitType="Stretch">
+		<band height="155" splitType="Stretch">
 			<staticText>
-				<reportElement x="161" y="130" width="240" height="30" uuid="7533b5ef-739b-48e2-b3e9-a100a034d8d8"/>
+				<reportElement x="161" y="120" width="240" height="30" uuid="7533b5ef-739b-48e2-b3e9-a100a034d8d8"/>
 				<textElement textAlignment="Center" markup="styled">
 					<font size="18" isBold="true"/>
 				</textElement>

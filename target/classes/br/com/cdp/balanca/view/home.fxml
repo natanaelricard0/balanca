@@ -158,31 +158,22 @@
         </ScrollPane>
     </left>
 
+
+   <center>
+       <Pane fx:id="tela">
+           <children>
+
+           </children>
+       </Pane>
+   </center>
     <bottom>
         <ButtonBar prefHeight="42.0" prefWidth="1350.0" styleClass="background-center" BorderPane.alignment="CENTER">
             <buttons>
-               <Label fx:id="txtTime" prefHeight="26.0" prefWidth="288.0" styleClass="label-bright" />
+                <Label fx:id="txtTime" prefHeight="26.0" prefWidth="288.0" styleClass="label-bright" />
             </buttons>
         </ButtonBar>
     </bottom>
-    <center>
-          <Pane fx:id="tela" styleClass="fundo-painel">
-         <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="323.0" layoutY="26.0" prefHeight="54.0" prefWidth="530.0" styleClass="label-header" text="Sistema Portuário Balança Rodoviária" textAlignment="CENTER">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets></Label>
-            <ImageView fitHeight="343.0" fitWidth="528.0" layoutX="393.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/porto_img.jpeg" />
-               </image>
-            </ImageView>
-         </children></Pane>
-        <!--AnchorPane prefHeight="747.0" prefWidth="110.0" BorderPane.alignment="CENTER">
-         <children>
-                <Pane fx:id="tela" layoutX="-3.0" layoutY="-1.0" prefHeight="730.0" prefWidth="1009.0" styleClass="fundo-painel" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="-3.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-         </children>
-        </AnchorPane-->
-    </center>
+
+
 
 </BorderPane>

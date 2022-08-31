@@ -14,7 +14,10 @@ import javafx.scene.control.*;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import org.w3c.dom.Node;
+
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
@@ -28,8 +31,9 @@ public class HomeController implements Initializable {
 
     @FXML
     private Label txtTime;
+    
     @FXML
-    private Pane tela;
+    private Pane tela = new Pane();
 
     @FXML
     private Label lblUser;
@@ -56,6 +60,11 @@ public class HomeController implements Initializable {
     private Button btnSair;
 
 
+    private final List<Node> children = new ArrayList<>();
+
+    public List<Node> getChildren() {
+        return children;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -64,7 +73,7 @@ public class HomeController implements Initializable {
 
     private void initializeNodes() {
         lblUser.setText(Main.getDataUser().getNome());
-        getDateSystem();
+        //getDateSystem();
     }
 
     private void getDateSystem() {
@@ -136,13 +145,6 @@ public class HomeController implements Initializable {
     @FXML
     private void onBtCadastroTara(Event event){
         cadastroTara(event);
-        /*try {
-            cadastroTara(event);
-        } catch (RuntimeException e) {
-            e.printStackTrace();
-        // Alerts.showAlert("Erro ao abrir tela Cadastro Tara.", null, e.getMessage(), Alert.AlertType.ERROR);
-        }*/
-
     }
 
     @FXML
@@ -168,7 +170,7 @@ public class HomeController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absolutName));
             Pane pane = loader.load();
 
-            tela.getChildren().addAll(pane); //new
+            tela.getChildren().addAll(pane);
 
             T controller = loader.getController();
             initializingAction.accept(controller);
@@ -176,7 +178,12 @@ public class HomeController implements Initializable {
 
         } catch (IOException e) {
             e.printStackTrace();
+            System.out.println(e.getMessage());
+
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
         }
+
     }
 
     /*  public interface EventHandler<T extends ActionEvent> extends EventListener {}*/
