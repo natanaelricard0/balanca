@@ -25,7 +25,11 @@ public class LeituraPortaCOM {
             System.out.println(e.getMessage());
         } catch (SerialPortTimeoutException e) {
             System.out.println(e.getMessage());
-        }finally {
+        }
+        catch (NumberFormatException e) {
+            System.out.println(e.getMessage());
+        }
+        finally {
             try {
                 port.closePort();
             }catch (SerialPortException e){
