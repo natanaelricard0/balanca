@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Update_at_31_08_2022_13_02_[Changes]" date="1661961754147" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_08_2022_13_02_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 31/08/2022 13:02 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/br/com/cdp/balanca/controller/HomeController.class" />
+    <option name="AFTER_PATH" value="target/classes/br/com/cdp/balanca/controller/HomeController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_08_2022_13_02_[Changes]/HomeController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/br/com/cdp/balanca/utils/LeituraPortaCOM.class" />
+    <option name="AFTER_PATH" value="target/classes/br/com/cdp/balanca/utils/LeituraPortaCOM.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_08_2022_13_02_[Changes]/LeituraPortaCOM.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/classes/br/com/cdp/balanca/controller/PesagemImportacaoController.class" />
+    <option name="AFTER_PATH" value="target/classes/br/com/cdp/balanca/controller/PesagemImportacaoController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_08_2022_13_02_[Changes]/PesagemImportacaoController.class" />
+  </binary>
+</changelist>
