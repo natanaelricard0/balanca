@@ -147,6 +147,8 @@ public class HomeController implements Initializable {
         cadastroTara(event);
     }
 
+
+
     @FXML
     private void onBtPesagemExportacaoAction(ActionEvent event) {
         pesagemExportacao(event);
@@ -169,6 +171,7 @@ public class HomeController implements Initializable {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absolutName));
             Pane pane = loader.load();
+
 
             tela.getChildren().addAll(pane);
 

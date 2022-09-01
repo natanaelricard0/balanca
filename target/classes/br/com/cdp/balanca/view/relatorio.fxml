@@ -5,84 +5,84 @@
 <?import javafx.scene.layout.*?>
 <?import org.kordamp.ikonli.javafx.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1576.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.RelatorioController">
-   <children>
-      <GridPane prefHeight="213.0" prefWidth="1590.0">
-        <columnConstraints>
-            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="141.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
-          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="325.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
-            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="60.0" minHeight="3.0" prefHeight="44.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <DatePicker fx:id="dataInicial" editable="false" prefHeight="35.0" prefWidth="304.0" GridPane.columnIndex="1" />
-            <DatePicker fx:id="dataFinal" prefHeight="35.0" prefWidth="304.0" GridPane.columnIndex="3" />
-            <Label text="Data Inicio:">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding></Label>
-            <Label text="Data Fim:" GridPane.columnIndex="2">
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
-               <GridPane.margin>
-                  <Insets right="45.0" />
-               </GridPane.margin></Label>
-            <Label text="Tipo de Pesagem:" GridPane.columnIndex="2" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets left="20.0" />
-               </GridPane.margin></Label>
-            <ComboBox fx:id="cmbTipo" prefHeight="35.0" prefWidth="304.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField fx:id="txtVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Veículo:" GridPane.rowIndex="1">
-               <padding>
-                  <Insets left="20.0" />
-               </padding></Label>
-            <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" prefHeight="30.0" prefWidth="97.0" text="Buscar" GridPane.columnIndex="4" />
-            <Button fx:id="btnGerarPdf" mnemonicParsing="false" onAction="#printRelatorio" prefHeight="30.0" prefWidth="97.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
-               <graphic>
-                  <FontIcon iconColor="WHITE" iconLiteral="mdi-file-pdf" iconSize="20" />
-               </graphic>
-               <GridPane.margin>
-                  <Insets bottom="15.0" top="15.0" />
-               </GridPane.margin>
-            </Button>
-            <Label text="Usuário:" GridPane.rowIndex="2">
-               <padding>
-                  <Insets left="20.0" />
-               </padding></Label>
-            <TextField fx:id="txtUsuario" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-         </children>
-         <VBox.margin>
-            <Insets left="5.0" right="5.0" />
-         </VBox.margin>
-         <padding>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </padding>
-      </GridPane>
-      <TableView fx:id="tblPesagem" prefHeight="750.0" prefWidth="1000.0">
-         <VBox.margin>
-            <Insets top="20.0" />
-         </VBox.margin>
-         <columns>
-             <TableColumn fx:id="colPlaca" prefWidth="130.0" text="Placa" />
-             <TableColumn fx:id="colAutorizacao" prefWidth="175.0" text="Autorização" />
-             <TableColumn fx:id="colTara" prefWidth="157.0" text="Tara" />
-             <TableColumn fx:id="colPesoCheio" prefWidth="244.0" text="Pesagem Cheio" />
-             <TableColumn fx:id="colPesoLiquido" prefWidth="241.0" text="Peso Liquido" />
-             <TableColumn fx:id="coldataPrimeiraPesagem" prefWidth="241.0" text="Data Primeira Pesagem" />
-             <TableColumn fx:id="colusuarioPrimeiraPesagem" prefWidth="241.0" text="Usuário Primeira Pesagem" />
-             <TableColumn fx:id="colDataHora" prefWidth="288.0" text="Data Segunda Pesagem" />
-             <TableColumn fx:id="colusuarioSegundaPesagem" prefWidth="241.0" text="Usuário Segunda Pesagem" />
-         </columns></TableView>
-   </children>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1576.0"  styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.RelatorioController">
+    <children>
+        <GridPane prefHeight="213.0" prefWidth="1590.0">
+            <columnConstraints>
+                <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="141.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="325.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="63.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="60.0" minHeight="3.0" prefHeight="44.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <DatePicker fx:id="dataInicial" editable="false" prefHeight="35.0" prefWidth="304.0" GridPane.columnIndex="1" />
+                <DatePicker fx:id="dataFinal" prefHeight="35.0" prefWidth="304.0" GridPane.columnIndex="3" />
+                <Label text="Data Inicio:">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding></Label>
+                <Label text="Data Fim:" GridPane.columnIndex="2">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                    <GridPane.margin>
+                        <Insets right="45.0" />
+                    </GridPane.margin></Label>
+                <Label text="Tipo de Pesagem:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="20.0" />
+                    </GridPane.margin></Label>
+                <ComboBox fx:id="cmbTipo" prefHeight="35.0" prefWidth="304.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <TextField fx:id="txtVeiculo" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Veículo:" GridPane.rowIndex="1">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding></Label>
+                <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscar" prefHeight="30.0" prefWidth="97.0" text="Buscar" GridPane.columnIndex="4" />
+                <Button fx:id="btnGerarPdf" mnemonicParsing="false" onAction="#printRelatorio" prefHeight="30.0" prefWidth="97.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <graphic>
+                        <FontIcon iconColor="WHITE" iconLiteral="mdi-file-pdf" iconSize="20" />
+                    </graphic>
+                    <GridPane.margin>
+                        <Insets bottom="15.0" top="15.0" />
+                    </GridPane.margin>
+                </Button>
+                <Label text="Usuário:" GridPane.rowIndex="2">
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding></Label>
+                <TextField fx:id="txtUsuario" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            </children>
+            <VBox.margin>
+                <Insets left="5.0" right="5.0" />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </padding>
+        </GridPane>
+        <TableView fx:id="tblPesagem" prefHeight="750.0" prefWidth="1000.0">
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+            <columns>
+                <TableColumn fx:id="colPlaca" prefWidth="115.0" text="Placa" />
+                <TableColumn fx:id="colAutorizacao" prefWidth="143.0" text="Autorização" />
+                <TableColumn fx:id="colTara" prefWidth="128.0" text="Tara" />
+                <TableColumn fx:id="colPesoCheio" prefWidth="171.0" text="Pesagem Cheio" />
+                <TableColumn fx:id="colPesoLiquido" prefWidth="147.0" text="Peso Liquido" />
+                <TableColumn fx:id="coldataPrimeiraPesagem" prefWidth="216.0" text="Data Primeira Pesagem" />
+                <TableColumn fx:id="colusuarioPrimeiraPesagem" prefWidth="213.0" text="Usuário Primeira Pesagem" />
+                <TableColumn fx:id="colDataHora" prefWidth="192.0" text="Data Segunda Pesagem" />
+                <TableColumn fx:id="colusuarioSegundaPesagem" prefWidth="633.0" text="Usuário Segunda Pesagem" />
+            </columns></TableView>
+    </children>
 </VBox>
