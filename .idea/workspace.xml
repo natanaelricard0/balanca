@@ -9,9 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="reajuste de tamanho da tela relatorio">
+    <list default="true" id="d2d15b68-5100-4490-9db2-e23aea1ff9c3" name="Changes" comment="adiconando exceção de erro java na tela home">
+      <change afterPath="$PROJECT_DIR$/out/artifacts/TESTE/Balanca.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Balanca_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Balanca_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2022_11_01__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_07_2022_11_01__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_12_24_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_12_24__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_12_30_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_29_08_2022_12_30__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_08_2022_13_02__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_31_08_2022_13_02__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/LeituraPortaCOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/cdp/balanca/utils/LeituraPortaCOM.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/utils/LeituraPortaCOM.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/br/com/cdp/balanca/utils/LeituraPortaCOM.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,12 +66,13 @@
     &quot;ToolWindowBuild.ShowToolbar&quot;: &quot;false&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/s2ferreira/Downloads/Balanca/balanca&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/n2carvalho/IdeaProjects/balanca/out/artifacts/teste&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.32068965&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
@@ -81,7 +94,7 @@
       <recent name="C:\Users\s2ferreira\Downloads\Balanca\Balanca\src\main\resources\br\com\cdp\balanca\images" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.br.com.cdp.balanca.application.Main">
+  <component name="RunManager" selected="JAR Application.Balanca.jar">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.Main" />
       <module name="Balanca" />
@@ -114,7 +127,8 @@
       </method>
     </configuration>
     <configuration name="br.com.cdp.balanca.application.Main" type="Application" factoryName="Application" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="$USER_HOME$/Desktop/ARQUIVOS/jdk-17.0.2" />
+      <option name="ALTERNATIVE_JRE_PATH" value="$PROJECT_DIR$/../../../../Program Files/Java/jdk-17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="br.com.cdp.balanca.application.Main" />
       <module name="Balanca" />
       <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
@@ -126,13 +140,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Balanca.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/teste/Balanca.jar" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Application.br.com.cdp.balanca.application.Main" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Teste" />
+      <item itemvalue="JAR Application.Balanca.jar" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JAR Application.Balanca.jar" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Teste" />
       </list>
@@ -215,14 +235,29 @@
       <workItem from="1661773893755" duration="3048000" />
       <workItem from="1661777593552" duration="4725000" />
       <workItem from="1661863005378" duration="743000" />
-      <workItem from="1662032621253" duration="623000" />
-      <workItem from="1662047272434" duration="278000" />
-      <workItem from="1662047594149" duration="331000" />
-      <workItem from="1662047945511" duration="285000" />
-      <workItem from="1662048301832" duration="190000" />
-      <workItem from="1662048524470" duration="126000" />
-      <workItem from="1662048667012" duration="746000" />
-      <workItem from="1662049433344" duration="654000" />
+      <workItem from="1662384929795" duration="9694000" />
+      <workItem from="1662465960708" duration="1826000" />
+    </task>
+    <task id="LOCAL-00007" summary="algumas mudanças">
+      <created>1656001382784</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1656001382784</updated>
+    </task>
+    <task id="LOCAL-00008" summary="algumas mudanças relatório">
+      <created>1656089115274</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1656089115274</updated>
+    </task>
+    <task id="LOCAL-00009" summary="melhoras no designer do relatório">
+      <created>1656336794118</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1656336794118</updated>
     </task>
     <task id="LOCAL-00010" summary="algumas mudanças">
       <created>1656340158346</created>
@@ -546,28 +581,7 @@
       <option name="project" value="LOCAL" />
       <updated>1661963170457</updated>
     </task>
-    <task id="LOCAL-00056" summary="adicionando exceção de erro java na tela home">
-      <created>1661963295343</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1661963295343</updated>
-    </task>
-    <task id="LOCAL-00057" summary="adicionando exceção de erro java na tela home">
-      <created>1661963324011</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1661963324011</updated>
-    </task>
-    <task id="LOCAL-00058" summary="reajuste de tamanho da tela relatorio">
-      <created>1662049820205</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1662049820206</updated>
-    </task>
-    <option name="localTasksCounter" value="59" />
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,6 +600,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="melhoras no designer do relatório" />
+    <MESSAGE value="Mudanças na cor do sistema" />
     <MESSAGE value="mudanças no estilo do app" />
     <MESSAGE value="algumas mudanças" />
     <MESSAGE value="algumas mudanças no front do app" />
@@ -609,8 +625,6 @@
     <MESSAGE value="atualizando relatorio personalizado" />
     <MESSAGE value="atualização sistema" />
     <MESSAGE value="adiconando exceção de erro java na tela home" />
-    <MESSAGE value="adicionando exceção de erro java na tela home" />
-    <MESSAGE value="reajuste de tamanho da tela relatorio" />
-    <option name="LAST_COMMIT_MESSAGE" value="reajuste de tamanho da tela relatorio" />
+    <option name="LAST_COMMIT_MESSAGE" value="adiconando exceção de erro java na tela home" />
   </component>
 </project>
