@@ -5,14 +5,14 @@
 <?import javafx.scene.layout.*?>
 <?import org.kordamp.ikonli.javafx.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1576.0"  styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.RelatorioController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1576.0" styleClass="background" stylesheets="@../style/style.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.cdp.balanca.controller.RelatorioController">
     <children>
         <GridPane prefHeight="213.0" prefWidth="1590.0">
             <columnConstraints>
                 <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="141.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0" />
-                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="325.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="365.0" minWidth="10.0" prefWidth="272.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="492.0" minWidth="10.0" prefWidth="492.0" />
                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
             </columnConstraints>
             <rowConstraints>
@@ -61,6 +61,12 @@
                         <Insets left="20.0" />
                     </padding></Label>
                 <TextField fx:id="txtUsuario" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtPesquisar" prefWidth="391.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Button fx:id="btnPesquisar" mnemonicParsing="false" prefHeight="30.0" prefWidth="97.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                <graphic>
+                    <FontIcon fx:id="btnPesquisar" iconColor="WHITE" iconLiteral="mdi-account-search" iconSize="23" />
+                </graphic>
+            </Button>
             </children>
             <VBox.margin>
                 <Insets left="5.0" right="5.0" />

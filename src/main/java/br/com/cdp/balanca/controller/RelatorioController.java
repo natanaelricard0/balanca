@@ -1,6 +1,8 @@
 package br.com.cdp.balanca.controller;
 
+import br.com.cdp.balanca.model.entities.Funcionario;
 import br.com.cdp.balanca.model.entities.Pesagem;
+import br.com.cdp.balanca.model.services.FuncionarioServices;
 import br.com.cdp.balanca.model.services.PesagemServices;
 import br.com.cdp.balanca.utils.Alerts;
 import br.com.cdp.balanca.utils.ShowReports;
@@ -21,6 +23,7 @@ public class RelatorioController implements Initializable {
 
     PesagemServices pesagemServices = new PesagemServices();
 
+    FuncionarioServices service;
     @FXML
     private DatePicker dataInicial;
 
@@ -29,6 +32,9 @@ public class RelatorioController implements Initializable {
 
     @FXML
     private TextField txtVeiculo;
+
+    @FXML
+    private TextField txtPesquisar;
 
     @FXML
     private TextField txtUsuario;
@@ -41,6 +47,9 @@ public class RelatorioController implements Initializable {
 
     @FXML
     private Button btnGerarPdf;
+
+    @FXML
+    private Button btnPesquisar;
 
     @FXML
     private TableView<Pesagem> tblPesagem;
@@ -79,6 +88,19 @@ public class RelatorioController implements Initializable {
     private TableColumn<Pesagem, String> coldataSegundaPesagem;
 
     private ObservableList<Pesagem> pesagens;
+
+    private ObservableList<Funcionario> obsList;
+
+    public void setService(FuncionarioServices service) {
+        this.service = service;
+    }
+    private void searchTableView(){
+        List<Funcionario> list;
+        //list = service.findByNameOrLogin(txtPesquisar.getText());
+        //obsList = FXCollections.observableArrayList(list);
+        //tabelaFuncionario.setItems(obsList);
+       // initEditButtons();
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
